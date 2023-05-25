@@ -11,8 +11,13 @@
     &__top {
         border-bottom: 1px solid $black_1;
         padding-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
     &__title {
+        width: fit-content;
+        font-family: "Piepie";
         // font-family: "Piepie";
         font-size: 48px;
         line-height: 57px;

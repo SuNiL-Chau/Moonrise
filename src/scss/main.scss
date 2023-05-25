@@ -98,6 +98,7 @@ main {
 }
 
 .coming {
+  overflow: hidden;
   position: relative;
   height: calc(100vh - 110px);
   // @media only screen and (max-width: 1023px) {
@@ -180,7 +181,7 @@ main {
     }
   }
   &__title {
-    font-family: 'Piepie';
+    font-family: "Piepie";
     font-size: 68px;
     line-height: 80px;
     color: $orangeColor;
@@ -235,17 +236,30 @@ main {
       }
     }
     &State {
+      height: 36px;
       padding-top: 20px;
+      @media only screen and (max-width: 786px) {
+        height: 26px;
+        padding-top: 10px;
+      }
 
       &Icon {
         width: 20px;
         height: 20px;
+        @media only screen and (max-width: 786px) {
+          width: 16px;
+          height: 16px;
+        }
       }
       &Text {
         text-align: center;
         font-size: 14px;
         line-height: 20px;
         display: none;
+        @media only screen and (max-width: 786px) {
+          font-size: 12px;
+          line-height: 16px;
+        }
         &.-errorState {
           color: #c71835;
         }
@@ -319,6 +333,8 @@ main {
       max-width: 100%;
     }
     &Title {
+      font-family: "Suisse Neue";
+      font-weight: 400;
       padding-bottom: 30px;
       font-size: 40px;
       line-height: 48px;
