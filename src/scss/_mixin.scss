@@ -1,0 +1,49 @@
+@mixin btn-n {
+    .btn {
+        padding: toRem(11) toRem(26);
+    }
+}
+
+// breakpoints media queries
+@mixin media-bp($breakpoint) {
+    @if ($breakpoint == 'xs') {
+        @media screen and (max-width: 575px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'sm') {
+        @media screen and (min-width: 576px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'md') {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'mdl') {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'lg') {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'xl') {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'tablet') {
+        @media (min-width: 768px) and (max-width: 991.98px)  {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'tablet_L') {
+        @media (min-width: 992px) and (max-width: 1024px)  {
+            @content;
+        }
+    }
+}

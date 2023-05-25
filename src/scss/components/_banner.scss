@@ -1,0 +1,9 @@
+// banner scss
+@import "../baseInfo";
+.banner {
+  padding: 0;
+  &__image {
+    width: 100%;
+    // min-height: 200px;
+  }
+}

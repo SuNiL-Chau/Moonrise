@@ -1,0 +1,6 @@
+{
+  "ignore": ["node_modules", "./src/js/libs/*"],
+  "sourceMaps": true,
+  "presets": [["@babel/preset-env", { "targets": "> 0.25%, not dead"}]],
+  "plugins": []
+}

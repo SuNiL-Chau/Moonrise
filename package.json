@@ -1,0 +1,48 @@
+{
+  "name": "sunil_boilerplate",
+  "version": "1.0.0",
+  "description": "A Simple Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "develop": "start npm run serve && start npm run watch-scss && start npm run watch-js",
+    "serve": "http-server -g -b --cors",
+    "build-css": "sass src/scss/:dist/css/ -s compressed && postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/",
+    "watch-scss": "sass src/scss/:dist/css/ -w -s compressed",
+    "build-js": "babel --config-file ./babel.config.json --out-dir ./dist/js/ ./src/js/ --copy-files",
+    "watch-js": "babel --config-file ./babel.config.json --out-dir ./dist/js/ ./src/js/ --copy-files --watch",
+    "prefix-css": "postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuNiL-Chau/Basic_Frontend_Boilerplate.git"
+  },
+  "keywords": [
+    "Frontend",
+    "Boilerplate",
+    "frontend",
+    "boilerplate",
+    "vanillajs"
+  ],
+  "author": "Sunil Chaudhary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuNiL-Chau/Basic_Frontend_Boilerplate/issues"
+  },
+  "homepage": "https://github.com/SuNiL-Chau/Basic_Frontend_Boilerplate#readme",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 10"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "autoprefixer": "^10.4.14",
+    "http-server": "^14.1.1",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {}
+}

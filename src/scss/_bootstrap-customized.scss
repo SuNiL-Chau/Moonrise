@@ -1,0 +1,23 @@
+// cutomize bootstrap default values here
+@include media-bp("xl") {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1400px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@include media-bp("mdl") {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,82 @@
+// Font face goes here
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+body,
+* {
+    font-family: "Poppins", sans-serif;
+}
+// @font-face {
+//     font-family: Piepie;
+//     src: url("../assets/fonts/Piepie/piepie-regular.otf") format("opentype");
+// }
+@font-face {
+    font-family: 'Piepie';
+    src: url('../assets/fonts/Piepie/Piepie.woff2') format('woff2'),
+        url('../assets/fonts/Piepie/Piepie.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+// suisseNeue & beyond infinity
+@font-face {
+    font-family: 'Suisse Neue';
+    src: url('../assets/fonts/SuisseNeue/SuisseNeue.woff2') format('woff2'),
+        url('../assets/fonts/SuisseNeue/SuisseNeue.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Neue';
+    src: url('../assets/fonts/SuisseNeue/SuisseNeue-MediumItalic.woff2') format('woff2'),
+        url('../assets/fonts/SuisseNeue/SuisseNeue-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Neue';
+    src: url('../assets/fonts/SuisseNeue/SuisseNeue-Medium.woff2') format('woff2'),
+        url('../assets/fonts/SuisseNeue/SuisseNeue-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Neue';
+    src: url('../assets/fonts/SuisseNeue/SuisseNeue-LightItalic.woff2') format('woff2'),
+        url('../assets/fonts/SuisseNeue/SuisseNeue-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Neue';
+    src: url('../assets/fonts/SuisseNeue/SuisseNeue-Light.woff2') format('woff2'),
+        url('../assets/fonts/SuisseNeue/SuisseNeue-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Neue';
+    src: url('../assets/fonts/SuisseNeue/SuisseNeue-Italic.woff2') format('woff2'),
+        url('../assets/fonts/SuisseNeue/SuisseNeue-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beyond Infinity';
+    src: url('../assets/fonts/BeyondInfinity/BeyondInfinity.woff2') format('woff2'),
+        url('../assets/fonts/BeyondInfinity/BeyondInfinity.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

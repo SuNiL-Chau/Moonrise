@@ -1,0 +1,87 @@
+@import "../baseInfo";
+
+.footer {
+    background: $pinkColor;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include media-bp("mdl") {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__top {
+        border-bottom: 1px solid $black_1;
+        padding-bottom: 30px;
+    }
+    &__title {
+        // font-family: "Piepie";
+        font-size: 48px;
+        line-height: 57px;
+        color: $orangeColor;
+        @include media-bp("mdl") {
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &Icon {
+            margin-left: 30px;
+            width: 60px;
+            height: 60px;
+            @include media-bp("mdl") {
+                margin-left: 20px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    &__nav {
+        &Title {
+            padding-bottom: 10px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+        &Para,
+        &Link {
+            font-size: 16px;
+            line-height: 24px;
+            @include media-bp("mdl") {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+        &Wrapper {
+            padding-top: 30px;
+            border-bottom: 1px solid $black_1;
+            padding-bottom: 30px;
+            ul {
+                margin: 0;
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    }
+    .footer__social {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        &Link {
+            display: inline-block;
+            width: 30px;
+        }
+    }
+    &__bottom {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__copy {
+        font-size: 14px;
+        line-height: 20px;
+        @include media-bp("mdl") {
+            font-size: 10px;
+        }
+    }
+}
