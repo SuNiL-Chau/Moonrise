@@ -11,8 +11,8 @@ body,
 // }
 @font-face {
     font-family: "Piepie";
-    src: url("/assets/fonts/Piepie/Piepie.woff2") format("woff2"),
-        url("/assets/fonts/Piepie/Piepie.woff") format("woff");
+    src: url("/assets/fonts/Piepie/piepie_regular.otf") format("opentype"),
+        url("/assets/fonts/Piepie/Piepie.woff2") format("woff2"), url("/assets/fonts/Piepie/Piepie.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
