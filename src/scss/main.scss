@@ -97,15 +97,49 @@ button {
 main {
   padding-top: 118px;
 }
-.section__wrapper {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  @include media-bp(mdl) {
-    padding-top: 30px;
-    padding-bottom: 30px;
+.section {
+  &__wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include media-bp(mdl) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  &__title {
+    position: relative;
+    display: inline-block;
+    font-size: 32px;
+    font-family: "Suisse Neue";
+    font-weight: 500;
+    margin-bottom: 40px;
+    z-index: 1;
+    &Icon {
+      position: absolute;
+      top: -70%;
+      right: -50px;
+      z-index: -1;
+    }
+    &Doodle {
+      position: absolute;
+      left: calc(100% + 30px);
+      top: 40px;
+      width: 205px;
+      height: 150px;
+      @media only screen and (max-width: 786px) {
+        top: 30px;
+        width: 185px;
+        height: 120px;
+        left: calc(100% + 20px);
+      }
+    }
   }
 }
-
+@media only screen and (max-width: 786px) {
+  section {
+    overflow: hidden;
+  }
+}
 .coming {
   overflow: hidden;
   position: relative;
@@ -444,5 +478,105 @@ main {
   }
   &__bgPink {
     background: $pinkColor;
+  }
+}
+
+// news
+.news {
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__card {
+    border: 1px solid #1b1c1e;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid #f4dc49;
+
+      background: #f4dc49;
+      .news__date {
+        color: #ffffff;
+      }
+    }
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+    @include media-bp("mdl") {
+      padding: 20px;
+    }
+  }
+  &__img {
+    &Wrapper {
+      width: 363px;
+      position: relative;
+      aspect-ratio: 363 / 182;
+      overflow: hidden;
+      border-radius: 10px;
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__content {
+    max-width: 600px;
+    width: 100%;
+    @media only screen and (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+  &__date {
+    font-size: 14px;
+    color: #c6c6c6;
+    padding-bottom: 10px;
+  }
+  &__title {
+    font-size: 24px;
+    padding-bottom: 10px;
+    @include media-bp("mdl") {
+      font-size: 20px;
+    }
+  }
+  &__para {
+    font-size: 14px;
+  }
+}
+.form {
+  &-control {
+    border: 0;
+    border-bottom: 1px solid #1b1c1e;
+    border-radius: 0;
+    &:focus {
+      box-shadow: none;
+      border-color: 0;
+      border-bottom: 1px solid #1b1c1e;
+    }
+  }
+  label {
+    padding-left: 0px;
+    color: #c6c6c6;
+  }
+  &__submit {
+    margin-top: 30px;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    min-width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #e65435;
+    align-items: center;
+    justify-content: center;
   }
 }
