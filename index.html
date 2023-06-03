@@ -5,8 +5,81 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Moon Rise</title>
-		<!-- <link rel="shortcut icon" href="assets/faivcon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://unpkg.com/"> -->
+		<!-- favicon start  -->
+		<link
+			rel="apple-touch-icon"
+			sizes="57x57"
+			href="/assets/favicon/apple-icon-57x57.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="60x60"
+			href="/assets/favicon/apple-icon-60x60.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="/assets/favicon/apple-icon-72x72.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="/assets/favicon/apple-icon-76x76.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="/assets/favicon/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="/assets/favicon/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="/assets/favicon/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="/assets/favicon/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/assets/favicon/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="/assets/favicon/android-icon-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/assets/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="/assets/favicon/favicon-96x96.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/assets/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/assets/favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<!-- favicon end-->
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -30,7 +103,7 @@
 				</div>
 				<a href="#" class="navbar-brand"
 					><img
-						src="./assets/images/moonrise.png"
+						src="./assets/images/moonrise.svg"
 						class="img-fluid"
 						alt=""
 				/></a>
@@ -294,50 +367,136 @@
 							</h2>
 						</div>
 						<div class="col-lg-6 col-md-12 col-12">
-							<form action="" class="form">
-								<div class="form-floating mb-3">
-									<input
-										type="text"
-										class="form-control"
-										id="name"
-										name="name"
-										placeholder="Name"
-									/>
-									<label for="name">Name</label>
+							<form action="" class="form" id="contact_form">
+								<div class="form_wrapper">
+									<div class="form-floating mb-3">
+										<input
+											type="text"
+											class="form-control"
+											id="name"
+											name="name"
+											placeholder="Name"
+										/>
+										<label for="name">Name</label>
+										<div class="form-error">
+											<p class="form-errorText -red">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													class="form-errorIcon"
+													fill="none"
+													viewBox="0 0 23 20"
+												>
+													<path
+														fill="#C71835"
+														d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z"
+													/>
+												</svg>
+												<span
+													>Please fill mandatory</span
+												>
+											</p>
+										</div>
+									</div>
+									<div class="form-floating mb-3">
+										<input
+											type="email"
+											class="form-control"
+											id="email"
+											name="email"
+											placeholder="E-mail"
+										/>
+										<label for="email">E-mail</label>
+										<div class="form-error">
+											<p class="form-errorText -red">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													class="form-errorIcon"
+													fill="none"
+													viewBox="0 0 23 20"
+												>
+													<path
+														fill="#C71835"
+														d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z"
+													/>
+												</svg>
+												<span
+													>Please fill mandatory</span
+												>
+											</p>
+										</div>
+									</div>
+									<div class="form-floating mb-3">
+										<textarea
+											class="form-control"
+											placeholder="Leave a comment here"
+											id="msg"
+											name="msg"
+											style="height: 100px"
+										></textarea>
+										<label for="msg">Message</label>
+									</div>
+									<div class="form-floating mb-3">
+										<input
+											type="text"
+											class="form-control"
+											id="budget"
+											name="budget"
+											placeholder="Budget"
+											oninput="this.value = this.value.replace(/\D+/g, '')"
+											inputmode="numeric"
+										/>
+										<label for="budget">Budget</label>
+										<div class="form-error">
+											<p class="form-errorText -red">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													class="form-errorIcon"
+													fill="none"
+													viewBox="0 0 23 20"
+												>
+													<path
+														fill="#C71835"
+														d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z"
+													/>
+												</svg>
+												<span
+													>Please fill mandatory</span
+												>
+											</p>
+										</div>
+									</div>
+									<button type="submit" class="form__submit">
+										Submit
+									</button>
 								</div>
-								<div class="form-floating mb-3">
-									<input
-										type="email"
-										class="form-control"
-										id="email"
-										name="email"
-										placeholder="E-mail"
-									/>
-									<label for="email">E-mail</label>
+								<div class="form_success">
+									<svg
+										class="form_successIcon"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 101 100"
+									>
+										<rect
+											width="100"
+											height="100"
+											x=".200195"
+											fill="#fff"
+											rx="50"
+										/>
+										<path
+											stroke="#22AF6E"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="3"
+											d="m28 58 12 12 32-40"
+										/>
+									</svg>
+									<p class="form_successText">
+										Thank you for completing the <br />
+										application form! We’ll get back <br />
+										to you as soon as possible.
+									</p>
 								</div>
-								<div class="form-floating mb-3">
-									<textarea
-										class="form-control"
-										placeholder="Leave a comment here"
-										id="msg"
-										name="msg"
-										style="height: 100px"
-									></textarea>
-									<label for="msg">Message</label>
-								</div>
-								<div class="form-floating mb-3">
-									<input
-										type="text"
-										class="form-control"
-										id="budget"
-										name="budget"
-										placeholder="Name"
-									/>
-									<label for="budget">Budget</label>
-								</div>
-								<button type="submit" class="form__submit">
-									Submit
-								</button>
 							</form>
 						</div>
 					</div>
@@ -513,6 +672,100 @@
 				},
 				loop: true,
 			});
+
+			document
+				.getElementById("contact_form")
+				.addEventListener("submit", function (e) {
+					e.preventDefault();
+
+					let formValid = true;
+					// Clear previous error messages and remove error class
+					var errorMessages =
+						document.querySelectorAll(".form-error");
+					var formFloatings =
+						document.querySelectorAll(".form-floating");
+
+					errorMessages.forEach(function (formFloating) {
+						formFloating.classList.remove("-Invalid");
+					});
+
+					// Validate Name
+					var nameInput = document.getElementById("name");
+					var name = nameInput.value.trim();
+					if (name === "") {
+						showError(nameInput, "Name is required");
+						formValid = false;
+					}
+
+					// Validate Email
+					var emailInput = document.getElementById("email");
+					var email = emailInput.value.trim();
+					if (email === "") {
+						showError(emailInput, "Email is required");
+						formValid = false;
+					} else if (!isValidEmail(email)) {
+						showError(emailInput, "Invalid email format");
+						formValid = false;
+					}
+
+					// Validate Budget
+					var budgetInput = document.getElementById("budget");
+					var budget = budgetInput.value.trim();
+					if (budget === "") {
+						showError(budgetInput, "Budget is required");
+						formValid = false;
+					} else if (!isValidNumber(budget)) {
+						formValid = false;
+						showError(budgetInput, "Invalid budget format");
+					}
+
+					console.log(formValid);
+					// If there are no errors, submit the form
+					if (formValid) {
+						const xhr = new XMLHttpRequest();
+						xhr.open("POST", "send_email.php", true);
+						xhr.setRequestHeader(
+							"Content-type",
+							"application/x-www-form-urlencoded"
+						);
+						xhr.onreadystatechange = function () {
+							if (
+								xhr.readyState === XMLHttpRequest.DONE &&
+								xhr.status === 200
+							) {
+								e.target.classList.add("-success");
+
+								// Request successful, do something if needed
+								console.log("Email sent successfully!");
+								form.reset(); // Reset the form
+
+								setTimeout(() => {
+									e.target.classList.remove("-success");
+								}, 5000);
+							}
+						};
+						xhr.send(`email=${encodeURIComponent(email)}`);
+
+						// Submit the form
+					}
+				});
+			function showError(inputElement, errorMessage) {
+				var errorContainer =
+					inputElement.parentElement.querySelector(".form-error");
+				errorContainer.querySelector("span").textContent = errorMessage;
+				errorContainer.classList.add("-Invalid");
+			}
+
+			function isValidEmail(email) {
+				var emailRegex =
+					/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				return emailRegex.test(email);
+			}
+
+			function isValidNumber(number) {
+				var numberRegex = /^\d+$/;
+				return numberRegex.test(number);
+			}
 		</script>
 	</body>
 </html>
