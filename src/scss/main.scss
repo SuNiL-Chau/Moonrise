@@ -639,15 +639,24 @@ main {
     padding-left: 0px;
     color: #c6c6c6;
   }
-  &_success {
+  &_submittedState {
     display: none;
-    background: #22af6e;
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
     padding-bottom: 100px;
     justify-content: center;
+
+    &.-submitted {
+      background: #22af6e;
+    }
+    &.-notsubmitted {
+      background: #fefbed;
+      .form_submittedStateText {
+        color: #c71835;
+      }
+    }
     &Icon {
       width: 100px;
       height: 100px;
@@ -690,7 +699,15 @@ main {
   .form_wrapper {
     display: none;
   }
-  .form_success {
+  .-submitted {
+    display: flex;
+  }
+}
+#contact_form.-failed {
+  .form_wrapper {
+    display: none;
+  }
+  .-notsubmitted {
     display: flex;
   }
 }
