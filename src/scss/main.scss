@@ -96,6 +96,9 @@ button {
 @import "./components/footer";
 main {
   padding-top: 118px;
+  @media only screen and (max-width: 1024px) {
+    padding-top: 90px;
+  }
 }
 .section {
   &__wrapper {
@@ -758,18 +761,31 @@ main {
   &__defaultLine {
     content: "";
     position: absolute;
-    left: 50%;
+
     width: 3px;
     background: rgba(255, 255, 255, 0.3);
     height: 100%;
+    left: 60px;
+    @media only screen and (min-width: 1024px) {
+      left: 50%;
+    }
+    @media only screen and (max-width: 786px) {
+      left: 20px;
+    }
   }
   &__drawLine {
     content: "";
     position: absolute;
-    left: 50%;
     width: 3px;
     background: rgba(255, 255, 255, 1);
     height: 30%;
+    left: 60px;
+    @media only screen and (min-width: 1024px) {
+      left: 50%;
+    }
+    @media only screen and (max-width: 786px) {
+      left: 20px;
+    }
   }
   &__headWrapper {
     display: flex;
@@ -789,16 +805,33 @@ main {
     }
   }
   &__step {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @media only screen and (min-width: 1024px) {
+      height: 260px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
     &Head {
       font-family: "Piepie";
       font-size: 68px;
       line-height: 80px;
       color: #fff;
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
     }
     &Content {
+      position: relative;
       padding-left: 50px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: #ffffff;
+        left: -8.5px;
+        top: 00px;
+      }
     }
     &Count {
       font-size: 20px;
@@ -820,13 +853,13 @@ main {
   &__icon {
     width: 170px;
     position: absolute;
-    @include media-bp("mdl") {
+    @media only screen and (max-width: 1024px) {
       width: 100px;
     }
     &.-Icon1 {
       top: 0;
       right: 15%;
-      @include media-bp("mdl") {
+      @media only screen and (max-width: 1024px) {
         right: 5%;
       }
     }
@@ -834,7 +867,7 @@ main {
       width: 150px;
       top: 180px;
       right: 28%;
-      @include media-bp("mdl") {
+      @media only screen and (max-width: 1024px) {
         width: 100px;
         top: 300px;
         right: 10%;
@@ -844,6 +877,9 @@ main {
       width: 100px;
       top: 250px;
       left: 0;
+      @media only screen and (max-width: 1024px) {
+        top: 400px;
+      }
       @include media-bp("mdl") {
         width: 80px;
         top: 380px;
@@ -880,6 +916,9 @@ main {
     min-height: 400px;
     img {
       width: 100%;
+      @media only screen and (min-width: 786px) {
+        height: 400px;
+      }
       height: 100%;
       object-fit: cover;
     }
@@ -968,14 +1007,14 @@ main {
       align-items: center;
       justify-content: center;
       gap: 20px;
-      @include media-bp("mdl") {
+      @media only screen and (max-width: 1024px) {
         gap: 10px;
         padding: 20px;
         margin-top: 60px;
       }
       img {
         width: 60px;
-        @include media-bp("mdl") {
+        @media only screen and (max-width: 1024px) {
           width: 40px;
           // display: none;
         }
@@ -985,7 +1024,7 @@ main {
         line-height: 58px;
         color: #c71835;
         font-family: "Piepie";
-        @include media-bp("mdl") {
+        @media only screen and (max-width: 1024px) {
           font-size: 24px;
           line-height: 30px;
         }
