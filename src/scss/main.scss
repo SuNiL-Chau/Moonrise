@@ -102,8 +102,8 @@ main {
     padding-top: 80px;
     padding-bottom: 80px;
     @include media-bp(mdl) {
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
   }
   &__title {
@@ -400,7 +400,14 @@ main {
   }
 }
 .moonrise {
+  @media only screen and (min-width: 1024px) {
+    height: calc(100vh - 108px);
+  }
+  .row {
+    height: 100%;
+  }
   &__content {
+    position: relative;
     max-width: 800px;
     width: 100%;
     margin-left: auto;
@@ -409,9 +416,19 @@ main {
     height: 100%;
     justify-content: center;
     @media only screen and (max-width: 1400px) {
+      margin-left: 60px;
+    }
+    @media only screen and (max-width: 1024px) {
+      max-width: 100%;
+      margin-left: 0px;
       padding-left: 60px;
+
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
     @media only screen and (max-width: 786px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
       padding-left: 20px;
       padding-right: 20px;
     }
@@ -422,6 +439,10 @@ main {
     line-height: 28px;
     font-family: "Piepie";
     padding-bottom: 10px;
+    @media only screen and (max-width: 786px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
   &__heading {
     font-family: "Piepie";
@@ -431,6 +452,36 @@ main {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     text-shadow: 3px 3px 0px #1b1c1e;
+    @media only screen and (max-width: 786px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  &__downButton {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4dc49;
+    /* #1B1C1E */
+
+    border: 1px solid #1b1c1e;
+    box-shadow: 4px 2px 0px #000000;
+    border-radius: 100px;
+
+    @media only screen and (max-width: 1024px) {
+      position: relative;
+      bottom: unset;
+      margin-top: 20px;
+    }
+    svg {
+      width: 12px;
+      height: 24px;
+    }
   }
   &__slider {
     margin: 0;
@@ -439,6 +490,11 @@ main {
     padding-left: 90px;
     padding-top: 80px;
     padding-bottom: 80px;
+    @media only screen and (max-width: 1024px) {
+      max-width: 100%;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
     @media only screen and (max-width: 786px) {
       padding-left: 20px;
       padding-right: 20px;
@@ -740,24 +796,41 @@ main {
   }
 }
 .contact {
+  padding-top: 80px;
   overflow: hidden;
   position: relative;
-  height: calc(100vh - 110px);
   background: #fefbed;
   &__icon {
     width: 170px;
     position: absolute;
+    @include media-bp("mdl") {
+      width: 100px;
+    }
     &.-Icon1 {
       top: 0;
       right: 15%;
+      @include media-bp("mdl") {
+        right: 5%;
+      }
     }
     &.-Icon2 {
-      bottom: 10%;
-      right: 10%;
+      width: 150px;
+      top: 180px;
+      right: 28%;
+      @include media-bp("mdl") {
+        width: 100px;
+        top: 300px;
+        right: 10%;
+      }
     }
     &.-Icon3 {
-      bottom: 5%;
+      width: 100px;
+      top: 250px;
       left: 0;
+      @include media-bp("mdl") {
+        width: 80px;
+        top: 380px;
+      }
     }
   }
   &__wrapper {
@@ -785,6 +858,123 @@ main {
       color: #ffffff;
     }
   }
+  &__banner {
+    position: relative;
+    min-height: 400px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &Form {
+    padding-top: 100px;
+    @include media-bp("mdl") {
+      padding-top: 200px;
+    }
+    &__input {
+      &Wrapper {
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        text-transform: uppercase;
+        &:not(:first-child) {
+          padding-top: 80px;
+          @include media-bp("mdl") {
+            padding-top: 60px;
+          }
+        }
+        @include media-bp("mdl") {
+          flex-direction: column;
+          align-items: start;
+        }
+
+        label {
+          min-width: 280px;
+          color: #0434ac;
+          font-size: 24px;
+          line-height: 31px;
+          font-family: "Suisse Neue";
+
+          @include media-bp("mdl") {
+            font-size: 18px;
+            line-height: 24px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 30px;
+      justify-content: space-between;
+      font-size: 24px;
+      line-height: 30px;
+      input {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        box-shadow: 0;
+        @include media-bp("mdl") {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        &:focus-visible {
+          border: 0;
+          box-shadow: none;
+        }
+      }
+      span {
+        color: #c71835;
+        font-size: 14px;
+        line-height: 18px;
+        @include media-bp("mdl") {
+          font-size: 10px;
+          line-height: 16px;
+        }
+      }
+    }
+    &__submitButton {
+      padding: 20px 40px;
+      height: 68px;
+      // max-width: 1000px;
+      background: transparent;
+      margin: 0 auto;
+      margin-top: 80px;
+      border: 1px solid #ffffff;
+      border-radius: 34px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      @include media-bp("mdl") {
+        gap: 10px;
+        padding: 20px;
+        margin-top: 60px;
+      }
+      img {
+        width: 60px;
+        @include media-bp("mdl") {
+          width: 40px;
+          // display: none;
+        }
+      }
+      &Text {
+        font-size: 48px;
+        line-height: 58px;
+        color: #c71835;
+        font-family: "Piepie";
+        @include media-bp("mdl") {
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
 }
 
 .bg {
@@ -794,7 +984,7 @@ main {
   }
   &__yellow {
     background: #f4dc49;
-    color: #fff;
+    // color: #fff;
   }
   &__blue {
     background: #61cbf0;

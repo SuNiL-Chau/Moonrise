@@ -122,9 +122,9 @@
 			</div>
 		</header>
 		<main>
-			<section class="">
+			<section class="moonrise">
 				<div class="row gx-0">
-					<div class="col-lg-7 col-md-6 col-12 moonrise__bgPink">
+					<div class="col-lg-7 col-md-12 col-12 moonrise__bgPink">
 						<div class="moonrise__content">
 							<p class="moonrise__subheading">#moonrise</p>
 							<h2 class="moonrise__heading">
@@ -132,9 +132,23 @@
 								thought-leaders, <br />design thinkers <br />
 								& storytellers.
 							</h2>
+							<button class="moonrise__downButton">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 14 28"
+								>
+									<path
+										stroke="#1B1C1E"
+										stroke-linecap="round"
+										stroke-width="2"
+										d="M7 1v24m6-5.4-6 6-6-6"
+									/>
+								</svg>
+							</button>
 						</div>
 					</div>
-					<div class="col-lg-5 col-md-6 col-12">
+					<div class="col-lg-5 col-md-12 col-12">
 						<div class="swiper moonrise__slider">
 							<div class="swiper-wrapper">
 								<!-- Slides -->
@@ -174,27 +188,6 @@
 				</div>
 			</section>
 			<section class="coming__divder">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="coming__divderButton"
-					fill="none"
-					viewBox="0 0 40 40"
-				>
-					<rect
-						width="40"
-						height="40"
-						x="40"
-						fill="#FFB3D2"
-						rx="20"
-						transform="rotate(90 40 0)"
-					/>
-					<path
-						stroke="#fff"
-						stroke-linecap="round"
-						stroke-width="2"
-						d="M20 8v24m6-5.4001-6 6-6-6"
-					/>
-				</svg>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="custom__mobile"
@@ -647,18 +640,6 @@
 		<!-- Custom main js -->
 		<script src="./dist/js/main.js"></script>
 		<script>
-			let hamburger = document.querySelector(".navbar__hamburger");
-			let MenuItems = document.querySelector(".navbar__items");
-			hamburger.addEventListener("click", () => {
-				hamburger.classList.toggle("active");
-				MenuItems.classList.toggle("active");
-				if (hamburger.classList.contains("active")) {
-					document.body.classList.add("overflow-h");
-				} else {
-					document.body.classList.remove("overflow-h");
-				}
-			});
-
 			const swiper = new Swiper(".moonrise__slider", {
 				slidesPerView: 1,
 				effect: "fade",
