@@ -1,5 +1,8 @@
 "use strict";
 
+const {
+  document
+} = require("postcss");
 let hamburger = document.querySelector(".navbar__hamburger");
 let MenuItems = document.querySelector(".navbar__items");
 hamburger.addEventListener("click", () => {

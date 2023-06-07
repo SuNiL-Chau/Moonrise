@@ -226,7 +226,7 @@ main {
     }
   }
   &__title {
-    font-family: "Piepie";
+    font-family: "PiepieW01-Regular";
     font-size: 68px;
     line-height: 80px;
     color: $orangeColor;
@@ -440,7 +440,7 @@ main {
     color: #1b1c1e;
     font-size: 20px;
     line-height: 28px;
-    font-family: "Piepie";
+    font-family: "PiepieW01-Regular";
     padding-bottom: 10px;
     @media only screen and (max-width: 786px) {
       font-size: 16px;
@@ -448,7 +448,7 @@ main {
     }
   }
   &__heading {
-    font-family: "Piepie";
+    font-family: "PiepieW01-Regular";
     font-size: 58px;
     line-height: 60px;
     color: #ffffff;
@@ -717,7 +717,7 @@ main {
 
 .m {
   &__title {
-    font-family: "Piepie";
+    font-family: "PiepieW01-Regular";
     font-size: 68px;
     line-height: 80px;
     color: $orangeColor;
@@ -811,7 +811,7 @@ main {
       grid-template-columns: repeat(2, 1fr);
     }
     &Head {
-      font-family: "Piepie";
+      font-family: "PiepieW01-Regular";
       font-size: 68px;
       line-height: 80px;
       color: #fff;
@@ -993,6 +993,7 @@ main {
         }
       }
     }
+
     &__submitButton {
       padding: 20px 40px;
       height: 68px;
@@ -1023,7 +1024,7 @@ main {
         font-size: 48px;
         line-height: 58px;
         color: #c71835;
-        font-family: "Piepie";
+        font-family: "PiepieW01-Regular";
         @media only screen and (max-width: 1024px) {
           font-size: 24px;
           line-height: 30px;
@@ -1033,6 +1034,25 @@ main {
   }
 }
 
+.btn {
+  &__round {
+    width: fit-content;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    min-width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #e65435;
+    align-items: center;
+    justify-content: center;
+    &Icon {
+      margin-left: 10px;
+      width: 24px;
+      height: 12px;
+    }
+  }
+}
 .bg {
   &__green {
     background: #22af6e;
@@ -1049,5 +1069,209 @@ main {
   &__red {
     background: #c71835;
     color: #fff;
+  }
+}
+
+.popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffb3d2;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  display: none;
+  &.active {
+    display: flex;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    padding: 20px;
+  }
+  @media only screen and (max-width: 786px) {
+    height: 100vh;
+    align-items: start;
+    overflow-y: auto;
+    padding-bottom: 90px;
+  }
+  &__container {
+    max-width: 887px;
+    width: 100%;
+    position: relative;
+    padding: 30px;
+    padding-top: 90px;
+    background: #ffffff;
+    border-radius: 10px;
+    @media only screen and (max-width: 1024px) {
+      padding-bottom: 70px;
+    }
+    @media only screen and (max-width: 786px) {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 70px;
+    }
+  }
+
+  &__closeBtn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__heading {
+    font-family: "PiepieW01-Regular";
+    color: #ffb3d2;
+    font-size: 48px;
+    line-height: 58px;
+    @media only screen and (max-width: 786px) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  &__form {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    &Text {
+      font-size: 22px;
+      line-height: 28px;
+      @media only screen and (max-width: 786px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    &Input {
+      border: 0px;
+      border-bottom: 1px solid #1b1c1e;
+      font-size: 22px;
+      line-height: 28px;
+      @media only screen and (max-width: 786px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      &:placeholder-shown {
+        font-size: 18px;
+        line-height: 28px;
+        @media only screen and (max-width: 786px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      &:focus-visible,
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      &.-fullname {
+        width: 239px;
+      }
+      &.-from {
+        width: 328px;
+      }
+      @media only screen and (max-width: 1024px) {
+        width: 100% !important;
+      }
+    }
+    &CheckBoxs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      @media only screen and (max-width: 786px) {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      &.-projectTags {
+        width: 260px;
+        @media only screen and (max-width: 1024px) {
+          width: 100%;
+        }
+      }
+      &.-priceTags {
+        .popUp__formCheckBoxLabel {
+          border-color: #ae5ef2;
+        }
+        .popUp__formCheckBox:checked {
+          + .popUp__formCheckBoxLabel {
+            background-color: #ae5ef2;
+            color: #fff;
+            backface-visibility: hidden;
+          }
+        }
+      }
+    }
+    &CheckBox {
+      display: none;
+      &Label {
+        cursor: pointer;
+        user-select: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid #22af6e;
+        display: inline-block;
+        backface-visibility: hidden;
+        transition: all 0.3s ease;
+        text-align: center;
+        @media only screen and (max-width: 786px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      &:checked {
+        + .popUp__formCheckBoxLabel {
+          background-color: #22af6e;
+          color: #fff;
+          backface-visibility: hidden;
+        }
+      }
+    }
+  }
+  &__inputWrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 10px;
+      padding-bottom: 30px;
+    }
+    @media only screen and (max-width: 786px) {
+      padding-bottom: 20px;
+    }
+  }
+  &__submit {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    bottom: -75px;
+    border-radius: 75px;
+    right: 30px;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    background: #e65435;
+    color: #ffffff;
+    @media only screen and (max-width: 1024px) {
+      width: 100px;
+      height: 100px;
+      font-size: 16px;
+      line-height: 20px;
+      bottom: -50px;
+    }
   }
 }

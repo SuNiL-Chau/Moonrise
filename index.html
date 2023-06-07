@@ -283,14 +283,34 @@
 			</section>
 			<section class="section__wrapper">
 				<div class="container">
-					<h2 class="section__title">
-						News
-						<img
-							src="assets/images/news_icon.png"
-							class="img-fluid section__titleIcon"
-							alt=""
-						/>
-					</h2>
+					<div
+						class="section__head mb-5 d-flex justify-content-between align-items-center"
+					>
+						<h2 class="section__title m-0">
+							News
+							<img
+								src="assets/images/news_icon.png"
+								class="img-fluid section__titleIcon"
+								alt=""
+							/>
+						</h2>
+						<a href="javascipt:void(0)" class="btn__round"
+							>View all News
+							<svg
+								class="btn__roundIcon"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 23 12"
+							>
+								<path
+									stroke="#fff"
+									stroke-linecap="round"
+									stroke-width="1.5"
+									d="M1 6h20m-4.5-5 5 5-5 5"
+								/>
+							</svg>
+						</a>
+					</div>
 					<div class="news__cards">
 						<div class="news__card">
 							<div class="news__imgWrapper">
@@ -335,6 +355,24 @@
 									trends to meet the needs of clients.
 								</p>
 							</div>
+						</div>
+						<div class="custom__tablet">
+							<a href="javascipt:void(0)" class="btn__round"
+								>View all News
+								<svg
+									class="btn__roundIcon"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 23 12"
+								>
+									<path
+										stroke="#fff"
+										stroke-linecap="round"
+										stroke-width="1.5"
+										d="M1 6h20m-4.5-5 5 5-5 5"
+									/>
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -660,6 +698,188 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="popUp" id="letsTalk">
+			<form class="popUp__container">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="popUp__closeBtn"
+					fill="none"
+					viewBox="0 0 41 40"
+				>
+					<path
+						fill="#1B1C1E"
+						stroke="#fff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M20.4987 36.8965c9.1667 0 16.6667-7.5472 16.6667-16.7715s-7.5-16.77148-16.6667-16.77148c-9.1667 0-16.66667 7.54718-16.66667 16.77148S11.332 36.8965 20.4987 36.8965Z"
+					/>
+					<path
+						stroke="#fff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="m15.7812 24.8716 9.4334-9.4927m0 9.4927-9.4334-9.4927"
+					/>
+				</svg>
+				<h3 class="popUp__heading">
+					Hi, <br class="custom__mobile" />
+					Moonrise. team!
+				</h3>
+				<div class="popUp__form">
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">My name is</p>
+						<input
+							type="text"
+							class="popUp__formInput -fullname"
+							placeholder="Your Name"
+						/>
+					</div>
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">from</p>
+						<input
+							type="text"
+							class="popUp__formInput -from"
+							placeholder="WEBSITE OR COMPANY NAME"
+						/>
+					</div>
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">I’d like to discuss</p>
+						<div class="popUp__formCheckBoxs -projectTags">
+							<input
+								type="checkbox"
+								name=""
+								class="popUp__formCheckBox"
+								value="DIAGNOSTICS"
+								id="project_tag1"
+							/>
+							<label
+								for="project_tag1"
+								class="popUp__formCheckBoxLabel"
+								>DIAGNOSTICS</label
+							>
+
+							<input
+								type="checkbox"
+								name=""
+								class="popUp__formCheckBox"
+								value="DIGITAL"
+								id="project_tag2"
+							/>
+							<label
+								for="project_tag2"
+								class="popUp__formCheckBoxLabel"
+								>DIGITAL</label
+							>
+							<input
+								type="checkbox"
+								name=""
+								class="popUp__formCheckBox"
+								value="DESIGN"
+								checked
+								id="project_tag3"
+							/>
+							<label
+								for="project_tag3"
+								class="popUp__formCheckBoxLabel"
+								>DESIGN</label
+							>
+							<input
+								type="checkbox"
+								name=""
+								class="popUp__formCheckBox"
+								value="ADVISORY"
+								id="project_tag4"
+							/>
+							<label
+								for="project_tag4"
+								class="popUp__formCheckBoxLabel"
+								>ADVISORY</label
+							>
+						</div>
+						<p class="popUp__formText">
+							project idea & design brief.
+						</p>
+					</div>
+					<div class="popUp__inputWrapper w-100">
+						<input
+							type="text"
+							class="popUp__formInput w-100"
+							placeholder="PITCH YOUR PROJECT IDEA (OPTIONAL)"
+							name="idea"
+						/>
+					</div>
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">
+							A budget for this project is
+						</p>
+						<div class="popUp__formCheckBoxs -priceTags">
+							<input
+								type="radio"
+								name="budget"
+								class="popUp__formCheckBox"
+								value="UNDER 5K"
+								id="project_price1"
+							/>
+							<label
+								for="project_price1"
+								class="popUp__formCheckBoxLabel"
+								>UNDER 5K</label
+							>
+
+							<input
+								type="radio"
+								name="budget"
+								class="popUp__formCheckBox"
+								value="5K-15K"
+								id="project_price2"
+							/>
+							<label
+								for="project_price2"
+								class="popUp__formCheckBoxLabel"
+								>5K-15K</label
+							>
+							<input
+								type="radio"
+								name="budget"
+								class="popUp__formCheckBox"
+								value="15K-50K"
+								checked
+								id="project_price3"
+							/>
+							<label
+								for="project_price3"
+								class="popUp__formCheckBoxLabel"
+								>15K-50K</label
+							>
+							<input
+								type="radio"
+								name="budget"
+								class="popUp__formCheckBox"
+								value="50K+"
+								id="project_price4"
+							/>
+							<label
+								for="project_price4"
+								class="popUp__formCheckBoxLabel"
+								>50K+</label
+							>
+						</div>
+					</div>
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">Contact me back at</p>
+						<input
+							type="text"
+							class="popUp__formInput -fullname"
+							placeholder="YOUR EMAIL ID"
+						/>
+					</div>
+				</div>
+				<button type="submit" class="popUp__submit">Submit</button>
+			</form>
+		</div>
+
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 		<!-- Bootstrap Bundle js -->
 		<script src="./dist/js/libs/bootstrap.bundle.min.js"></script>
@@ -778,6 +998,17 @@
 				var numberRegex = /^\d+$/;
 				return numberRegex.test(number);
 			}
+
+			let talkButton = document.querySelector(".navbar__talkBtn");
+			let closeButton = document.querySelector(".popUp__closeBtn");
+
+			talkButton.addEventListener("click", () => {
+				if (hamburger.classList.contains("active")) {
+					hamburger.classList.toggle("active");
+				}
+				document.body.classList.add("overflow-h");
+				document.querySelector("#letsTalk").classList.add("active");
+			});
 		</script>
 	</body>
 </html>
