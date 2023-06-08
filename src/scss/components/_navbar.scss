@@ -56,14 +56,14 @@
             position: absolute;
             left: 0;
             width: 100%;
-            top: 100px;
+            top: 90px;
             justify-content: center;
             flex-direction: column;
             background: $l-orangeColor;
             height: 0px;
             overflow: hidden;
             &.active {
-                height: calc(100vh - 100px);
+                height: calc(100vh - 90px);
             }
         }
     }

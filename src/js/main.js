@@ -17,7 +17,7 @@ let closeButton = document.querySelector(".popUp__closeBtn");
 talkButton.addEventListener("click", () => {
 	console.log("add");
 	if (hamburger.classList.contains("active")) {
-		hamburger.classList.toggle("active");
+		hamburger.click();
 	}
 	document.body.classList.add("overflow-h");
 	document.querySelector("#letsTalk").classList.add("active");
