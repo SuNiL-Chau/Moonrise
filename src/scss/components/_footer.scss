@@ -1,12 +1,6 @@
 @import "../baseInfo";
 
 .footer {
-    &.-bgPink {
-        background: $pinkColor;
-    }
-    &.-bgWhite {
-        background: $white;
-    }
     padding-top: 80px;
     padding-bottom: 80px;
     @include media-bp("mdl") {
@@ -92,6 +86,32 @@
         line-height: 20px;
         @include media-bp("mdl") {
             font-size: 10px;
+        }
+    }
+
+    &.-bgPink {
+        background: $pinkColor;
+    }
+    &.-bgWhite {
+        background: $white;
+    }
+    &.bg__orange {
+        .footer {
+            &__title {
+                color: #fff;
+                &Icon {
+                    rect {
+                        fill: #fff;
+                    }
+                    path {
+                        stroke: #e65435;
+                    }
+                }
+            }
+            &__navWrapper,
+            &__top {
+                border-color: #fff;
+            }
         }
     }
 }
