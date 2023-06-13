@@ -1,4 +1,7 @@
 // const { document } = require("postcss");
+AOS.init({
+	once: true,
+});
 
 let hamburger = document.querySelector(".navbar__hamburger");
 let MenuItems = document.querySelector(".navbar__items");
