@@ -115,6 +115,9 @@
 			</div>
 		</header>
 		<main>
+			<div id="cursor">
+				<div class="cursor__circle"></div>
+			</div>
 			<section class="section__wrapper bg__orange contact">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +173,10 @@
 						<div class="m__title mb-4">Our Services</div>
 					</div>
 					<div class="service">
-						<div class="service__section">
+						<div
+							class="service__section"
+							cursor-background-image="about_vision.png"
+						>
 							<h3 class="service__title">Diagnostics</h3>
 							<div class="service__content">
 								<p class="service__para">
@@ -191,7 +197,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="service__section">
+						<div
+							class="service__section"
+							cursor-background-image="about_vision.png"
+						>
 							<h3 class="service__title">Design</h3>
 							<div class="service__content">
 								<p class="service__para">
@@ -207,7 +216,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="service__section">
+						<div
+							class="service__section"
+							cursor-background-image="about_vision.png"
+						>
 							<h3 class="service__title">Advisory</h3>
 							<div class="service__content">
 								<p class="service__para">
@@ -225,7 +237,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="service__section">
+						<div
+							class="service__section"
+							cursor-background-image="about_vision.png"
+						>
 							<h3 class="service__title">Digital</h3>
 							<div class="service__content">
 								<p class="service__para">
@@ -248,13 +263,118 @@
 			</section>
 			<section class="section__wrapper bg__orange">
 				<div class="container">
-					<div class="m__title">Deliverables</div>
+					<div class="m__title deliverable__head">Deliverables</div>
 					<p>
 						We provide deliverables that are comprehensive and
-						<br />
+						<br class="custom__desktop" />
 						tangible, in various formats that are tailored to your
 						needs.
 					</p>
+					<div class="deliverable__navs">
+						<div class="deliverable__nav active">Strategy</div>
+						<div class="deliverable__nav">Design</div>
+						<span class="deliverable__navsBar"></span>
+					</div>
+					<div class="deliverable__tabs">
+						<div class="deliverable__tab show" data-tab="Strategy">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="deliverable__card">
+										<div class="deliverable__cardCircle">
+											<img
+												src="assets/images/icon/brand_plan.png"
+												alt=""
+												class="deliverable__img img-fluid"
+											/>
+										</div>
+										<div class="deliverable__content">
+											<h3 class="deliverable__title">
+												Brand Plan
+											</h3>
+											<p class="deliverable__para">
+												A comprehensive plan that
+												outlines the objectives of your
+												brand, and the tactics and
+												strategy devised to meet those
+												objectives.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="deliverable__card">
+										<div class="deliverable__cardCircle">
+											<img
+												src="assets/images/icon/Insight_Report.png"
+												alt=""
+												class="deliverable__img img-fluid"
+											/>
+										</div>
+										<div class="deliverable__content">
+											<h3 class="deliverable__title">
+												Insight Report
+											</h3>
+											<p class="deliverable__para">
+												A findings report that derives
+												from desktop research, surveys
+												from brand loyalists,
+												stakeholder interviews and on-
+												ground mystery shopping.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="deliverable__tab" data-tab="Design">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="deliverable__card">
+										<div class="deliverable__cardCircle">
+											<img
+												src="assets/images/icon/Moodboards.png"
+												alt=""
+												class="deliverable__img img-fluid"
+											/>
+										</div>
+										<div class="deliverable__content">
+											<h3 class="deliverable__title">
+												Moodboards
+											</h3>
+											<p class="deliverable__para">
+												The preliminary stages of the
+												branding process, that consist
+												of the color palette, visual
+												elements and typeface.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="deliverable__card">
+										<div class="deliverable__cardCircle">
+											<img
+												src="assets/images/icon/Palette-of-Codes.png"
+												alt=""
+												class="deliverable__img img-fluid"
+											/>
+										</div>
+										<div class="deliverable__content">
+											<h3 class="deliverable__title">
+												Palette of Codes
+											</h3>
+											<p class="deliverable__para">
+												Consists of the logo, tagline,
+												color values, packaging box,
+												icons, typography and other
+												brand touchpoints.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -400,6 +520,99 @@
 		<script src="./dist/js/libs/bootstrap.bundle.min.js"></script>
 		<!-- Custom main js -->
 		<script src="./dist/js/main.js"></script>
-		<script></script>
+		<script>
+			const tabNavs = document.querySelectorAll(".deliverable__nav");
+			const tabNavsBar = document.querySelector(".deliverable__navsBar");
+			const tabContents = document.querySelectorAll(".deliverable__tab");
+
+			tabNavs.forEach((tabNav) => {
+				tabNav.addEventListener("click", () => {
+					const activeTab = tabNav.textContent;
+
+					tabNavs.forEach((nav) => {
+						nav.classList.remove("active");
+					});
+
+					tabContents.forEach((content) => {
+						content.classList.remove("show");
+					});
+					tabNavsBar.style.width = `${tabNav.offsetWidth}px`;
+					tabNavsBar.style.transform = `translateX(${tabNav.offsetLeft}px)`;
+					tabNav.classList.add("active");
+					document
+						.querySelector(`[data-tab="${activeTab}"]`)
+						.classList.add("show");
+				});
+			});
+
+			const cursor = document.querySelector("#cursor");
+			const cursorCircle = cursor.querySelector(".cursor__circle");
+
+			const mouse = { x: -100, y: -100 }; // mouse pointer's coordinates
+			const pos = { x: 0, y: 0 }; // cursor's coordinates
+			const speed = 0.15; // between 0 and 1
+
+			const updateCoordinates = (e) => {
+				mouse.x = e.clientX;
+				mouse.y = e.clientY;
+			};
+
+			// window.addEventListener("mousemove", updateCoordinates);
+
+			function getAngle(diffX, diffY) {
+				return (Math.atan2(diffY, diffX) * 180) / Math.PI;
+			}
+
+			function getSqueeze(diffX, diffY) {
+				const distance = Math.sqrt(
+					Math.pow(diffX, 2) + Math.pow(diffY, 2)
+				);
+				const maxSqueeze = 0.15;
+				const accelerator = 1500;
+				return Math.min(distance / accelerator, maxSqueeze);
+			}
+
+			const updateCursor = () => {
+				const diffX = Math.round(mouse.x - pos.x);
+				const diffY = Math.round(mouse.y - pos.y);
+
+				pos.x += diffX * speed;
+				pos.y += diffY * speed;
+
+				const angle = getAngle(diffX, diffY);
+				const squeeze = getSqueeze(diffX, diffY);
+
+				const scale =
+					"scale(" + (1 + squeeze) + ", " + (1 - squeeze) + ")";
+				const rotate = "rotate(" + angle + "deg)";
+				const translate =
+					"translate3d(" + pos.x + "px ," + pos.y + "px, 0)";
+
+				cursor.style.transform = translate;
+				cursorCircle.style.transform = rotate + scale;
+			};
+
+			function loop() {
+				updateCursor();
+				requestAnimationFrame(loop);
+			}
+
+			requestAnimationFrame(loop);
+
+			const cursorModifiers =
+				document.querySelectorAll(".service__section");
+
+			cursorModifiers.forEach((curosrModifier) => {
+				curosrModifier.addEventListener("mouseenter", function () {
+					const image = this.getAttribute("cursor-background-image");
+					console.log(cursorCircle.style);
+					cursorCircle.style.backgroundImage = `url(../../assets/images/${image})`;
+				});
+
+				curosrModifier.addEventListener("mouseleave", function () {
+					const image = this.getAttribute("cursor-background-image");
+				});
+			});
+		</script>
 	</body>
 </html>

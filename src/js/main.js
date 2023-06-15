@@ -15,7 +15,7 @@ hamburger.addEventListener("click", () => {
 	}
 });
 let talkButton = document.querySelector(".navbar__talkBtn");
-let closeButton = document.querySelector(".popUp__closeBtn");
+let closeButtons = document.querySelectorAll(".popUp__closeBtn");
 
 talkButton.addEventListener("click", () => {
 	console.log("add");
@@ -26,14 +26,21 @@ talkButton.addEventListener("click", () => {
 	document.querySelector("#letsTalk").classList.add("active");
 });
 
-closeButton.addEventListener("click", () => {
-	document.body.classList.remove("overflow-h");
-	document.querySelector("#letsTalk").classList.remove("active");
+closeButtons.forEach((closeButton) => {
+	closeButton.addEventListener("click", () => {
+		document.body.classList.remove("overflow-h");
+		document.querySelector("#letsTalk").classList.remove("active");
+		if (document.querySelector(".js-contact-state"))
+			document
+				.querySelector(".js-contact-state")
+				.classList.remove("active");
+	});
 });
 
-document
-	.querySelector("#letsTalk form")
-	.addEventListener("submit", function (e) {
+let LetsTalkForm = document.querySelector("#letsTalk form");
+
+if (LetsTalkForm) {
+	LetsTalkForm.addEventListener("submit", function (e) {
 		e.preventDefault();
 
 		let formValid = true;
@@ -103,3 +110,4 @@ document
 			// Submit the form
 		}
 	});
+}

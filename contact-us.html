@@ -82,6 +82,11 @@
 		<meta name="theme-color" content="#ffffff" />
 		<!-- favicon end-->
 
+		<link
+			href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+			rel="stylesheet"
+		/>
+
 		<link rel="stylesheet" href="./dist/css/bootstrap.css" />
 		<link rel="stylesheet" href="./dist/css/fonts.css" />
 		<link rel="stylesheet" href="./dist/css/main.css" />
@@ -185,14 +190,14 @@
 					</div>
 				</div>
 				<div class="container">
-					<form action="" class="contactForm" id="">
+					<form action="" class="contactForm" id="contact_form">
 						<div class="contactForm__inputWrapper">
 							<label for="name">Name</label>
 							<div class="contactForm__input">
 								<input
 									type="text"
 									placeholder="Please enter your name"
-									id="name"
+									id="fullname"
 									name="name"
 									required
 								/>
@@ -402,10 +407,428 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="popUp js-contact-state">
+			<div class="popUp__container -failed">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="popUp__closeBtn"
+					fill="none"
+					viewBox="0 0 41 40"
+				>
+					<path
+						fill="#1B1C1E"
+						stroke="#fff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M20.4987 36.8965c9.1667 0 16.6667-7.5472 16.6667-16.7715s-7.5-16.77148-16.6667-16.77148c-9.1667 0-16.66667 7.54718-16.66667 16.77148S11.332 36.8965 20.4987 36.8965Z"
+					/>
+					<path
+						stroke="#fff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="m15.7812 24.8716 9.4334-9.4927m0 9.4927-9.4334-9.4927"
+					/>
+				</svg>
+				<div class="form_submittedState -submitted">
+					<svg
+						class="form_submittedStateIcon"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 101 100"
+					>
+						<rect
+							width="100"
+							height="100"
+							x=".200195"
+							fill="#fff"
+							rx="50"
+						/>
+						<path
+							stroke="#22AF6E"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="3"
+							d="m28 58 12 12 32-40"
+						/>
+					</svg>
+					<p class="form_submittedStateText">
+						Thank you for completing the <br />
+						application form! We’ll get back <br />
+						to you as soon as possible.
+					</p>
+				</div>
+				<div class="form_submittedState -notsubmitted">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="form_submittedStateIcon"
+						fill="none"
+						viewBox="0 0 101 100"
+					>
+						<rect
+							width="100"
+							height="100"
+							x=".201172"
+							fill="#C71835"
+							rx="50"
+						/>
+						<path
+							fill="#FEFBED"
+							d="m53.2254 29.688-.7202 28.5318H48.35l-.7202-28.5318h5.5956Zm.3324 34.072v5.928h-6.1496V63.76h6.1496Z"
+						/>
+					</svg>
+					<p class="form_submittedStateText">
+						Opps! We are facing some <br />
+						technical issues. Please try again
+						<br />
+						or contact at mail@mail.com
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="popUp" id="letsTalk">
+			<form class="popUp__container">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="popUp__closeBtn"
+					fill="none"
+					viewBox="0 0 41 40"
+				>
+					<path
+						fill="#1B1C1E"
+						stroke="#fff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M20.4987 36.8965c9.1667 0 16.6667-7.5472 16.6667-16.7715s-7.5-16.77148-16.6667-16.77148c-9.1667 0-16.66667 7.54718-16.66667 16.77148S11.332 36.8965 20.4987 36.8965Z"
+					/>
+					<path
+						stroke="#fff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="m15.7812 24.8716 9.4334-9.4927m0 9.4927-9.4334-9.4927"
+					/>
+				</svg>
+				<h3 class="popUp__heading">
+					Hi, <br class="custom__mobile" />
+					Moonrise. team!
+				</h3>
+				<div class="popUp__form">
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">My name is</p>
+						<input
+							type="text"
+							class="popUp__formInput -fullname"
+							placeholder="Your Name"
+							name="name"
+						/>
+					</div>
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">from</p>
+						<input
+							type="text"
+							class="popUp__formInput -from"
+							name="form"
+							placeholder="WEBSITE OR COMPANY NAME"
+						/>
+					</div>
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">I’d like to discuss</p>
+						<div class="popUp__formCheckBoxs -projectTags">
+							<input
+								type="checkbox"
+								name=""
+								class="popUp__formCheckBox"
+								value="DIAGNOSTICS"
+								id="project_tag1"
+							/>
+							<label
+								for="project_tag1"
+								class="popUp__formCheckBoxLabel"
+								>DIAGNOSTICS</label
+							>
+
+							<input
+								type="checkbox"
+								name=""
+								class="popUp__formCheckBox"
+								value="DIGITAL"
+								id="project_tag2"
+							/>
+							<label
+								for="project_tag2"
+								class="popUp__formCheckBoxLabel"
+								>DIGITAL</label
+							>
+							<input
+								type="checkbox"
+								name=""
+								class="popUp__formCheckBox"
+								value="DESIGN"
+								checked
+								id="project_tag3"
+							/>
+							<label
+								for="project_tag3"
+								class="popUp__formCheckBoxLabel"
+								>DESIGN</label
+							>
+							<input
+								type="checkbox"
+								name=""
+								class="popUp__formCheckBox"
+								value="ADVISORY"
+								id="project_tag4"
+							/>
+							<label
+								for="project_tag4"
+								class="popUp__formCheckBoxLabel"
+								>ADVISORY</label
+							>
+						</div>
+						<p class="popUp__formText">
+							project idea & design brief.
+						</p>
+					</div>
+					<div class="popUp__inputWrapper w-100">
+						<input
+							type="text"
+							class="popUp__formInput w-100"
+							placeholder="PITCH YOUR PROJECT IDEA (OPTIONAL)"
+							name="idea"
+						/>
+					</div>
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">
+							A budget for this project is
+						</p>
+						<div class="popUp__formCheckBoxs -priceTags">
+							<input
+								type="radio"
+								name="budget"
+								class="popUp__formCheckBox"
+								value="UNDER 5K"
+								id="project_price1"
+							/>
+							<label
+								for="project_price1"
+								class="popUp__formCheckBoxLabel"
+								>UNDER 5K</label
+							>
+
+							<input
+								type="radio"
+								name="budget"
+								class="popUp__formCheckBox"
+								value="5K-15K"
+								id="project_price2"
+							/>
+							<label
+								for="project_price2"
+								class="popUp__formCheckBoxLabel"
+								>5K-15K</label
+							>
+							<input
+								type="radio"
+								name="budget"
+								class="popUp__formCheckBox"
+								value="15K-50K"
+								checked
+								id="project_price3"
+							/>
+							<label
+								for="project_price3"
+								class="popUp__formCheckBoxLabel"
+								>15K-50K</label
+							>
+							<input
+								type="radio"
+								name="budget"
+								class="popUp__formCheckBox"
+								value="50K+"
+								id="project_price4"
+							/>
+							<label
+								for="project_price4"
+								class="popUp__formCheckBoxLabel"
+								>50K+</label
+							>
+						</div>
+					</div>
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">Contact me back at</p>
+						<input
+							type="text"
+							class="popUp__formInput -email"
+							placeholder="YOUR EMAIL ID"
+							name="email"
+						/>
+					</div>
+				</div>
+				<div class="form_submittedState -submitted">
+					<svg
+						class="form_submittedStateIcon"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 101 100"
+					>
+						<rect
+							width="100"
+							height="100"
+							x=".200195"
+							fill="#fff"
+							rx="50"
+						/>
+						<path
+							stroke="#22AF6E"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="3"
+							d="m28 58 12 12 32-40"
+						/>
+					</svg>
+					<p class="form_submittedStateText">
+						Thank you for completing the <br />
+						application form! We’ll get back <br />
+						to you as soon as possible.
+					</p>
+				</div>
+				<div class="form_submittedState -notsubmitted">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="form_submittedStateIcon"
+						fill="none"
+						viewBox="0 0 101 100"
+					>
+						<rect
+							width="100"
+							height="100"
+							x=".201172"
+							fill="#C71835"
+							rx="50"
+						/>
+						<path
+							fill="#FEFBED"
+							d="m53.2254 29.688-.7202 28.5318H48.35l-.7202-28.5318h5.5956Zm.3324 34.072v5.928h-6.1496V63.76h6.1496Z"
+						/>
+					</svg>
+					<p class="form_submittedStateText">
+						Opps! We are facing some <br />
+						technical issues. Please try again
+						<br />
+						or contact at mail@mail.com
+					</p>
+				</div>
+				<button type="submit" class="popUp__submit">Submit</button>
+			</form>
+		</div>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 		<!-- Bootstrap Bundle js -->
 		<script src="./dist/js/libs/bootstrap.bundle.min.js"></script>
 		<!-- Custom main js -->
 		<script src="./dist/js/main.js"></script>
-		<script></script>
+		<script>
+			document
+				.querySelector("#contact_form")
+				.addEventListener("submit", function (e) {
+					e.preventDefault();
+
+					let formValid = true;
+					// Clear previous error messages and remove error class
+					var errorMessages =
+						document.querySelectorAll(".form-error");
+					var formFloatings = document.querySelectorAll(
+						".popUp__inputWrapper"
+					);
+
+					errorMessages.forEach(function (formFloating) {
+						formFloating.classList.remove("-Invalid");
+					});
+
+					// Validate Name
+					var nameInput = document.querySelector(
+						".contactForm__input #fullname"
+					);
+					var name = nameInput.value.trim();
+					if (name === "") {
+						alert("Name is required");
+						formValid = false;
+					}
+
+					// Validate Email
+					var emailInput = document.querySelector(
+						".contactForm__input #email"
+					);
+					var email = emailInput.value.trim();
+					if (email === "") {
+						alert("Email is required");
+						formValid = false;
+					}
+
+					console.log(formValid);
+					// If there are no errors, submit the form
+					if (formValid) {
+						const xhr = new XMLHttpRequest();
+						xhr.open("POST", "send_email.php", true);
+						xhr.setRequestHeader(
+							"Content-type",
+							"application/x-www-form-urlencoded"
+						);
+						xhr.onreadystatechange = function () {
+							if (
+								xhr.readyState === XMLHttpRequest.DONE &&
+								xhr.status === 200
+							) {
+								document
+									.querySelector(".js-contact-state")
+									.classList.add("active");
+								document
+									.querySelector(".popUp__container")
+									.classList.add("-success");
+
+								// Request successful, do something if needed
+								console.log("Email sent successfully!");
+								form.reset(); // Reset the form
+
+								setTimeout(() => {
+									document
+										.querySelector(".popUp__container")
+										.classList.remove("-success");
+									document
+										.querySelector(".js-contact-state")
+										.classList.remove("active");
+								}, 5000);
+							} else {
+								document
+									.querySelector(".js-contact-state")
+									.classList.add("active");
+								document
+									.querySelector(".popUp__container")
+									.classList.add("-failed");
+
+								// Request successful, do something if needed
+								console.log("Email not sent");
+
+								setTimeout(() => {
+									document
+										.querySelector(".js-contact-state")
+										.classList.remove("active");
+									document
+										.querySelector(".popUp__container")
+										.classList.remove("-failed");
+								}, 5000);
+							}
+						};
+						xhr.send(`email=${encodeURIComponent(email)}`);
+
+						// Submit the form
+					}
+				});
+		</script>
 	</body>
 </html>

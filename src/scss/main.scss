@@ -714,7 +714,7 @@ main {
     display: flex;
   }
 }
-#letsTalk .popUp__container.-success {
+.popUp__container.-success {
   .popUp__submit,
   .popUp__heading,
   .popUp__form {
@@ -724,7 +724,7 @@ main {
     display: flex;
   }
 }
-#letsTalk .popUp__container.-failed {
+.popUp__container.-failed {
   .popUp__submit,
   .popUp__heading,
   .popUp__form {
@@ -1110,6 +1110,22 @@ main {
   display: none;
   &.active {
     display: flex;
+  }
+  &.js-contact-state {
+    background: rgba(244, 220, 73, 0.5);
+    backdrop-filter: blur(10px);
+    .popUp__container {
+      background: transparent;
+      max-width: 600px;
+      padding: 0;
+      .popUp__closeBtn {
+        z-index: 999;
+      }
+    }
+    .form_submittedState {
+      position: relative;
+      width: 100%;
+    }
   }
 
   @media only screen and (max-width: 1024px) {
@@ -1591,5 +1607,116 @@ main {
       height: 24px;
       flex-shrink: 0;
     }
+  }
+}
+
+#cursor {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  will-change: transform;
+  // mix-blend-mode: difference;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor__circle {
+    width: 120px;
+    height: 120px;
+    margin-top: -50%;
+    margin-left: -50%;
+    border-radius: 50%;
+    background-image: url(../../assets/images/contact-banner-m.png);
+    background-position: center;
+    background-size: cover;
+    // border: solid 1px rgba(227, 222, 193, 0.64);
+    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+      border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+      height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+}
+
+.deliverable {
+  &__head {
+    color: #f4dc49;
+    padding-bottom: 20px;
+  }
+  &__navs {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+
+    &Bar {
+      position: absolute;
+      width: 150px;
+      bottom: -1px;
+      left: 0;
+      height: 3px;
+      background: #f4dc49;
+      z-index: 9;
+    }
+  }
+  &__nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-family: "Suisse Neue";
+    line-height: 30px;
+    min-width: 150px;
+    @media only screen and (max-width: 786px) {
+      min-width: 50%;
+    }
+    cursor: pointer;
+    &.active {
+      color: #f4dc49;
+    }
+  }
+  &__tab {
+    display: none;
+    &.show {
+      display: block;
+    }
+
+    @media only screen and (max-width: 786px) {
+      .row {
+        gap: 40px;
+      }
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    @media only screen and (max-width: 786px) {
+      flex-direction: column;
+      align-items: start;
+    }
+    &Circle {
+      width: 180px;
+      height: 180px;
+      flex-shrink: 0;
+      flex-grow: 1;
+      border-radius: 50%;
+      background: #f4dc49;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 10px;
+  }
+  &__para {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
