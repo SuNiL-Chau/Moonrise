@@ -21,25 +21,7 @@ body {
 .overflow-h {
   overflow: hidden;
 }
-.custom {
-  &__desktop {
-    @include media-bp("mdl") {
-      display: none;
-    }
-  }
-  &__mobile {
-    display: none;
-    @include media-bp("mdl") {
-      display: block;
-    }
-  }
-  &__tablet {
-    display: none;
-    @media only screen and (max-width: 1024px) {
-      display: block;
-    }
-  }
-}
+
 * {
   transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   word-wrap: break-word;
@@ -95,9 +77,9 @@ button {
 @import "./components/banner";
 @import "./components/footer";
 main {
-  padding-top: 118px;
+  padding-top: 100px;
   @media only screen and (max-width: 1024px) {
-    padding-top: 90px;
+    padding-top: 95px;
   }
 }
 .section {
@@ -112,14 +94,16 @@ main {
   &__title {
     position: relative;
     display: inline-block;
-    font-size: 32px;
+    // font-size: 32px;
+    font-size: 48px;
+    line-height: 50px;
     font-family: "Suisse Neue";
     font-weight: 500;
     margin-bottom: 40px;
     z-index: 1;
     &Icon {
       position: absolute;
-      top: -70%;
+      top: -50%;
       right: -50px;
       z-index: -1;
     }
@@ -129,11 +113,11 @@ main {
       top: 40px;
       width: 205px;
       height: 150px;
-      @media only screen and (max-width: 786px) {
-        top: 30px;
-        width: 185px;
+      @media only screen and (max-width: 1024px) {
+        top: 0px;
+        width: 40px;
         height: 120px;
-        left: calc(100% + 20px);
+        left: calc(100% + 40px);
       }
     }
   }
@@ -353,6 +337,8 @@ main {
     @media only screen and (max-width: 786px) {
       min-width: 120px;
       padding: 5px;
+      font-size: 14px;
+      line-height: 20px;
     }
   }
   &__divder {
@@ -373,7 +359,8 @@ main {
     }
   }
   &__about {
-    max-width: 80%;
+    max-width: calc(90% - 30px);
+    width: 100%;
     @include media-bp("mdl") {
       max-width: 100%;
     }
@@ -381,8 +368,8 @@ main {
       font-family: "Suisse Neue";
       font-weight: 400;
       padding-bottom: 30px;
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 48px;
+      line-height: 50px;
       border-bottom: 1px solid $black_1;
       @include media-bp("mdl") {
         font-size: 24px;
@@ -439,7 +426,7 @@ main {
   &__subheading {
     color: #1b1c1e;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 24px;
     font-family: "PiepieW01-Regular";
     padding-bottom: 10px;
     @media only screen and (max-width: 786px) {
@@ -559,7 +546,7 @@ main {
   &__card {
     border: 1px solid #1b1c1e;
     border-radius: 20px;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -570,7 +557,7 @@ main {
 
       background: #f4dc49;
       .news__date {
-        color: #ffffff;
+        color: #000;
       }
     }
     @media only screen and (max-width: 1024px) {
@@ -605,12 +592,12 @@ main {
     }
   }
   &__date {
-    font-size: 14px;
+    font-size: 16px;
     color: #c6c6c6;
     padding-bottom: 10px;
   }
   &__title {
-    font-size: 24px;
+    font-size: 20px;
     padding-bottom: 10px;
     @include media-bp("mdl") {
       font-size: 20px;
@@ -623,10 +610,11 @@ main {
 .form-floating > .form-control:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label {
   color: rgba(var(--bs-body-color-rgb), 0.65);
-  transform: scale(0.85) translateY(-0.5rem) translateX(0rem) !important;
+  transform: scale(0.8) translateY(-0.9rem) translateX(0rem) !important;
 }
 .form {
   &-control {
+    font-size: 20px;
     border: 0;
     border-bottom: 1px solid #1b1c1e;
     border-radius: 0;
@@ -641,6 +629,7 @@ main {
   label {
     padding-left: 0px;
     color: #c6c6c6;
+    font-size: 20px;
   }
   &_submittedState {
     display: none;
@@ -665,6 +654,7 @@ main {
       height: 100px;
     }
     &Text {
+      font-size: 24px;
       padding-top: 20px;
       text-align: center;
       color: #ffffff;
@@ -676,15 +666,17 @@ main {
       display: block;
     }
     &Icon {
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
     }
     &Text {
+      font-size: 14px;
       padding-top: 10px;
       color: #c71835;
     }
   }
   &__submit {
+    font-size: 14px;
     margin-top: 30px;
     font-weight: 500;
     color: #fff;
@@ -695,6 +687,10 @@ main {
     background-color: #e65435;
     align-items: center;
     justify-content: center;
+    @media only screen and (max-width: 786px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -755,7 +751,7 @@ main {
 .process {
   overflow: hidden;
   position: relative;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 90px);
   background: #fefbed;
   display: flex;
   align-items: center;
@@ -765,14 +761,40 @@ main {
     &.-Icon1 {
       top: 0;
       right: 15%;
+      @include media-bp("mdl") {
+        width: 110px;
+        top: -15px;
+      }
     }
     &.-Icon2 {
       bottom: 10%;
       right: 10%;
+      @include media-bp("mdl") {
+        width: 110px;
+      }
     }
     &.-Icon3 {
       bottom: 5%;
       left: 0;
+      @include media-bp("mdl") {
+        width: 110px;
+        left: -30px;
+      }
+    }
+    &.-downIcon {
+      left: calc(50% + 2px);
+      transform: translateX(-50%);
+      bottom: 50px;
+      width: 23px;
+      @include media-bp("tablet") {
+        transform: unset;
+        left: 50px;
+      }
+      @include media-bp("mdl") {
+        left: 22px;
+        width: 15px;
+        bottom: 20px;
+      }
     }
   }
   &__wrapper {
@@ -807,6 +829,11 @@ main {
       left: 20px;
     }
   }
+  @media only screen and (max-width: 786px) {
+    .container {
+      height: 100%;
+    }
+  }
   &__headWrapper {
     display: flex;
     flex-direction: column;
@@ -823,6 +850,20 @@ main {
         max-width: 270px;
       }
     }
+    @media only screen and (max-width: 786px) {
+      max-width: 80%;
+      align-items: start;
+      padding-top: 80px;
+      .m__title {
+        font-size: 36px;
+        line-height: 43px;
+      }
+      .m__para {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    gap: 20px;
   }
   &__step {
     @media only screen and (min-width: 1024px) {
@@ -1065,11 +1106,18 @@ main {
     border-radius: 20px;
     background-color: #e65435;
     align-items: center;
+    font-size: 14px;
+    line-height: 20px;
     justify-content: center;
     &Icon {
       margin-left: 10px;
       width: 24px;
       height: 12px;
+    }
+
+    @media only screen and (max-width: 786px) {
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }
@@ -1080,7 +1128,10 @@ main {
   }
   &__yellow {
     background: #f4dc49;
-    // color: #fff;
+
+    &.-text-white {
+      color: #fff;
+    }
   }
   &__blue {
     background: #61cbf0;
@@ -1093,6 +1144,9 @@ main {
   &__orange {
     background: #e65435;
     color: #fff;
+    &Light {
+      background: rgba(254, 251, 237, 1);
+    }
   }
 }
 
@@ -1317,6 +1371,10 @@ main {
       font-size: 16px;
       line-height: 20px;
       bottom: -50px;
+    }
+    @media only screen and (max-width: 786px) {
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }
@@ -1718,5 +1776,25 @@ main {
   &__para {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.custom {
+  &__desktop {
+    @media only screen and (max-width: 1024px) {
+      display: none !important;
+    }
+  }
+  &__mobile {
+    display: none;
+    @include media-bp("mdl") {
+      display: block;
+    }
+  }
+  &__tablet {
+    display: none !important;
+    @media only screen and (max-width: 1024px) {
+      display: block !important;
+    }
   }
 }
