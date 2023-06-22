@@ -81,6 +81,9 @@ main {
   @media only screen and (max-width: 1024px) {
     padding-top: 95px;
   }
+  &.about-us {
+    background-color: #FEFBED;
+  }
 }
 .section {
   &__wrapper {
