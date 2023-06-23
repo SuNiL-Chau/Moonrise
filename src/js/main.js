@@ -71,7 +71,20 @@ if (LetsTalkForm) {
 			formValid = false;
 		}
 
-		console.log(formValid);
+		var formData = new FormData(this); // Get form data
+
+		// Append selected checkbox values manually
+		var checkboxes = document.getElementsByName("project_idea");
+		var checkedCategories = Array.prototype.slice
+			.call(checkboxes)
+			.filter(function (checkbox) {
+				return checkbox.checked;
+			})
+			.map(function (checkbox) {
+				return checkbox.value;
+			});
+
+		formData.append("idea", checkedCategories.join(", "));
 		// If there are no errors, submit the form
 		if (formValid) {
 			const xhr = new XMLHttpRequest();
@@ -105,9 +118,14 @@ if (LetsTalkForm) {
 					}, 5000);
 				}
 			};
-			xhr.send(`email=${encodeURIComponent(email)}`);
+			xhr.send(formData);
 
 			// Submit the form
 		}
 	});
+
+	function isValidEmail(email) {
+		var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		return emailRegex.test(email);
+	}
 }

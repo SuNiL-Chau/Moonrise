@@ -1,6 +1,224 @@
 @import "../baseInfo";
 
 .home {
+    .moonrise {
+        @media only screen and (min-width: 1024px) {
+            height: calc(100vh - 108px);
+        }
+        .row {
+            height: 100%;
+        }
+        &__content {
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            @media only screen and (max-width: 1400px) {
+                margin-left: 60px;
+            }
+            @media only screen and (max-width: 1024px) {
+                max-width: 100%;
+                margin-left: 0px;
+                padding-left: 60px;
+
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+            @media only screen and (max-width: 786px) {
+                padding-top: 40px;
+                padding-bottom: 40px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        &__subheading {
+            color: #1b1c1e;
+            font-size: 20px;
+            line-height: 24px;
+            font-family: "PiepieW01-Regular";
+            padding-bottom: 10px;
+            @media only screen and (max-width: 786px) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+        &__heading {
+            font-family: "PiepieW01-Regular";
+            font-size: 58px;
+            line-height: 60px;
+            color: #ffffff;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            text-shadow: 3px 3px 0px #1b1c1e;
+            @media only screen and (max-width: 786px) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+        &__downButton {
+            position: absolute;
+            left: 0;
+            bottom: 100px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f4dc49;
+            /* #1B1C1E */
+
+            border: 1px solid #1b1c1e;
+            box-shadow: 4px 2px 0px #000000;
+            border-radius: 100px;
+
+            @media only screen and (max-width: 1024px) {
+                position: relative;
+                bottom: unset;
+                margin-top: 20px;
+            }
+            svg {
+                width: 12px;
+                height: 24px;
+            }
+        }
+        &__slider {
+            margin: 0;
+            max-width: 500px;
+            width: 100%;
+            padding-left: 90px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            @media only screen and (max-width: 1024px) {
+                max-width: 100%;
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+            @media only screen and (max-width: 786px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            &ImgWrapper {
+                width: 100%;
+                display: block;
+                position: relative;
+                padding-top: calc(55000% / 511);
+                border: 1px solid #1b1c1e;
+                border-radius: 20px;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            &Bullet {
+                gap: 5px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                bottom: unset !important;
+                top: unset !important;
+                .swiper-pagination-bullet {
+                    width: 30px;
+                    height: 20px;
+                    border-radius: 10px;
+                    border: 1px solid #1b1c1e;
+                    box-shadow: -2px 4px 0px #000000;
+                    opacity: 1;
+                    background-color: #ffffff;
+                    &.swiper-pagination-bullet-active {
+                        width: 80px;
+                        background: #f4dc49;
+                    }
+                }
+            }
+        }
+        &__bgPink {
+            background: $pinkColor;
+        }
+    }
+
+    // news
+    .news {
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        &__card {
+            border: 1px solid #1b1c1e;
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            align-items: center;
+            cursor: pointer;
+            &:hover {
+                border: 1px solid #f4dc49;
+
+                background: #f4dc49;
+                .news__date {
+                    color: #000;
+                }
+            }
+            @media only screen and (max-width: 1024px) {
+                flex-direction: column;
+            }
+            @include media-bp("mdl") {
+                padding: 20px;
+            }
+        }
+        &__img {
+            &Wrapper {
+                width: 363px;
+                position: relative;
+                aspect-ratio: 363 / 182;
+                overflow: hidden;
+                border-radius: 10px;
+                @media only screen and (max-width: 1024px) {
+                    width: 100%;
+                }
+            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            object-fit: cover;
+        }
+        &__content {
+            max-width: 600px;
+            width: 100%;
+            @media only screen and (max-width: 1024px) {
+                max-width: 100%;
+            }
+        }
+        &__date {
+            font-size: 16px;
+            color: #c6c6c6;
+            padding-bottom: 10px;
+        }
+        &__title {
+            font-size: 20px;
+            padding-bottom: 10px;
+            @include media-bp("mdl") {
+                font-size: 20px;
+            }
+        }
+        &__para {
+            font-size: 14px;
+        }
+    }
 }
 @include media-bp(mdl) {
 }

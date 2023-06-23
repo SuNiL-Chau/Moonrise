@@ -90,7 +90,7 @@
 		<link rel="stylesheet" href="./dist/css/bootstrap.css" />
 		<link rel="stylesheet" href="./dist/css/fonts.css" />
 		<link rel="stylesheet" href="./dist/css/main.css" />
-		<!-- <link rel="stylesheet" href="./dist/css/pages/home.css" /> -->
+		<link rel="stylesheet" href="./dist/css/pages/contact.css" />
 	</head>
 
 	<body>
@@ -110,17 +110,20 @@
 						alt=""
 				/></a>
 				<div class="navbar__items">
-					<a href="services" class="navbar__link active">Services</a>
+					<a href="services" class="navbar__link">Services</a>
 					<a href="work" class="navbar__link">Work</a>
 					<a href="about-us" class="navbar__link">About Us</a>
 					<a href="process" class="navbar__link">Process</a>
-					<a href="contact-us" class="navbar__link">Contact Us</a>
+					<a href="contact-us" class="navbar__link">Gallery</a>
+					<a href="contact-us" class="navbar__link active"
+						>Contact Us</a
+					>
 					<button class="navbar__talkBtn">Let's Talk</button>
 				</div>
 			</div>
 		</header>
-		<main>
-			<section class="section__wrapper bg__yellow contact">
+		<main class="bg__yellow">
+			<section class="section__wrapper">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="contact__icon -Icon1"
@@ -259,12 +262,7 @@
 			<section class="contact__banner">
 				<img
 					src="assets/images/contact-banner.png"
-					class="img-fluid custom__desktop"
-					alt=""
-				/>
-				<img
-					src="assets/images/contact-banner-m.png"
-					class="img-fluid custom__mobile"
+					class="img-fluid"
 					alt=""
 				/>
 			</section>
@@ -561,54 +559,42 @@
 						<div class="popUp__formCheckBoxs -projectTags">
 							<input
 								type="checkbox"
-								name=""
+								name="project_idea"
 								class="popUp__formCheckBox"
-								value="DIAGNOSTICS"
+								checked
+								value="DESIGN "
 								id="project_tag1"
 							/>
 							<label
 								for="project_tag1"
 								class="popUp__formCheckBoxLabel"
-								>DIAGNOSTICS</label
-							>
+								>DESIGN
+							</label>
 
 							<input
 								type="checkbox"
-								name=""
+								name="project_idea"
 								class="popUp__formCheckBox"
-								value="DIGITAL"
+								value="ACTIVATION "
 								id="project_tag2"
 							/>
 							<label
 								for="project_tag2"
 								class="popUp__formCheckBoxLabel"
-								>DIGITAL</label
-							>
+								>ACTIVATION
+							</label>
 							<input
 								type="checkbox"
-								name=""
+								name="project_idea"
 								class="popUp__formCheckBox"
-								value="DESIGN"
-								checked
+								value="STRATEGY"
 								id="project_tag3"
 							/>
 							<label
 								for="project_tag3"
 								class="popUp__formCheckBoxLabel"
-								>DESIGN</label
-							>
-							<input
-								type="checkbox"
-								name=""
-								class="popUp__formCheckBox"
-								value="ADVISORY"
-								id="project_tag4"
-							/>
-							<label
-								for="project_tag4"
-								class="popUp__formCheckBoxLabel"
-								>ADVISORY</label
-							>
+								>STRATEGY
+							</label>
 						</div>
 						<p class="popUp__formText">
 							project idea & design brief.
@@ -619,66 +605,10 @@
 							type="text"
 							class="popUp__formInput w-100"
 							placeholder="PITCH YOUR PROJECT IDEA (OPTIONAL)"
-							name="idea"
+							name="pitch_idea"
 						/>
 					</div>
-					<div class="popUp__inputWrapper">
-						<p class="popUp__formText">
-							A budget for this project is
-						</p>
-						<div class="popUp__formCheckBoxs -priceTags">
-							<input
-								type="radio"
-								name="budget"
-								class="popUp__formCheckBox"
-								value="UNDER 5K"
-								id="project_price1"
-							/>
-							<label
-								for="project_price1"
-								class="popUp__formCheckBoxLabel"
-								>UNDER 5K</label
-							>
 
-							<input
-								type="radio"
-								name="budget"
-								class="popUp__formCheckBox"
-								value="5K-15K"
-								id="project_price2"
-							/>
-							<label
-								for="project_price2"
-								class="popUp__formCheckBoxLabel"
-								>5K-15K</label
-							>
-							<input
-								type="radio"
-								name="budget"
-								class="popUp__formCheckBox"
-								value="15K-50K"
-								checked
-								id="project_price3"
-							/>
-							<label
-								for="project_price3"
-								class="popUp__formCheckBoxLabel"
-								>15K-50K</label
-							>
-							<input
-								type="radio"
-								name="budget"
-								class="popUp__formCheckBox"
-								value="50K+"
-								id="project_price4"
-							/>
-							<label
-								for="project_price4"
-								class="popUp__formCheckBoxLabel"
-								>50K+</label
-							>
-						</div>
-					</div>
 					<div class="popUp__inputWrapper">
 						<p class="popUp__formText">Contact me back at</p>
 						<input

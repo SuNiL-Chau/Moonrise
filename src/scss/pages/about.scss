@@ -1,0 +1,222 @@
+@import "../baseInfo";
+.about {
+    &__section1 {
+        overflow: hidden;
+        position: relative;
+        padding-top: 150px;
+        @media only screen and (max-width: 1024px) {
+            padding-top: 100px;
+        }
+        @media only screen and (max-width: 1024px) {
+            padding-top: 80px;
+        }
+    }
+
+    &__title {
+        color: #c71835;
+        margin-bottom: 30px;
+        @media only screen and (max-width: 1024px) {
+            margin-bottom: 10px;
+        }
+    }
+    &__para {
+        font-size: 24px;
+        line-height: 30px;
+        @media only screen and (max-width: 1024px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    &__floatIcon {
+        position: absolute;
+        width: 240px;
+        &.Icon1 {
+            width: 120px;
+            top: 80px;
+            left: 0;
+            @media only screen and (max-width: 1024px) {
+                top: 300px;
+                left: -10px;
+                width: 100px;
+                transform: rotate(30deg);
+            }
+            @media only screen and (max-width: 1024px) {
+                top: 220px;
+                width: 90px;
+            }
+        }
+        &.Icon2 {
+            top: 0;
+            right: 10%;
+            @media only screen and (max-width: 1024px) {
+                width: 120px;
+            }
+            @media only screen and (max-width: 786px) {
+                right: -10px;
+                top: 10px;
+            }
+        }
+    }
+    &__face {
+        margin-bottom: 150px;
+        @media only screen and (min-width: 1024px) {
+            margin-top: 100px;
+            margin-bottom: 0px;
+        }
+        width: 240px;
+        @media only screen and (max-width: 786px) {
+            width: 170px;
+            margin-bottom: 105px;
+        }
+    }
+
+    &__member {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 120px;
+        align-items: center;
+        @media only screen and (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        &s {
+            display: grid;
+            gap: 120px;
+            @media only screen and (max-width: 1024px) {
+                gap: 80px;
+            }
+        }
+        @media only screen and (min-width: 1024px) {
+            &:nth-child(2n) {
+                .about__memberContent {
+                    grid-column: 2;
+                    grid-row: 1;
+                }
+                .about__memberImgWrapper {
+                    grid-row: 1;
+                    grid-column: 1;
+                }
+            }
+        }
+        &Pos {
+            font-size: 16px;
+            color: #e65435;
+            // font-family: "Suisse Neue";
+            padding-bottom: 10px;
+        }
+        &Name {
+            font-size: 36px;
+            line-height: 46px;
+            // font-family: "Suisse Neue";
+            padding-bottom: 20px;
+            @media only screen and (max-width: 1024px) {
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+        &Para {
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 20px;
+            @media only screen and (max-width: 1024px) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+        &Img {
+            border-radius: 20px;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    &__vision {
+        min-height: 460px;
+        position: relative;
+        background-image: url(../../../assets/images/about_vision.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        overflow: hidden;
+        @media only screen and (max-width: 1024px) {
+            padding-top: 60px;
+            height: 500px;
+        }
+        @media only screen and (min-width: 1024px) {
+            display: flex;
+            align-items: center;
+        }
+        &Content {
+            max-width: 600px;
+            color: #fff;
+        }
+        &Title {
+            font-size: 40px;
+            line-height: 48px;
+            // font-family: "Suisse Neue";
+            padding-bottom: 10px;
+            font-weight: 400;
+            @media only screen and (max-width: 786px) {
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+        &Para {
+            font-size: 20px;
+            line-height: 30px;
+            @media only screen and (max-width: 786px) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+        &Moon {
+            position: absolute;
+            top: 30%;
+            width: 40%;
+            right: 5%;
+            filter: drop-shadow(0 0 0.75rem rgb(243 147 77));
+            @media only screen and (max-width: 1024px) {
+                max-width: 600px;
+                width: 100%;
+                right: -15%;
+                bottom: -50%;
+                top: unset;
+            }
+            @media only screen and (max-width: 786px) {
+                bottom: -20%;
+            }
+        }
+    }
+    &__listing {
+        padding-bottom: 30px;
+        &:not(:last-child) {
+            border-bottom: 1px solid #000000;
+        }
+        &:nth-child(n + 2) {
+            padding-top: 30px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            padding-bottom: 20px;
+            &:nth-child(n + 2) {
+                padding-top: 20px;
+            }
+        }
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        &s {
+            padding: 0;
+            @media only screen and (max-width: 1024px) {
+                padding-top: 30px;
+            }
+        }
+        &Icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+    }
+}

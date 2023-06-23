@@ -82,10 +82,15 @@
 		<meta name="theme-color" content="#ffffff" />
 		<!-- favicon end-->
 
+		<link
+			href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+			rel="stylesheet"
+		/>
+
 		<link rel="stylesheet" href="./dist/css/bootstrap.css" />
 		<link rel="stylesheet" href="./dist/css/fonts.css" />
 		<link rel="stylesheet" href="./dist/css/main.css" />
-		<!-- <link rel="stylesheet" href="./dist/css/pages/home.css" /> -->
+		<link rel="stylesheet" href="./dist/css/pages/services.css" />
 	</head>
 
 	<body>
@@ -109,16 +114,17 @@
 					<a href="work" class="navbar__link">Work</a>
 					<a href="about-us" class="navbar__link">About Us</a>
 					<a href="process" class="navbar__link">Process</a>
+					<a href="process" class="navbar__link">Gallery</a>
 					<a href="contact-us" class="navbar__link">Contact Us</a>
 					<button class="navbar__talkBtn">Let's Talk</button>
 				</div>
 			</div>
 		</header>
-		<main>
+		<main class="bg__orange">
 			<div id="cursor">
 				<div class="cursor__circle"></div>
 			</div>
-			<section class="section__wrapper bg__orange contact">
+			<section class="section__wrapper">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="contact__icon -Icon1"
@@ -177,30 +183,6 @@
 							class="service__section"
 							cursor-background-image="about_vision.png"
 						>
-							<h3 class="service__title">Diagnostics</h3>
-							<div class="service__content">
-								<p class="service__para">
-									Diagnostics that deep dive into the
-									competitive landscape, key stakeholder
-									insights and an assessment of macro industry
-									trends.
-								</p>
-								<div class="service__chips">
-									<p class="service__chip">Industry codes</p>
-									<p class="service__chip">
-										Stakeholder Intel
-									</p>
-									<p class="service__chip">
-										Competitor Intel
-									</p>
-									<p class="service__chip">Trend Tracking</p>
-								</div>
-							</div>
-						</div>
-						<div
-							class="service__section"
-							cursor-background-image="about_vision.png"
-						>
 							<h3 class="service__title">Design</h3>
 							<div class="service__content">
 								<p class="service__para">
@@ -209,10 +191,12 @@
 									logo, packaging and other brand codes.
 								</p>
 								<div class="service__chips">
-									<p class="service__chip">Visual design</p>
-									<p class="service__chip">Website design</p>
-									<p class="service__chip">Stationery</p>
-									<p class="service__chip">Merchandise</p>
+									<p class="service__chip">Identity Design</p>
+									<p class="service__chip">UI/UX</p>
+									<p class="service__chip">Packaging</p>
+									<p class="service__chip">
+										Stationery & Merch
+									</p>
 								</div>
 							</div>
 						</div>
@@ -220,20 +204,22 @@
 							class="service__section"
 							cursor-background-image="about_vision.png"
 						>
-							<h3 class="service__title">Advisory</h3>
+							<h3 class="service__title">Strategy</h3>
 							<div class="service__content">
 								<p class="service__para">
-									Proving a competitive advantage through
-									brand strategy, identity system, brand story
-									and narrative.
+									Providing a competitive advantage, through
+									brand strategy, identity system,
+									storytelling and narrative.
 								</p>
 								<div class="service__chips">
 									<p class="service__chip">Positioning</p>
 									<p class="service__chip">
 										Archetype Discovery
 									</p>
-									<p class="service__chip">Identity System</p>
-									<p class="service__chip">Copywriting</p>
+									<p class="service__chip">Naming</p>
+									<p class="service__chip">
+										Voice & Communication
+									</p>
 								</div>
 							</div>
 						</div>
@@ -241,20 +227,18 @@
 							class="service__section"
 							cursor-background-image="about_vision.png"
 						>
-							<h3 class="service__title">Digital</h3>
+							<h3 class="service__title">Activation</h3>
 							<div class="service__content">
 								<p class="service__para">
-									Brand activation on social media platforms,
-									and also through tools such as SEO strategy,
-									advertising strategy, and email marketing.
+									Brand Activation through tools such as brand
+									campaigns, copywriting, email marketing and
+									advertising strategy.
 								</p>
 								<div class="service__chips">
 									<p class="service__chip">Copywriting</p>
+									<p class="service__chip">Brand Campaigns</p>
 									<p class="service__chip">Email marketing</p>
-									<p class="service__chip">Seo strategy</p>
-									<p class="service__chip">
-										Influencer marketing
-									</p>
+									<p class="service__chip">& More</p>
 								</div>
 							</div>
 						</div>
@@ -536,6 +520,178 @@
 				</div>
 			</div>
 		</footer>
+		<div class="popUp" id="letsTalk">
+			<form class="popUp__container">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="popUp__closeBtn"
+					fill="none"
+					viewBox="0 0 41 40"
+				>
+					<path
+						fill="#1B1C1E"
+						stroke="#fff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M20.4987 36.8965c9.1667 0 16.6667-7.5472 16.6667-16.7715s-7.5-16.77148-16.6667-16.77148c-9.1667 0-16.66667 7.54718-16.66667 16.77148S11.332 36.8965 20.4987 36.8965Z"
+					/>
+					<path
+						stroke="#fff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="m15.7812 24.8716 9.4334-9.4927m0 9.4927-9.4334-9.4927"
+					/>
+				</svg>
+				<h3 class="popUp__heading">
+					Hi, <br class="custom__mobile" />
+					Moonrise. team!
+				</h3>
+				<div class="popUp__form">
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">My name is</p>
+						<input
+							type="text"
+							class="popUp__formInput -fullname"
+							placeholder="Your Name"
+							name="name"
+						/>
+					</div>
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">from</p>
+						<input
+							type="text"
+							class="popUp__formInput -from"
+							name="form"
+							placeholder="WEBSITE OR COMPANY NAME"
+						/>
+					</div>
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">I’d like to discuss</p>
+						<div class="popUp__formCheckBoxs -projectTags">
+							<input
+								type="checkbox"
+								name="project_idea"
+								class="popUp__formCheckBox"
+								checked
+								value="DESIGN "
+								id="project_tag1"
+							/>
+							<label
+								for="project_tag1"
+								class="popUp__formCheckBoxLabel"
+								>DESIGN
+							</label>
+
+							<input
+								type="checkbox"
+								name="project_idea"
+								class="popUp__formCheckBox"
+								value="ACTIVATION "
+								id="project_tag2"
+							/>
+							<label
+								for="project_tag2"
+								class="popUp__formCheckBoxLabel"
+								>ACTIVATION
+							</label>
+							<input
+								type="checkbox"
+								name="project_idea"
+								class="popUp__formCheckBox"
+								value="STRATEGY"
+								id="project_tag3"
+							/>
+							<label
+								for="project_tag3"
+								class="popUp__formCheckBoxLabel"
+								>STRATEGY
+							</label>
+						</div>
+						<p class="popUp__formText">
+							project idea & design brief.
+						</p>
+					</div>
+					<div class="popUp__inputWrapper w-100">
+						<input
+							type="text"
+							class="popUp__formInput w-100"
+							placeholder="PITCH YOUR PROJECT IDEA (OPTIONAL)"
+							name="pitch_idea"
+						/>
+					</div>
+
+					<div class="popUp__inputWrapper">
+						<p class="popUp__formText">Contact me back at</p>
+						<input
+							type="text"
+							class="popUp__formInput -email"
+							placeholder="YOUR EMAIL ID"
+							name="email"
+						/>
+					</div>
+				</div>
+				<div class="form_submittedState -submitted">
+					<svg
+						class="form_submittedStateIcon"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 101 100"
+					>
+						<rect
+							width="100"
+							height="100"
+							x=".200195"
+							fill="#fff"
+							rx="50"
+						/>
+						<path
+							stroke="#22AF6E"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="3"
+							d="m28 58 12 12 32-40"
+						/>
+					</svg>
+					<p class="form_submittedStateText">
+						Thank you for completing the <br />
+						application form! We’ll get back <br />
+						to you as soon as possible.
+					</p>
+				</div>
+				<div class="form_submittedState -notsubmitted">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="form_submittedStateIcon"
+						fill="none"
+						viewBox="0 0 101 100"
+					>
+						<rect
+							width="100"
+							height="100"
+							x=".201172"
+							fill="#C71835"
+							rx="50"
+						/>
+						<path
+							fill="#FEFBED"
+							d="m53.2254 29.688-.7202 28.5318H48.35l-.7202-28.5318h5.5956Zm.3324 34.072v5.928h-6.1496V63.76h6.1496Z"
+						/>
+					</svg>
+					<p class="form_submittedStateText">
+						Opps! We are facing some <br />
+						technical issues. Please try again
+						<br />
+						or contact at mail@mail.com
+					</p>
+				</div>
+				<button type="submit" class="popUp__submit">Submit</button>
+			</form>
+		</div>
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 		<!-- Bootstrap Bundle js -->
 		<script src="./dist/js/libs/bootstrap.bundle.min.js"></script>
 		<!-- Custom main js -->

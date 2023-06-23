@@ -1,0 +1,159 @@
+@import "../baseInfo";
+.process {
+    overflow: hidden;
+    position: relative;
+    height: calc(100vh - 90px);
+    background: #fefbed;
+    display: flex;
+    align-items: center;
+    &__icon {
+        width: 170px;
+        position: absolute;
+        &.-Icon1 {
+            top: 0;
+            right: 15%;
+            @include media-bp("mdl") {
+                width: 110px;
+                top: -15px;
+            }
+        }
+        &.-Icon2 {
+            bottom: 10%;
+            right: 10%;
+            @include media-bp("mdl") {
+                width: 110px;
+            }
+        }
+        &.-Icon3 {
+            bottom: 5%;
+            left: 0;
+            @include media-bp("mdl") {
+                width: 110px;
+                left: -30px;
+            }
+        }
+        &.-downIcon {
+            left: calc(50% + 2px);
+            transform: translateX(-50%);
+            bottom: 50px;
+            width: 23px;
+            @include media-bp("tablet") {
+                transform: unset;
+                left: 50px;
+            }
+            @include media-bp("mdl") {
+                left: 22px;
+                width: 15px;
+                bottom: 20px;
+            }
+        }
+    }
+    &__wrapper {
+        position: relative;
+    }
+    &__defaultLine {
+        content: "";
+        position: absolute;
+
+        width: 3px;
+        background: rgba(255, 255, 255, 0.3);
+        height: 100%;
+        left: 60px;
+        @media only screen and (min-width: 1024px) {
+            left: 50%;
+        }
+        @media only screen and (max-width: 786px) {
+            left: 20px;
+        }
+    }
+    &__drawLine {
+        content: "";
+        position: absolute;
+        width: 3px;
+        background: rgba(255, 255, 255, 1);
+        height: 30%;
+        left: 60px;
+        @media only screen and (min-width: 1024px) {
+            left: 50%;
+        }
+        @media only screen and (max-width: 786px) {
+            left: 20px;
+        }
+    }
+    @media only screen and (max-width: 786px) {
+        .container {
+            height: 100%;
+        }
+    }
+    &__headWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        & > .m__title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 170px;
+            .m__para {
+                flex-shrink: 0;
+                max-width: 270px;
+            }
+        }
+        @media only screen and (max-width: 786px) {
+            max-width: 80%;
+            align-items: start;
+            padding-top: 80px;
+            .m__title {
+                font-size: 36px;
+                line-height: 43px;
+            }
+            .m__para {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        gap: 20px;
+    }
+    &__step {
+        @media only screen and (min-width: 1024px) {
+            height: 260px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &Head {
+            font-family: "PiepieW01-Regular";
+            font-size: 68px;
+            line-height: 80px;
+            color: #fff;
+            @media only screen and (max-width: 1024px) {
+                display: none;
+            }
+        }
+        &Content {
+            position: relative;
+            padding-left: 50px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                background: #ffffff;
+                left: -8.5px;
+                top: 00px;
+            }
+        }
+        &Count {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &Title {
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 600;
+            padding-bottom: 10px;
+        }
+    }
+}
