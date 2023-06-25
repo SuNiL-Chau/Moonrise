@@ -220,3 +220,62 @@
         }
     }
 }
+
+.popUp {
+    &.-brandProtfolio {
+        @media only screen and (max-width: 786px) {
+            padding-top: 70px;
+            padding-bottom: 150px;
+        }
+        .popUp {
+            &__wrapper {
+                @media only screen and (max-width: 786px) {
+                    padding-top: 280px;
+                }
+            }
+            &__container {
+                background: #f4dc49;
+
+                @media only screen and (max-width: 786px) {
+                    padding-top: 45px;
+                    padding-bottom: 30px;
+                }
+            }
+            &__heading {
+                color: #c71835;
+            }
+        }
+    }
+
+    &__slider {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: row;
+        @media only screen and (max-width: 786px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    }
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 10px;
+        width: 340px;
+        height: 200px;
+        background: #fff;
+        flex-shrink: 0;
+        img {
+            border-radius: 10px;
+        }
+        @media only screen and (max-width: 786px) {
+            padding: 10px;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/0.5;
+        }
+    }
+}

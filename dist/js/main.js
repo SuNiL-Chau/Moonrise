@@ -17,6 +17,7 @@ hamburger.addEventListener("click", () => {
 });
 let talkButton = document.querySelector(".navbar__talkBtn");
 let closeButtons = document.querySelectorAll(".popUp__closeBtn");
+// console.log(closeButtons);
 talkButton.addEventListener("click", () => {
   console.log("add");
   if (hamburger.classList.contains("active")) {
@@ -28,7 +29,7 @@ talkButton.addEventListener("click", () => {
 closeButtons.forEach(closeButton => {
   closeButton.addEventListener("click", () => {
     document.body.classList.remove("overflow-h");
-    document.querySelector("#letsTalk").classList.remove("active");
+    closeButton.closest(".popUp").classList.remove("active");
     if (document.querySelector(".js-contact-state")) document.querySelector(".js-contact-state").classList.remove("active");
   });
 });
