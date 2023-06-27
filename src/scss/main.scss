@@ -516,6 +516,19 @@ main {
     display: flex;
   }
 }
+.popUp__container.-success.-failed {
+  // .popUp__submit,
+  // .popUp__heading,
+  // .popUp__form {
+  //   display: inherit;
+  // }
+  .-submitted {
+    display: none;
+  }
+  .-notsubmitted {
+    display: none;
+  }
+}
 
 .m {
   &__title {
@@ -936,9 +949,7 @@ main {
     background-position: center;
     background-size: cover;
     // border: solid 1px rgba(227, 222, 193, 0.64);
-    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   }
 }
 

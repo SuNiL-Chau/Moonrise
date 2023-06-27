@@ -59,9 +59,6 @@ if (LetsTalkForm) {
     if (email === "") {
       alert("Email is required");
       formValid = false;
-    } else if (!isValidEmail(email)) {
-      alert("Invalid email format");
-      formValid = false;
     }
     var formData = new FormData(this); // Get form data
 

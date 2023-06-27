@@ -639,7 +639,7 @@
 							<input
 								type="text"
 								class="popUp__formInput -email"
-								placeholder="YOUR Amount"
+								placeholder="YOUR Email"
 								name="email"
 							/>
 						</div>
@@ -770,7 +770,7 @@
 
 								// Request successful, do something if needed
 								console.log("Email sent successfully!");
-								form.reset(); // Reset the form
+								document.querySelector("#contact_form").reset(); // Reset the form
 
 								setTimeout(() => {
 									document

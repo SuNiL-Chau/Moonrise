@@ -4,7 +4,7 @@ $to = 'anandita@brandingbymoonrise.com';
 $ccemail = 'ananditagoenka@gmail.com';
 
 
-echo "not Contact";
+// echo "not Contact";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($_POST["contact_form"]) && isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"])) {
@@ -30,8 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers .= "Cc: $ccemail\r\n";
 
         if (mail($to, $subject, $email_content, $headers)) {
+            echo 'contact mail sent';
             return true;
         } else {
+            echo 'contact mail failed';
             return false;
         }
     }
@@ -59,8 +61,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers .= "Cc: $ccemail\r\n";
 
         if (mail($recipient, $subject, $email_content, $headers)) {
+            echo 'talk mail sent';
             return true;
         } else {
+            echo 'talk mail failed';
             return false;
         }
     }
