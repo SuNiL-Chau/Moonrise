@@ -87,8 +87,9 @@ if (LetsTalkForm) {
 		formData.append("idea", checkedCategories.join(", "));
 		// If there are no errors, submit the form
 		if (formValid) {
-			const xhr = new XMLHttpRequest();
-			xhr.open("POST", "send_email.php", true);
+          	formData.append("letsTalk", true);
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "form/mail.php", true);
 			xhr.setRequestHeader(
 				"Content-type",
 				"application/x-www-form-urlencoded"

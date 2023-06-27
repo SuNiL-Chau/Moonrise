@@ -1,6 +1,7 @@
 <?php
 
-$to = 'info@moonrise.co.in';
+$to = 'anandita@brandingbymoonrise.com';
+$ccemail = 'ananditagoenka@gmail.com';
 
 
 echo "not Contact";
@@ -26,8 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $headers = "From: $name <$email>\r\n";
         $headers .= "Reply-To: $email\r\n";
+        $headers .= "Cc: $ccemail\r\n";
 
-        if (mail($recipient, $subject, $email_content, $headers)) {
+        if (mail($to, $subject, $email_content, $headers)) {
             return true;
         } else {
             return false;
@@ -54,6 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $headers = "From: $name <$email>\r\n";
         $headers .= "Reply-To: $email\r\n";
+        $headers .= "Cc: $ccemail\r\n";
 
         if (mail($recipient, $subject, $email_content, $headers)) {
             return true;
