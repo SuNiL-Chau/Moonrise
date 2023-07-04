@@ -77,9 +77,6 @@ if (LetsTalkForm) {
     if (email === "") {
       alert("Email is required");
       formValid = false;
-    } else if (!isValidEmail(email)) {
-      alert("Invalid email format");
-      formValid = false;
     }
     var formData = new FormData(this); // Get form data
     formData.append("letsTalk", true);
@@ -93,10 +90,17 @@ if (LetsTalkForm) {
     formData.append("idea", checkedCategories.join(", "));
     // If there are no errors, submit the form
     if (formValid) {
+<<<<<<< HEAD
       loader.classList.add("active");
       const xhr = new XMLHttpRequest();
       xhr.open("POST", "form/mail.php", true);
       xhr.setRequestHeader("Accept", "application/json");
+=======
+      formData.append("letsTalk", true);
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "form/mail.php", true);
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+>>>>>>> 7dd53fb9491585dd38bd8691b41ee7f554d5b85c
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
           if (xhr.status === 200 && xhr.responseText === "mail sent") {
