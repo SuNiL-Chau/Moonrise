@@ -12,16 +12,19 @@
         &.-Icon1 {
             top: 0;
             right: 15%;
+            z-index: 1;
             @include media-bp("mdl") {
                 width: 110px;
                 top: -15px;
             }
         }
         &.-Icon2 {
-            bottom: 10%;
-            right: 10%;
+            width: 550px;
+            bottom: 5%;
+            right: 0%;
             @include media-bp("mdl") {
-                width: 110px;
+                width: 100%;
+                right: -20%;
             }
         }
         &.-Icon3 {

@@ -605,6 +605,8 @@ main {
     display: flex;
   }
   &.js-contact-state {
+    align-items: center;
+    justify-content: center;
     background: rgba(244, 220, 73, 0.5);
     backdrop-filter: blur(10px);
     .popUp__container {
@@ -645,10 +647,11 @@ main {
   }
   &__icon {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    top: 100px;
-    right: 100px;
+    width: 600px;
+    height: 600px;
+    top: -30px;
+    left: 70%;
+
     @media only screen and (max-width: 786px) {
       z-index: 99;
       width: 100px;
@@ -672,7 +675,7 @@ main {
     @media only screen and (max-width: 786px) {
       padding-left: 20px;
       padding-right: 20px;
-      padding-top: 150px;
+      padding-top: 80px;
     }
 
     .form_submittedStateText {
@@ -848,73 +851,6 @@ main {
   }
 }
 
-.service {
-  padding-top: 130px;
-  &__section {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    &:nth-child(n + 2) {
-      border-top: 1px solid #ffffff;
-    }
-    @media only screen and (max-width: 1024px) {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-  }
-  &__title {
-    font-size: 32px;
-    line-height: 40px;
-    color: #f4dc49;
-    // font-family: "Suisse Neue";
-    @media only screen and (max-width: 786px) {
-      font-size: 20px;
-      line-height: 30px;
-    }
-  }
-  &__content {
-    max-width: 800px;
-  }
-  &__para {
-    font-size: 20px;
-    line-height: 30px;
-    padding-bottom: 20px;
-    @media only screen and (max-width: 786px) {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
-  &__chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    @media only screen and (max-width: 786px) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  &__chip {
-    border-radius: 30px;
-    border: 1px solid #ffffff;
-    padding: 10px 20px;
-    width: fit-content;
-    @media only screen and (max-width: 786px) {
-      width: 100%;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 40px;
-      font-size: 13px;
-      line-height: 1;
-    }
-  }
-}
-
 #cursor {
   position: fixed;
   z-index: 99;
@@ -958,6 +894,70 @@ main {
     display: none !important;
     @media only screen and (max-width: 1024px) {
       display: block !important;
+    }
+  }
+}
+#preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffb6d6;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  z-index: 9999;
+  &.loaded {
+    top: 100%;
+  }
+}
+.noscroll {
+  position: fixed;
+  inline-size: 100%;
+  overflow-y: scroll;
+}
+#preloader-video {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  object-position: bottom;
+  @include media-bp("mdl") {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: rgba(244, 220, 73, 0.5);
+  &:not(.active) {
+    display: none;
+  }
+  .spinner {
+    height: 0;
+    width: 0;
+    padding: 15px;
+    border: 6px solid #ccc;
+    border-right-color: #888;
+    border-radius: 22px;
+    -webkit-animation: rotate 1s infinite linear;
+    /* left, top and position just for the demo! */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+
+  @-webkit-keyframes rotate {
+    /* 100% keyframe for  clockwise. 
+     use 0% instead for anticlockwise */
+    100% {
+      -webkit-transform: rotate(360deg);
     }
   }
 }

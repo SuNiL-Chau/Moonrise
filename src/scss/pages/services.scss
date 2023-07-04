@@ -261,6 +261,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            @include media-bp("mdl") {
+                width: 90px;
+                height: 90px;
+                padding: 15px;
+            }
         }
     }
     &__title {
@@ -271,5 +276,79 @@
     &__para {
         font-size: 16px;
         line-height: 24px;
+    }
+}
+.service {
+    padding-top: 130px;
+    @media only screen and (max-width: 786px) {
+        padding-top: 50px;
+    }
+    &icon {
+        @media only screen and (max-width: 786px) {
+            top: 210px !important;
+        }
+    }
+    &__section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        &:nth-child(n + 2) {
+            border-top: 1px solid #ffffff;
+        }
+        @media only screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    }
+    &__title {
+        font-size: 32px;
+        line-height: 40px;
+        color: #f4dc49;
+        // font-family: "Suisse Neue";
+        @media only screen and (max-width: 786px) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    &__content {
+        max-width: 800px;
+    }
+    &__para {
+        font-size: 20px;
+        line-height: 30px;
+        padding-bottom: 20px;
+        @media only screen and (max-width: 786px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    &__chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        @media only screen and (max-width: 786px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__chip {
+        border-radius: 30px;
+        border: 1px solid #ffffff;
+        padding: 10px 20px;
+        width: fit-content;
+        @media only screen and (max-width: 786px) {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            font-size: 13px;
+            line-height: 1;
+        }
     }
 }
