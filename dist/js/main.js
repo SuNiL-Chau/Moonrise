@@ -5,21 +5,25 @@ AOS.init({
   once: true
 });
 const preloaderVideo = document.getElementById("preloader-video");
+if (preloaderVideo) {
+  // Add event listener to detect when the video has finished loading
+  preloaderVideo.addEventListener("loadeddata", () => {
+    // Video is loaded, remove the preloader container
+    const preloaderContainer = document.getElementById("preloader-container");
+    window.onload = () => {
+      preloaderContainer.classList.add("loaded");
+    };
+    // setTimeout(() => {
+    //   preloaderContainer.classList.add("loaded");
+    // }, 5000);
+    // setTimeout(() => {
+    // 	preloaderContainer.remove();
+    // }, 3000);
+  });
 
-// Add event listener to detect when the video has finished loading
-preloaderVideo.addEventListener("loadeddata", () => {
-  // Video is loaded, remove the preloader container
-  const preloaderContainer = document.getElementById("preloader-container");
-  setTimeout(() => {
-    preloaderContainer.classList.add("loaded");
-  }, 2000);
-  setTimeout(() => {
-    preloaderContainer.remove();
-  }, 3000);
-});
-
-// Start loading the video
-preloaderVideo.load();
+  // Start loading the video
+  preloaderVideo.load();
+}
 let hamburger = document.querySelector(".navbar__hamburger");
 let MenuItems = document.querySelector(".navbar__items");
 hamburger.addEventListener("click", () => {
@@ -90,17 +94,10 @@ if (LetsTalkForm) {
     formData.append("idea", checkedCategories.join(", "));
     // If there are no errors, submit the form
     if (formValid) {
-<<<<<<< HEAD
-      loader.classList.add("active");
-      const xhr = new XMLHttpRequest();
-      xhr.open("POST", "form/mail.php", true);
-      xhr.setRequestHeader("Accept", "application/json");
-=======
       formData.append("letsTalk", true);
       const xhr = new XMLHttpRequest();
       xhr.open("POST", "form/mail.php", true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
->>>>>>> 7dd53fb9491585dd38bd8691b41ee7f554d5b85c
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
           if (xhr.status === 200 && xhr.responseText === "mail sent") {
