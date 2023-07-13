@@ -67,9 +67,9 @@
         @media only screen and (min-width: 1024px) {
             // margin-top: 100px;
             // margin-bottom: 0px;
-            top: 0;
+            top: 10%;
             left: -2%;
-            width: 600px;
+            width: 500px;
         }
         width: 240px;
         @media only screen and (max-width: 786px) {
@@ -287,5 +287,36 @@
             height: auto;
             aspect-ratio: 1/0.5;
         }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #brandSlider:hover {
+        cursor: none;
+    }
+    .dragme.hover {
+        opacity: 1;
+    }
+    body.--brandOpen {
+        .dragme {
+            opacity: 1;
+        }
+    }
+    s .dragme {
+        width: 100px;
+        height: 100px;
+        background: #c71835;
+        border-radius: 50px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999999;
+        pointer-events: none;
+        opacity: 0;
+        // transition: 0.3 ease-in-out;
     }
 }

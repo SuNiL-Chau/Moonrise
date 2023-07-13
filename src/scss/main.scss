@@ -609,7 +609,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffb3d2;
+  background: #feb7d5;
   // display: flex;
 
   z-index: 999;
@@ -660,11 +660,12 @@ main {
   }
   &__icon {
     position: absolute;
-    width: 320px;
+    width: 350px;
+    height: 350px;
     // height: 300px;
-    top: -80px;
-    // left: 10%;
-    left: 14vw;
+    top: -30px;
+    left: -50px;
+    // left: 14vw;
 
     @media only screen and (max-width: 786px) {
       display: none;
@@ -887,7 +888,9 @@ main {
     background-position: center;
     background-size: cover;
     // border: solid 1px rgba(227, 222, 193, 0.64);
-    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+      border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+      height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   }
 }
 
@@ -916,7 +919,7 @@ main {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #ffb6d6;
+  background-color: #fdb9d0;
   display: flex;
   justify-content: center;
   align-items: center;

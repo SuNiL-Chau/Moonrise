@@ -7,22 +7,32 @@ AOS.init({
 const preloaderVideo = document.getElementById("preloader-video");
 if (preloaderVideo) {
   // Add event listener to detect when the video has finished loading
-  preloaderVideo.addEventListener("loadeddata", () => {
-    // Video is loaded, remove the preloader container
+
+  // Set the path to your animation JSON file
+  var animationPath = "../../assets/lottie/loading-moon.json";
+
+  // Configure the animation options
+  var animationOptions = {
+    container: preloaderVideo,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    // Set autoplay to false for preloading
+    path: animationPath
+  };
+
+  // Preload the animation
+  var animation = lottie.loadAnimation(animationOptions);
+  // Video is loaded, remove the preloader container
+  if (animation) {
     const preloaderContainer = document.getElementById("preloader-container");
     window.onload = () => {
-      preloaderContainer.classList.add("loaded");
+      setTimeout(() => {
+        preloaderContainer.classList.add("loaded");
+        x;
+      }, 1500);
     };
-    // setTimeout(() => {
-    //   preloaderContainer.classList.add("loaded");
-    // }, 5000);
-    // setTimeout(() => {
-    // 	preloaderContainer.remove();
-    // }, 3000);
-  });
-
-  // Start loading the video
-  preloaderVideo.load();
+  }
 }
 let hamburger = document.querySelector(".navbar__hamburger");
 let MenuItems = document.querySelector(".navbar__items");
@@ -38,6 +48,7 @@ hamburger.addEventListener("click", () => {
 let talkButton = document.querySelector(".navbar__talkBtn");
 let closeButtons = document.querySelectorAll(".popUp__closeBtn");
 // console.log(closeButtons);
+let animationSkipForward;
 talkButton.addEventListener("click", () => {
   console.log("add");
   if (hamburger.classList.contains("active")) {
@@ -45,11 +56,21 @@ talkButton.addEventListener("click", () => {
   }
   document.body.classList.add("overflow-h");
   document.querySelector("#letsTalk").classList.add("active");
-  document.querySelector("#letsTalk video").play();
+  let player = document.querySelector("#blueMoon");
+  if (!animationSkipForward) {
+    animationSkipForward = bodymovin.loadAnimation({
+      container: player,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      path: "../../assets/lottie/blue-moon.json"
+    });
+    animationSkipForward.playSegments([0, 60], true);
+  }
 });
 closeButtons.forEach(closeButton => {
   closeButton.addEventListener("click", () => {
-    document.body.classList.remove("overflow-h");
+    document.body.classList.remove("overflow-h", "--brandOpen");
     closeButton.closest(".popUp").classList.remove("active");
     if (document.querySelector(".js-contact-state")) document.querySelector(".js-contact-state").classList.remove("active");
   });
