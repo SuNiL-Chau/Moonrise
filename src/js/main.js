@@ -1,7 +1,9 @@
 // const { document } = require("postcss");
-AOS.init({
-	once: true,
-});
+
+// // const { document } = require("postcss");
+// AOS.init({
+// 	once: true,
+// });
 
 const preloaderVideo = document.getElementById("preloader-video");
 
@@ -53,7 +55,9 @@ let closeButtons = document.querySelectorAll(".popUp__closeBtn");
 let animationSkipForward;
 
 talkButton.addEventListener("click", () => {
-	console.log("add");
+	let popUpoffset = document.querySelector("#letsTalk form.popUp__container");
+	console.log(popUpoffset);
+
 	if (hamburger.classList.contains("active")) {
 		hamburger.click();
 	}
@@ -70,6 +74,16 @@ talkButton.addEventListener("click", () => {
 		});
 		animationSkipForward.playSegments([0, 60], true);
 	}
+
+	setTimeout(() => {
+		// if (popUpoffset.offsetLeft > 400) {
+		console.log(popUpoffset.offsetLeft);
+		let leftShif = popUpoffset.offsetLeft / 2;
+		leftShif = leftShif - 82;
+		player.style.transform = "translateX( " + leftShif + "px)";
+		player.style.transition = "2s ease-in";
+		// }
+	}, 600);
 });
 
 closeButtons.forEach((closeButton) => {
