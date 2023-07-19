@@ -3,10 +3,9 @@
 // const { document } = require("postcss");
 
 // // const { document } = require("postcss");
-// AOS.init({
-// 	once: true,
-// });
-
+AOS.init({
+  once: true
+});
 const preloaderVideo = document.getElementById("preloader-video");
 if (preloaderVideo) {
   // Add event listener to detect when the video has finished loading
@@ -32,7 +31,6 @@ if (preloaderVideo) {
     window.onload = () => {
       setTimeout(() => {
         preloaderContainer.classList.add("loaded");
-        x;
       }, 1500);
     };
   }
@@ -75,7 +73,11 @@ talkButton.addEventListener("click", () => {
     // if (popUpoffset.offsetLeft > 400) {
     console.log(popUpoffset.offsetLeft);
     let leftShif = popUpoffset.offsetLeft / 2;
-    leftShif = leftShif - 82;
+    if (window.innerWidth <= 1536) {
+      leftShif = leftShif - 22;
+    } else {
+      leftShif = leftShif + 62;
+    }
     player.style.transform = "translateX( " + leftShif + "px)";
     player.style.transition = "2s ease-in";
     // }
