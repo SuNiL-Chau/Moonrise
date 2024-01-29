@@ -74,8 +74,11 @@ talkButton.addEventListener("click", () => {
   setTimeout(() => {
     // if (popUpoffset.offsetLeft > 400) {
     console.log(popUpoffset.offsetLeft);
-    let leftShif = popUpoffset.offsetLeft / 2;
-    leftShif = leftShif - 82;
+    player.style.top = "".concat(popUpoffset.offsetHeight - 600, "px");
+    let leftShif = (popUpoffset.offsetLeft / 2 + player.offsetWidth / 2) / 2 / 2.5;
+    // let leftShif = popUpoffset.offsetLeft / 2;
+    // leftShif = leftShif - 82;
+    alert("leftShif: ".concat(leftShif));
     player.style.transform = "translateX( " + leftShif + "px)";
     player.style.transition = "2s ease-in";
     // }
