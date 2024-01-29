@@ -665,13 +665,21 @@ main {
     // width: 480px;
     // height: 480px;
     // height: 300px;
-    top: -120px;
-    left: 0px;
+    top: -10px;
+    left: 20px;
     // left: 14vw;
 
-    // @media only screen and (min-width: 1400px) {
-    //   top: -10px;
-    // }
+    @media only screen and (max-width: 1536px) {
+      top: -173px;
+      left: 0;
+    }
+    @media only screen and (max-width: 1400px) {
+      top: -150px;
+      left: -30px;
+    }
+    @media only screen and (max-width: 1280px) {
+      left: -50px;
+    }
     @media only screen and (max-width: 786px) {
       display: none;
       z-index: 99;
