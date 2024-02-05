@@ -219,6 +219,95 @@
             font-size: 14px;
         }
     }
+    .homeWrok {
+        padding: 90px 0;
+        background-color: #fefbed;
+        &__heading {
+            font-size: 48px;
+            line-height: 1;
+            font-family: "Suisse Neue";
+            padding-bottom: 30px;
+            @include media-bp(tablet) {
+                font-size: 38px;
+            }
+            @include media-bp(mdl) {
+                font-size: 38px;
+            }
+        }
+        &__container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            @include media-bp(mdl) {
+                grid-template-columns: 1fr;
+            }
+            @include media-bp(tablet) {
+                grid-template-columns: 1fr;
+            }
+            gap: 30px;
+        }
+        &__card {
+            &Img {
+                width: 100%;
+                border-radius: 20px;
+                overflow: hidden;
+                aspect-ratio: 1 / 0.8;
+                object-fit: cover;
+                margin-bottom: 30px;
+                border: 1px solid #1b1c1e;
+                background-color: #f4dc49;
+                @include media-bp(mdl) {
+                    margin-bottom: 15px;
+                }
+            }
+            &Name {
+                font-size: 32px;
+                line-height: 40px;
+                font-family: "Suisse Neue";
+                padding-bottom: 10px;
+                @include media-bp(mdl) {
+                    font-size: 28px;
+                }
+            }
+            &Tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                @include media-bp(mdl) {
+                    gap: 5px;
+                }
+            }
+            &Tag {
+                border-radius: 32px;
+                padding: 10px 20px;
+                vertical-align: middle;
+                border: 1px solid #1b1c1e;
+                text-align: center;
+                font-size: 12px;
+                line-height: 1;
+                @include media-bp(mdl) {
+                    padding: 8px 10px;
+                }
+            }
+        }
+        &__buttonWrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 90px;
+            @include media-bp(tablet) {
+                margin-top: 40px;
+            }
+            @include media-bp(mdl) {
+                margin-top: 40px;
+            }
+        }
+        &__cta {
+            display: inline-flex;
+            margin: 0 auto;
+        }
+    }
 }
 @include media-bp(mdl) {
 }
