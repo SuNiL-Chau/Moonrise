@@ -303,13 +303,13 @@
                 </p>
               </div>
             </div>
-            <div class="workDetails__fullBanner">
+            <!-- <div class="workDetails__fullBanner">
               <img
                 src="/assets/images/work/cocukluk/cocukluk-desktop-1.webp"
                 alt=""
                 class="workDetails__fullBannerImg img-fluid"
               />
-            </div>
+            </div> -->
             <div class="row">
               <div class="col-md-6 col-12">
                 <div class="workDetails__logo">
@@ -352,13 +352,13 @@
                 />
               </div>
             </div>
-            <div class="workDetails__fullBanner">
+            <!-- <div class="workDetails__fullBanner">
               <img
                 src="/assets/images/work/cocukluk/cocukluk-desktop-1.webp"
                 alt=""
                 class="workDetails__fullBannerImg img-fluid"
               />
-            </div>
+            </div> -->
             <div>
               <p class="workDetails__title">Typography</p>
               <div class="workDetails__grid">
@@ -415,7 +415,7 @@
               </div>
             </div>
           </div>
-          <div class="nextProject">
+          <!-- <div class="nextProject">
             <div class="nextProject__imgContainer">
               <img src="" alt="" class="nextProject__img" />
             </div>
@@ -425,7 +425,7 @@
               </p>
               <button class="nextProject__cta">Next Case</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
@@ -899,134 +899,7 @@
 
         loop: true,
       });
-
-      document
-
-        .getElementById("contact_form")
-
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          let loader = document.querySelector(".loader");
-
-          let formValid = true;
-
-          // Clear previous error messages and remove error class
-
-          var errorMessages = document.querySelectorAll(".form-error");
-
-          var formFloatings = document.querySelectorAll(".form-floating");
-
-          errorMessages.forEach(function (formFloating) {
-            formFloating.classList.remove("-Invalid");
-          });
-
-          // Validate Name
-
-          var nameInput = document.getElementById("name");
-
-          var name = nameInput.value.trim();
-
-          if (name === "") {
-            showError(nameInput, "Name is required");
-
-            formValid = false;
-          }
-
-          // Validate Email
-
-          var emailInput = document.getElementById("email");
-
-          var email = emailInput.value.trim();
-
-          if (email === "") {
-            showError(emailInput, "Email is required");
-
-            formValid = false;
-          } else if (!isValidEmail(email)) {
-            showError(emailInput, "Invalid email format");
-
-            formValid = false;
-          }
-          var formData = new FormData(this);
-
-          // Validate Message
-
-          var msgInput = document.getElementById("msg");
-
-          var message = msgInput.value.trim();
-
-          if (message === "") {
-            showError(msgInput, "Message is required");
-
-            formValid = false;
-          }
-
-          // If there are no errors, submit the form
-
-          if (formValid) {
-            loader.classList.add("active");
-
-            formData.append("letsWorkTogether", true);
-
-            const xhr = new XMLHttpRequest();
-
-            xhr.open("POST", "form/mail.php", true);
-
-            xhr.setRequestHeader("Accept", "application/json");
-
-            xhr.onreadystatechange = function () {
-              if (xhr.readyState === 4) {
-                if (xhr.status === 200 && xhr.responseText === "mail sent") {
-                  loader.classList.remove("active");
-
-                  e.target.classList.add("-success");
-
-                  // Request successful, do something if needed
-
-                  console.log("Email sent successfully!");
-
-                  form.reset(); // Reset the form
-
-                  setTimeout(() => {
-                    e.target.classList.remove("-success");
-                  }, 5000);
-                } else {
-                  loader.classList.remove("active");
-
-                  e.target.classList.add("-failed");
-
-                  setTimeout(() => {
-                    e.target.classList.remove("-failed");
-                  }, 5000);
-                  console.log("Email not sent");
-                }
-              }
-            };
-
-            xhr.send(formData);
-
-            // Submit the form
-          }
-        });
-
-      function isValidEmail(email) {
-        var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        return emailRegex.test(email);
-      }
-      function showError(inputElement, errorMessage) {
-        var errorContainer =
-          inputElement.parentElement.querySelector(".form-error");
-
-        errorContainer.querySelector("span").textContent = errorMessage;
-
-        errorContainer.classList.add("-Invalid");
-      }
-
-      function isValidNumber(number) {
-        var numberRegex = /^\d+$/;
-
-        return numberRegex.test(number);
-      }
+ 
     </script>
   </body>
 </html>
