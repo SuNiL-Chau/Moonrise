@@ -1,0 +1,44 @@
+.c-work {
+    &__img {
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        aspect-ratio: 1 / 0.8;
+        object-fit: cover;
+        margin-bottom: 30px;
+        border: 1px solid #1b1c1e;
+        background-color: #f4dc49;
+        @include media-bp(mdl) {
+            margin-bottom: 15px;
+        }
+    }
+    &__name {
+        font-size: 32px;
+        line-height: 40px;
+        font-family: "Suisse Neue";
+        padding-bottom: 10px;
+        @include media-bp(mdl) {
+            font-size: 28px;
+        }
+    }
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        @include media-bp(mdl) {
+            gap: 5px;
+        }
+    }
+    &__tag {
+        border-radius: 32px;
+        padding: 10px 20px;
+        vertical-align: middle;
+        border: 1px solid #1b1c1e;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1;
+        @include media-bp(mdl) {
+            padding: 8px 10px;
+        }
+    }
+}

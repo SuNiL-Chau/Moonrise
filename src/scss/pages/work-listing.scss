@@ -1,0 +1,71 @@
+@import "../baseInfo";
+
+.workListing {
+    position: relative;
+    padding: 90px 0;
+    background-color: #fefbed;
+    @media only screen and (max-width: 1024px) {
+        padding: 60px 0;
+    }
+    &__spring{
+        position: absolute;
+        width: 220px;
+        z-index: 1;
+        top: -100px;
+        right: 30%;
+        transform: rotate(5deg);
+        @media only screen and (max-width: 1024px) {
+            width: 120px;
+        }
+        @media only screen and (max-width: 786px) {
+            right: -40px;
+            top: -40px;
+        }
+    }
+    &__heading {
+        font-size: 68px;
+        line-height: 1;
+        font-family: "PiepieW01-Regular";
+        color: #e65435;
+        padding-bottom: 80px;
+        @include media-bp(tablet) {
+            font-size: 30px;
+            padding-bottom: 40px;
+        }
+        @include media-bp(mdl) {
+            font-size: 30px;
+            padding-bottom: 40px;
+        }
+    }
+    &__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px  30px ;
+        @include media-bp(mdl) {
+            gap: 30px;
+            grid-template-columns: 1fr;
+        }
+        @include media-bp(tablet) {
+            gap: 30px;
+            grid-template-columns: 1fr;
+        }
+    } 
+    &__buttonWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 90px;
+        @include media-bp(tablet) {
+            margin-top: 40px;
+        }
+        @include media-bp(mdl) {
+            margin-top: 40px;
+        }
+    }
+    &__cta {
+        display: inline-flex;
+        margin: 0 auto;
+    }
+}

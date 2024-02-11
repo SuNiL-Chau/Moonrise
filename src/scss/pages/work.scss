@@ -1,10 +1,16 @@
 @import "../baseInfo";
 
-html[data-page="work"] {
+html[data-page="work"] { 
+    body,
+    header{
+        background-color: #FEFBED;
+    }
     main {
         padding: 0;
+        background-color: #FEFBED;
     }
     .workLanding {
+        position: relative;
         padding-top: 100px;
         .row {
             height: 100%;
@@ -177,15 +183,15 @@ html[data-page="work"] {
     }
 
     .workDetails {
-        &__wrapper {
+        &__container {
             padding-top: 80px;
             @media only screen and (max-width: 1024px) {
                 padding-top: 0px;
             }
         }
-        &__about {
+        &__sections {
             display: grid;
-            gap: 80px;
+            gap: 120px;
             @media only screen and (max-width: 1024px) {
                 gap: 60px;
             }

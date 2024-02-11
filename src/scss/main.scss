@@ -73,6 +73,7 @@ button {
 }
 
 // components styles
+@import "./components/c-work";
 @import "./components/navbar";
 @import "./components/banner";
 @import "./components/footer";
@@ -660,10 +661,8 @@ main {
   }
   &__icon {
     position: absolute;
-    width: 400px;
-    height: 400px;
-    // width: 480px;
-    // height: 480px;
+    width: 480px;
+    height: 480px;
     // height: 300px;
     top: -10px;
     left: 20px;
