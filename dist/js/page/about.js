@@ -44,7 +44,7 @@ function handleMouseMove(event) {
   const posY = clientY - top;
 
   // Update the custom cursor position
-  customCursor.style.transform = "translate(".concat(posX, "px, ").concat(posY, "px)");
+  customCursor.style.transform = `translate(${posX}px, ${posY}px)`;
 }
 const cursorPos = {
   x: 0,
@@ -58,7 +58,7 @@ const moveCursor = e => {
     customCursor.style.transition = "none"; // Disable transition
   }
 
-  customCursor.style.transform = "translate3d(".concat(mouseX - 50, "px, ").concat(mouseY - 50, "px, 0)");
+  customCursor.style.transform = `translate3d(${mouseX - 50}px, ${mouseY - 50}px, 0)`;
 };
 const startDragging = () => {
   isDragging = true;

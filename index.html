@@ -1,394 +1,241 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+  <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Moon Rise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- favicon start  -->
+  <title>Moon Rise</title>
 
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="/assets/favicon/apple-icon-57x57.png"
-    />
+  <!-- favicon start  -->
 
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="/assets/favicon/apple-icon-60x60.png"
-    />
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/assets/favicon/apple-icon-72x72.png"
-    />
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/assets/favicon/apple-icon-76x76.png"
-    />
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/assets/favicon/apple-icon-114x114.png"
-    />
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/assets/favicon/apple-icon-120x120.png"
-    />
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/assets/favicon/apple-icon-144x144.png"
-    />
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/assets/favicon/apple-icon-152x152.png"
-    />
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/favicon/apple-icon-180x180.png"
-    />
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/assets/favicon/android-icon-192x192.png"
-    />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/favicon/favicon-32x32.png"
-    />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/assets/favicon/favicon-96x96.png"
-    />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon/favicon-16x16.png"
-    />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png" />
 
-    <link rel="manifest" href="/assets/favicon/manifest.json" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
 
-    <meta name="msapplication-TileColor" content="#ffffff" />
+  <link rel="manifest" href="/assets/favicon/manifest.json" />
 
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
 
-    <meta name="theme-color" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 
-    <!-- favicon end-->
+  <meta name="theme-color" content="#ffffff" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+  <!-- favicon end-->
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="./dist/css/bootstrap.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./dist/css/fonts.css" />
+  <link rel="stylesheet" href="./dist/css/bootstrap.css" />
 
-    <link rel="stylesheet" href="./dist/css/main.css" />
+  <link rel="stylesheet" href="./dist/css/fonts.css" />
 
-    <link rel="stylesheet" href="./dist/css/pages/home.css" />
+  <link rel="stylesheet" href="./dist/css/main.css" />
 
-    <!-- <link rel="stylesheet" href="./dist/css/pages/home.css" /> -->
-  </head>
+  <link rel="stylesheet" href="./dist/css/pages/home.css" />
 
-  <body>
-    <div id="preloader-container">
+  <!-- <link rel="stylesheet" href="./dist/css/pages/home.css" /> -->
+</head>
+
+<body>
+  <!-- <div id="preloader-container">
       <div id="preloader-video"></div>
+    </div> -->
+  <header class="navbar">
+    <div class="container">
+      <div class="custom__tablet">
+        <button class="navbar__hamburger">
+          <span></span>
 
-      <!-- <div id="preloader-video"></div> -->
-    </div>
-    <header class="navbar">
-      <div class="container">
-        <div class="custom__tablet">
-          <button class="navbar__hamburger">
-            <span></span>
+          <span></span>
 
-            <span></span>
-
-            <span></span>
-          </button>
-        </div>
-
-        <a href="/" class="navbar-brand"
-          ><img src="./assets/images/moonrise.svg" class="img-fluid" alt=""
-        /></a>
-
-        <div class="navbar__items">
-          <a href="our-services" class="navbar__link">Services</a>
-
-          <a href="about-us" class="navbar__link">About Us</a>
-
-          <a href="process" class="navbar__link">Process</a>
-
-          <a href="contact-us" class="navbar__link">Contact Us</a>
-
-          <button class="navbar__talkBtn">Let's Talk</button>
-        </div>
+          <span></span>
+        </button>
       </div>
-    </header>
 
-    <main class="home">
-      <section class="moonrise">
-        <div class="row gx-0">
-          <div class="col-lg-7 col-md-12 col-12 moonrise__bgPink">
-            <div class="moonrise__content">
-              <p
-                class="moonrise__subheading"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                #moonrise
-              </p>
+      <a href="/" class="navbar-brand"><img src="./assets/images/moonrise.svg" class="img-fluid" alt="" /></a>
 
-              <h2
-                class="moonrise__heading"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                We are <br />
+      <div class="navbar__items">
+        <a href="our-services" class="navbar__link">Services</a>
 
-                thought-leaders, <br />design thinkers <br />
+        <a href="about-us" class="navbar__link">About Us</a>
 
-                & storytellers.
-              </h2>
+        <a href="process" class="navbar__link">Process</a>
 
-              <a
-                href="#about-section"
-                class="moonrise__downButton"
-                data-aos="fade-in"
-                data-aos-duration="1000"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 28"
-                >
-                  <path
-                    stroke="#1B1C1E"
-                    stroke-linecap="round"
-                    stroke-width="2"
-                    d="M7 1v24m6-5.4-6 6-6-6"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
+        <a href="contact-us" class="navbar__link">Contact Us</a>
 
-          <div class="col-lg-5 col-md-12 col-12 d-flex align-items-center">
-            <div
-              class="swiper moonrise__slider"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <div class="swiper-wrapper">
-                <!-- Slides -->
+        <button class="navbar__talkBtn">Let's Talk</button>
+      </div>
+    </div>
+  </header>
 
-                <div class="swiper-slide moonrise__sliderImgWrapper">
-                  <img
-                    src="assets/images/slider/slide_2.jpeg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-
-                <div class="swiper-slide moonrise__sliderImgWrapper">
-                  <img
-                    src="assets/images/slider/slide_1.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div class="swiper-pagination moonrise__sliderBullet"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="coming__divder">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="custom__mobile"
-          fill="none"
-          viewBox="0 0 360 120"
-        >
-          <g clip-path="url(#a)">
-            <path fill="#21AF6E" d="M520 0h-623v120h623V0Z" />
-
-            <mask
-              id="b"
-              width="623"
-              height="120"
-              x="-103"
-              y="0"
-              maskUnits="userSpaceOnUse"
-              style="mask-type: luminance"
-            >
-              <path fill="#fff" d="M520 0h-623v120h623V0Z" />
-            </mask>
-
-            <g fill="#F6B2D0" mask="url(#b)">
-              <path
-                d="m150.495 53.4 10.292 34.9323 28.849-22.2094-12.204 34.3091 36.397-1.0068-30.04 20.5838 30.04 20.58-36.397-1.006 12.204 34.308-28.849-22.209-10.292 34.932-10.288-34.932-28.854 22.209 12.205-34.308-36.393 1.006 30.035-20.58-30.035-20.5838 36.393 1.0068-12.205-34.3091 28.854 22.2094L150.495 53.4ZM13.1466-67.0724l10.292 34.9323 28.8498-22.2095-12.205 34.3087 36.3976-1.0063L46.4409-.462936 76.481 20.1166l-36.3976-1.0063 12.205 34.3087-28.8498-22.2095-10.292 34.9323L2.85928 31.2095-25.9952 53.419l12.2049-34.3087-36.3928 1.0063L-20.1478-.462936-50.1831-21.0472l36.3928 1.0063-12.2049-34.3087L2.85928-32.1401 13.1466-67.0724Zm320.0634.044 10.292 34.9322 28.85-22.2094-12.205 34.3087 36.397-1.0063-30.04 20.584209 30.04 20.579491-36.397-1.0063 12.205 34.3087-28.85-22.2095-10.292 34.9323-10.287-34.9323-28.855 22.2095 12.205-34.3087-36.393 1.0063L299.916-.418991 269.88-21.0032l36.393 1.0063-12.205-34.3087 28.855 22.2094 10.287-34.9322Z"
-              />
-            </g>
-          </g>
-
-          <defs>
-            <clipPath id="a">
-              <path
-                fill="#fff"
-                d="M0 0h623v120H0z"
-                transform="translate(-103)"
-              />
-            </clipPath>
-          </defs>
-        </svg>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 1440 280"
-          class="custom__desktop"
-        >
-          <g clip-path="url(#a)">
-            <path fill="#21AF6E" d="M1447 0H-6v280h1453V0Z" />
-
-            <mask
-              id="b"
-              width="1453"
-              height="280"
-              x="-6"
-              y="0"
-              maskUnits="userSpaceOnUse"
-              style="mask-type: luminance"
-            >
-              <path fill="#fff" d="M1447 0H-6v280h1453V0Z" />
-            </mask>
-
-            <g fill="#F6B2D0" mask="url(#b)">
-              <path
-                d="m1226 124.6 24 81.509 67.29-51.822-28.47 80.053 84.89-2.348-70.06 48.03 70.06 48.019-84.89-2.348 28.47 80.054-67.29-51.823-24 81.509-23.99-81.509-67.3 51.823 28.47-80.054-84.88 2.348 70.05-48.019-70.05-48.03 84.88 2.348-28.47-80.053 67.3 51.822L1226 124.6Zm-738.762 0 24.004 81.509 67.285-51.822-28.465 80.053 84.889-2.348-70.062 48.03 70.062 48.019-84.889-2.348 28.465 80.054-67.285-51.823-24.004 81.509-23.993-81.509-67.296 51.823 28.465-80.054-84.877 2.348 70.05-48.019-70.05-48.03 84.877 2.348-28.465-80.053 67.296 51.822 23.993-81.509ZM52.1092-156.502l24.0037 81.5083 67.2851-51.8223-28.465 80.0538 84.889-2.348L129.76-1.08028l70.062 48.01888-84.889-2.348 28.465 80.0534-67.2851-51.8219-24.0037 81.5089-23.9927-81.5089-67.2963 51.8219 28.4652-80.0534-84.8777 2.348L-25.542-1.08028-95.5923-49.1102l84.8777 2.348-28.4652-80.0538 67.2963 51.8223 23.9927-81.5083Zm858.9108.102 24.004 81.5088 67.286-51.8218-28.466 80.0533 84.886-2.3481L988.672-.977859 1058.73 47.041l-84.886-2.348 28.466 80.054-67.286-51.8225-24.004 81.5085-23.992-81.5085-67.297 51.8225 28.465-80.054-84.877 2.348 70.05-48.018859-70.05-48.029941 84.877 2.3481-28.465-80.0533 67.297 51.8218L911.02-156.4Z"
-              />
-            </g>
-          </g>
-
-          <defs>
-            <clipPath id="a">
-              <path
-                fill="#fff"
-                d="M0 0h1453v280H0z"
-                transform="translate(-6)"
-              />
-            </clipPath>
-          </defs>
-        </svg>
-      </section>
-
-      <section class="section__wrapper" id="about-section">
-        <div class="container">
-          <div class="coming__about">
-            <h3
-              class="coming__aboutTitle"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              We build sophisticated and pragmatic brands that bring a
-              meaningful difference in the lives of others.
-            </h3>
-
-            <p
-              class="coming__aboutPara"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              Moonrise is a brand consultancy studio in the heart of Mumbai. We
-              provide branding tools to new age brands in a
-
-              <b>fresh</b> and <b>elevated</b> fashion.
-
-              <b>Challengers</b> and <b>storytellers</b>, we don’t like to use
-              the cookie cutter approach just because it seems familiar. We are
-              <b>disruptive</b> in everything that we do and we create
-
-              <b>bold</b> brands.
+  <main class="home">
+    <section class="moonrise">
+      <div class="row gx-0">
+        <div class="col-lg-7 col-md-12 col-12 moonrise__bgPink">
+          <div class="moonrise__content">
+            <p class="moonrise__subheading" data-aos="fade-up" data-aos-duration="1000">
+              #moonrise
             </p>
-          </div>
-        </div>
-      </section>
 
-      <section class="homeWrok">
-        <div class="container">
-          <h4 class="homeWrok__heading">Selected Work</h4>
-          <div class="homeWrok__container">  
-            <a href="work/cocukluk-essentials/" class="c-work">
-              <img src="assets/images/work/cocukluk/cocukalhi-essentials-thumbnail.webp" alt="Cocukalhi Essentials" class="c-work__img" />
-              <p class="c-work__name">Cocukalhi Essentials</p>
-              <div class="c-work__tags">
-                <p class="c-work__tag">Cocukalhi Essentials</p>
-                <p class="c-work__tag">Identity Design</p>
-                <p class="c-work__tag">Packaging Design</p>
-              </div>
-            </a>
-          </div>
-          <div class="homeWrok__buttonWrap" hidden>
-            <a
-              href="projects.html"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              class="btn__round homeWrok__cta"
-              >View all Projects
-              <svg
-                class="btn__roundIcon"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 23 12"
-              >
-                <path
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-width="1.5"
-                  d="M1 6h20m-4.5-5 5 5-5 5"
-                />
+            <h2 class="moonrise__heading" data-aos="fade-up" data-aos-duration="1000">
+              We are <br />
+
+              thought-leaders, <br />design thinkers <br />
+
+              & storytellers.
+            </h2>
+
+            <a href="#about-section" class="moonrise__downButton" data-aos="fade-in" data-aos-duration="1000">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 28">
+                <path stroke="#1B1C1E" stroke-linecap="round" stroke-width="2" d="M7 1v24m6-5.4-6 6-6-6" />
               </svg>
             </a>
           </div>
         </div>
-      </section>
 
-      <!-- <section class="section__wrapper">
+        <div class="col-lg-5 col-md-12 col-12 d-flex align-items-center">
+          <div class="swiper moonrise__slider" data-aos="fade-up" data-aos-duration="1000">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+
+              <div class="swiper-slide moonrise__sliderImgWrapper">
+                <img src="assets/images/slider/slide_2.jpeg" class="img-fluid" alt="" />
+              </div>
+
+              <div class="swiper-slide moonrise__sliderImgWrapper">
+                <img src="assets/images/slider/slide_1.jpg" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="swiper-pagination moonrise__sliderBullet"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coming__divder">
+      <svg xmlns="http://www.w3.org/2000/svg" class="custom__mobile" fill="none" viewBox="0 0 360 120">
+        <g clip-path="url(#a)">
+          <path fill="#21AF6E" d="M520 0h-623v120h623V0Z" />
+
+          <mask id="b" width="623" height="120" x="-103" y="0" maskUnits="userSpaceOnUse" style="mask-type: luminance">
+            <path fill="#fff" d="M520 0h-623v120h623V0Z" />
+          </mask>
+
+          <g fill="#F6B2D0" mask="url(#b)">
+            <path
+              d="m150.495 53.4 10.292 34.9323 28.849-22.2094-12.204 34.3091 36.397-1.0068-30.04 20.5838 30.04 20.58-36.397-1.006 12.204 34.308-28.849-22.209-10.292 34.932-10.288-34.932-28.854 22.209 12.205-34.308-36.393 1.006 30.035-20.58-30.035-20.5838 36.393 1.0068-12.205-34.3091 28.854 22.2094L150.495 53.4ZM13.1466-67.0724l10.292 34.9323 28.8498-22.2095-12.205 34.3087 36.3976-1.0063L46.4409-.462936 76.481 20.1166l-36.3976-1.0063 12.205 34.3087-28.8498-22.2095-10.292 34.9323L2.85928 31.2095-25.9952 53.419l12.2049-34.3087-36.3928 1.0063L-20.1478-.462936-50.1831-21.0472l36.3928 1.0063-12.2049-34.3087L2.85928-32.1401 13.1466-67.0724Zm320.0634.044 10.292 34.9322 28.85-22.2094-12.205 34.3087 36.397-1.0063-30.04 20.584209 30.04 20.579491-36.397-1.0063 12.205 34.3087-28.85-22.2095-10.292 34.9323-10.287-34.9323-28.855 22.2095 12.205-34.3087-36.393 1.0063L299.916-.418991 269.88-21.0032l36.393 1.0063-12.205-34.3087 28.855 22.2094 10.287-34.9322Z" />
+          </g>
+        </g>
+
+        <defs>
+          <clipPath id="a">
+            <path fill="#fff" d="M0 0h623v120H0z" transform="translate(-103)" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1440 280" class="custom__desktop">
+        <g clip-path="url(#a)">
+          <path fill="#21AF6E" d="M1447 0H-6v280h1453V0Z" />
+
+          <mask id="b" width="1453" height="280" x="-6" y="0" maskUnits="userSpaceOnUse" style="mask-type: luminance">
+            <path fill="#fff" d="M1447 0H-6v280h1453V0Z" />
+          </mask>
+
+          <g fill="#F6B2D0" mask="url(#b)">
+            <path
+              d="m1226 124.6 24 81.509 67.29-51.822-28.47 80.053 84.89-2.348-70.06 48.03 70.06 48.019-84.89-2.348 28.47 80.054-67.29-51.823-24 81.509-23.99-81.509-67.3 51.823 28.47-80.054-84.88 2.348 70.05-48.019-70.05-48.03 84.88 2.348-28.47-80.053 67.3 51.822L1226 124.6Zm-738.762 0 24.004 81.509 67.285-51.822-28.465 80.053 84.889-2.348-70.062 48.03 70.062 48.019-84.889-2.348 28.465 80.054-67.285-51.823-24.004 81.509-23.993-81.509-67.296 51.823 28.465-80.054-84.877 2.348 70.05-48.019-70.05-48.03 84.877 2.348-28.465-80.053 67.296 51.822 23.993-81.509ZM52.1092-156.502l24.0037 81.5083 67.2851-51.8223-28.465 80.0538 84.889-2.348L129.76-1.08028l70.062 48.01888-84.889-2.348 28.465 80.0534-67.2851-51.8219-24.0037 81.5089-23.9927-81.5089-67.2963 51.8219 28.4652-80.0534-84.8777 2.348L-25.542-1.08028-95.5923-49.1102l84.8777 2.348-28.4652-80.0538 67.2963 51.8223 23.9927-81.5083Zm858.9108.102 24.004 81.5088 67.286-51.8218-28.466 80.0533 84.886-2.3481L988.672-.977859 1058.73 47.041l-84.886-2.348 28.466 80.054-67.286-51.8225-24.004 81.5085-23.992-81.5085-67.297 51.8225 28.465-80.054-84.877 2.348 70.05-48.018859-70.05-48.029941 84.877 2.3481-28.465-80.0533 67.297 51.8218L911.02-156.4Z" />
+          </g>
+        </g>
+
+        <defs>
+          <clipPath id="a">
+            <path fill="#fff" d="M0 0h1453v280H0z" transform="translate(-6)" />
+          </clipPath>
+        </defs>
+      </svg>
+    </section>
+
+    <section class="section__wrapper" id="about-section">
+      <div class="container">
+        <div class="coming__about">
+          <h3 class="coming__aboutTitle" data-aos="fade-up" data-aos-duration="1000">
+            We build sophisticated and pragmatic brands that bring a
+            meaningful difference in the lives of others.
+          </h3>
+
+          <p class="coming__aboutPara" data-aos="fade-up" data-aos-duration="1000">
+            Moonrise is a brand consultancy studio in the heart of Mumbai. We
+            provide branding tools to new age brands in a
+
+            <b>fresh</b> and <b>elevated</b> fashion.
+
+            <b>Challengers</b> and <b>storytellers</b>, we don’t like to use
+            the cookie cutter approach just because it seems familiar. We are
+            <b>disruptive</b> in everything that we do and we create
+
+            <b>bold</b> brands.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="homeWrok">
+      <div class="container">
+        <h4 class="homeWrok__heading" data-aos="fade-up" data-aos-duration="1000">Selected Work</h4>
+        <div class="homeWrok__container">
+          <a href="work/cocukluk-essentials/index.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" class="c-work">
+            <img src="assets/images/work/cocukluk/cocukalhi-essentials-thumbnail.webp" alt="Cocukalhi Essentials"
+              class="c-work__img" />
+            <p class="c-work__name">Cocukalhi Essentials</p>
+            <div class="c-work__tags">
+              <p class="c-work__tag">Cocukalhi Essentials</p>
+              <p class="c-work__tag">Identity Design</p>
+              <p class="c-work__tag">Packaging Design</p>
+            </div>
+          </a>
+        </div>
+        <div class="homeWrok__buttonWrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" hidden>
+          <a href="projects.html" data-aos="fade-up" data-aos-duration="1000" class="btn__round homeWrok__cta">View all
+            Projects
+            <svg class="btn__roundIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 23 12">
+              <path stroke="#fff" stroke-linecap="round" stroke-width="1.5" d="M1 6h20m-4.5-5 5 5-5 5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section__wrapper">
 
 				<div class="container">
 
@@ -632,342 +479,195 @@
 
 			</section> -->
 
-      <section class="section__wrapper">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-12 col-12">
-              <h2
-                class="section__title"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                Let’s work <br />
+    <section class="section__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-12">
+            <h2 class="section__title" data-aos="fade-up" data-aos-duration="1000">
+              Let’s work <br />
 
-                together.
+              together.
 
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 206 150"
-                  class="section__titleDoodle custom__desktop"
-                >
-                  <path
-                    fill="#E65435"
-                    d="M205.215 124.214c-10.87 9.06-22.12 18.37-35.76 22.87-11.21 3.71-24.61 3.49-34.85-2.89-12.04-7.5-15.76-22.42-18.83-35.36-3.47-14.6197-5.5-29.5397-9.25-44.0897-3.37-13.08-8.2298-25.73-16.6898-36.41-7.43-9.37-17.28-17.44-28.98-20.65004-11.7-3.21001-24.07-.45999-34.05 6.54004-5.03 3.53-9.42 7.97-13.22 12.78-1.97 2.5-3.77 5.13-5.44 7.84-1.51 2.46-3.19 5.04-4.17 7.76-.78 2.14-1.31999 4.67-.78 6.93s2.32001 3.28 4.49001 2.33c2.89999-1.26 5.02999-4.64 6.56999-7.26 1.67-2.83 2.9-5.87 3.86-9.01 1.91-6.22 2.97-12.81 3.71-19.27.57-5 .42-12.92004-6.25-13.33004-1.81-.11-3.78.48001-4.34 2.38-.56 1.89999-3.43999 1.06-2.88999-.8 1.52-5.140002 8.18999-5.64 12.12999-3.03 5.8 3.83999 4.78 12.07004 3.93 17.96004-.98 6.84-2.06 13.77-4.54 20.26-1.21 3.16-2.73 6.22-4.72 8.97-1.99 2.75-4.38 5.7-7.75 6.35-2.58.5-5.20999-.63-6.429994-2.98-1.220002-2.35-1.089997-4.95-.660004-7.38.5-2.82 1.780018-5.31 3.150008-7.78 1.60001-2.89 3.34999-5.69 5.25999-8.38 7.44-10.49 17.5-19.78005 30.05-23.54005 12.55-3.75999 25.31-1.07 36.07 5.64005 10.76 6.71 19.7 17.26 25.6398 28.69 7.01 13.4799 10.19 28.67 13.05 43.46 1.5 7.75 2.9 15.53 4.66 23.2297 1.76 7.7 3.54 15.08 6.71 22.04 2.84 6.23 7.07 11.46 13.2 14.66 5.54 2.89 11.91 3.94 18.12 3.71 14.5-.54 27.21-8.63 38.28-17.36 2.9-2.29 5.74-4.65 8.58-7.01 1.47-1.23 3.61.88 2.12 2.12l.02.01Z"
-                  />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 206 150"
+                class="section__titleDoodle custom__desktop">
+                <path fill="#E65435"
+                  d="M205.215 124.214c-10.87 9.06-22.12 18.37-35.76 22.87-11.21 3.71-24.61 3.49-34.85-2.89-12.04-7.5-15.76-22.42-18.83-35.36-3.47-14.6197-5.5-29.5397-9.25-44.0897-3.37-13.08-8.2298-25.73-16.6898-36.41-7.43-9.37-17.28-17.44-28.98-20.65004-11.7-3.21001-24.07-.45999-34.05 6.54004-5.03 3.53-9.42 7.97-13.22 12.78-1.97 2.5-3.77 5.13-5.44 7.84-1.51 2.46-3.19 5.04-4.17 7.76-.78 2.14-1.31999 4.67-.78 6.93s2.32001 3.28 4.49001 2.33c2.89999-1.26 5.02999-4.64 6.56999-7.26 1.67-2.83 2.9-5.87 3.86-9.01 1.91-6.22 2.97-12.81 3.71-19.27.57-5 .42-12.92004-6.25-13.33004-1.81-.11-3.78.48001-4.34 2.38-.56 1.89999-3.43999 1.06-2.88999-.8 1.52-5.140002 8.18999-5.64 12.12999-3.03 5.8 3.83999 4.78 12.07004 3.93 17.96004-.98 6.84-2.06 13.77-4.54 20.26-1.21 3.16-2.73 6.22-4.72 8.97-1.99 2.75-4.38 5.7-7.75 6.35-2.58.5-5.20999-.63-6.429994-2.98-1.220002-2.35-1.089997-4.95-.660004-7.38.5-2.82 1.780018-5.31 3.150008-7.78 1.60001-2.89 3.34999-5.69 5.25999-8.38 7.44-10.49 17.5-19.78005 30.05-23.54005 12.55-3.75999 25.31-1.07 36.07 5.64005 10.76 6.71 19.7 17.26 25.6398 28.69 7.01 13.4799 10.19 28.67 13.05 43.46 1.5 7.75 2.9 15.53 4.66 23.2297 1.76 7.7 3.54 15.08 6.71 22.04 2.84 6.23 7.07 11.46 13.2 14.66 5.54 2.89 11.91 3.94 18.12 3.71 14.5-.54 27.21-8.63 38.28-17.36 2.9-2.29 5.74-4.65 8.58-7.01 1.47-1.23 3.61.88 2.12 2.12l.02.01Z" />
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" class="section__titleDoodle custom__tablet" fill="none"
+                viewBox="0 0 30 53">
+                <path stroke="#E65435" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M3.45341 1c15.69809 0 6.03771 21.3721 0 19C-3.33969 17.3311 5.15937 6.61415 19.5 8c10.7977 1.04347 13.9625 7.5326 0 22.5-8.6287 9.2496-6.6123 20.2989-3.9708 21.5" />
+              </svg>
+            </h2>
+          </div>
+
+          <div class="col-lg-6 col-md-12 col-12">
+            <form action="" class="form" id="contact_form">
+              <div class="form_wrapper">
+                <div class="form-floating mb-3" data-aos="fade-up" data-aos-duration="1000">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+
+                  <label for="name">Name</label>
+
+                  <div class="form-error">
+                    <p class="form-errorText -red">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="form-errorIcon" fill="none" viewBox="0 0 23 20">
+                        <path fill="#C71835"
+                          d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z" />
+                      </svg>
+
+                      <span>Please fill mandatory</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="form-floating mb-3" data-aos="fade-up" data-aos-duration="1000">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" />
+
+                  <label for="email">E-mail</label>
+
+                  <div class="form-error">
+                    <p class="form-errorText -red">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="form-errorIcon" fill="none" viewBox="0 0 23 20">
+                        <path fill="#C71835"
+                          d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z" />
+                      </svg>
+
+                      <span>Please fill mandatory</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="form-floating mb-3" data-aos="fade-up" data-aos-duration="1000">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="msg" name="msg"
+                    style="height: 100px"></textarea>
+
+                  <label for="msg">Message</label>
+
+                  <div class="form-error">
+                    <p class="form-errorText -red">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="form-errorIcon" fill="none" viewBox="0 0 23 20">
+                        <path fill="#C71835"
+                          d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z" />
+                      </svg>
+
+                      <span>Please fill mandatory</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="form-floating mb-3" data-aos="fade-up" data-aos-duration="1000">
+                  <input type="text" class="form-control" id="budget" name="budget" placeholder="Budget"
+                    oninput="this.value = this.value.replace(/\D+/g, '')" inputmode="numeric" />
+
+                  <label for="budget">Budget</label>
+
+                  <div class="form-error">
+                    <p class="form-errorText -red">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="form-errorIcon" fill="none" viewBox="0 0 23 20">
+                        <path fill="#C71835"
+                          d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z" />
+                      </svg>
+
+                      <span>Please fill mandatory</span>
+                    </p>
+                  </div>
+                </div>
+
+                <button type="submit" class="form__submit" data-aos="fade-up" data-aos-duration="1000">
+                  Submit
+                </button>
+              </div>
+
+              <div class="form_submittedState -submitted">
+                <svg class="form_submittedStateIcon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 101 100">
+                  <rect width="100" height="100" x=".200195" fill="#fff" rx="50" />
+
+                  <path stroke="#22AF6E" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                    d="m28 58 12 12 32-40" />
                 </svg>
 
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="section__titleDoodle custom__tablet"
-                  fill="none"
-                  viewBox="0 0 30 53"
-                >
-                  <path
-                    stroke="#E65435"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M3.45341 1c15.69809 0 6.03771 21.3721 0 19C-3.33969 17.3311 5.15937 6.61415 19.5 8c10.7977 1.04347 13.9625 7.5326 0 22.5-8.6287 9.2496-6.6123 20.2989-3.9708 21.5"
-                  />
+                <p class="form_submittedStateText">
+                  Thank you for completing the <br />
+
+                  application form! We’ll get back <br />
+
+                  to you as soon as possible.
+                </p>
+              </div>
+
+              <div class="form_submittedState -notsubmitted">
+                <svg xmlns="http://www.w3.org/2000/svg" class="form_submittedStateIcon" fill="none"
+                  viewBox="0 0 101 100">
+                  <rect width="100" height="100" x=".201172" fill="#C71835" rx="50" />
+
+                  <path fill="#FEFBED"
+                    d="m53.2254 29.688-.7202 28.5318H48.35l-.7202-28.5318h5.5956Zm.3324 34.072v5.928h-6.1496V63.76h6.1496Z" />
                 </svg>
-              </h2>
-            </div>
 
-            <div class="col-lg-6 col-md-12 col-12">
-              <form action="" class="form" id="contact_form">
-                <div class="form_wrapper">
-                  <div
-                    class="form-floating mb-3"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      name="name"
-                      placeholder="Name"
-                    />
+                <p class="form_submittedStateText">
+                  Opps! We are facing some <br />
 
-                    <label for="name">Name</label>
+                  technical issues. Please try again
 
-                    <div class="form-error">
-                      <p class="form-errorText -red">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="form-errorIcon"
-                          fill="none"
-                          viewBox="0 0 23 20"
-                        >
-                          <path
-                            fill="#C71835"
-                            d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z"
-                          />
-                        </svg>
+                  <br />
 
-                        <span>Please fill mandatory</span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="form-floating mb-3"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      placeholder="E-mail"
-                    />
-
-                    <label for="email">E-mail</label>
-
-                    <div class="form-error">
-                      <p class="form-errorText -red">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="form-errorIcon"
-                          fill="none"
-                          viewBox="0 0 23 20"
-                        >
-                          <path
-                            fill="#C71835"
-                            d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z"
-                          />
-                        </svg>
-
-                        <span>Please fill mandatory</span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="form-floating mb-3"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    <textarea
-                      class="form-control"
-                      placeholder="Leave a comment here"
-                      id="msg"
-                      name="msg"
-                      style="height: 100px"
-                    ></textarea>
-
-                    <label for="msg">Message</label>
-
-                    <div class="form-error">
-                      <p class="form-errorText -red">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="form-errorIcon"
-                          fill="none"
-                          viewBox="0 0 23 20"
-                        >
-                          <path
-                            fill="#C71835"
-                            d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z"
-                          />
-                        </svg>
-
-                        <span>Please fill mandatory</span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="form-floating mb-3"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="budget"
-                      name="budget"
-                      placeholder="Budget"
-                      oninput="this.value = this.value.replace(/\D+/g, '')"
-                      inputmode="numeric"
-                    />
-
-                    <label for="budget">Budget</label>
-
-                    <div class="form-error">
-                      <p class="form-errorText -red">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="form-errorIcon"
-                          fill="none"
-                          viewBox="0 0 23 20"
-                        >
-                          <path
-                            fill="#C71835"
-                            d="M21.934 17.0545 13.1495 1.01927c-.1662-.308164-.4127-.565608-.7134-.745043-.3006-.1794345-.6442-.2741736-.9944-.2741736-.3501 0-.6937.0947391-.9944.2741736-.3006.179435-.54713.436879-.71335.745043L.949489 17.0545c-.168986.3046-.254864.6484-.249014.9967.005851.3483.103225.6889.282347.9877.170288.293.414648.5361.708548.7048.29391.1687.62702.2571.9659.2563H20.2262c.3389.0008.672-.0876.9659-.2563.2939-.1687.5383-.4118.7085-.7048.1792-.2988.2765-.6394.2824-.9877.0058-.3483-.08-.6921-.249-.9967ZM12.4999 6.29632l-.5293 7.67188h-1.0581l-.5289-7.67188h2.1163ZM11.4417 17.7778c-.2197 0-.4345-.0651-.6173-.1872-.1827-.1221-.3251-.2957-.4092-.4987-.0841-.203-.1061-.4264-.0632-.642.0428-.2155.1487-.4135.3041-.5689.1553-.1554.3533-.2612.5689-.3041.2155-.0428.4389-.0208.6419.0633.2031.0841.3766.2265.4987.4092.1221.1827.1872.3976.1872.6173 0 .2947-.117.5773-.3254.7857-.2084.2084-.491.3254-.7857.3254Z"
-                          />
-                        </svg>
-
-                        <span>Please fill mandatory</span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    class="form__submit"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    Submit
-                  </button>
-                </div>
-
-                <div class="form_submittedState -submitted">
-                  <svg
-                    class="form_submittedStateIcon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 101 100"
-                  >
-                    <rect
-                      width="100"
-                      height="100"
-                      x=".200195"
-                      fill="#fff"
-                      rx="50"
-                    />
-
-                    <path
-                      stroke="#22AF6E"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                      d="m28 58 12 12 32-40"
-                    />
-                  </svg>
-
-                  <p class="form_submittedStateText">
-                    Thank you for completing the <br />
-
-                    application form! We’ll get back <br />
-
-                    to you as soon as possible.
-                  </p>
-                </div>
-
-                <div class="form_submittedState -notsubmitted">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="form_submittedStateIcon"
-                    fill="none"
-                    viewBox="0 0 101 100"
-                  >
-                    <rect
-                      width="100"
-                      height="100"
-                      x=".201172"
-                      fill="#C71835"
-                      rx="50"
-                    />
-
-                    <path
-                      fill="#FEFBED"
-                      d="m53.2254 29.688-.7202 28.5318H48.35l-.7202-28.5318h5.5956Zm.3324 34.072v5.928h-6.1496V63.76h6.1496Z"
-                    />
-                  </svg>
-
-                  <p class="form_submittedStateText">
-                    Opps! We are facing some <br />
-
-                    technical issues. Please try again
-
-                    <br />
-
-                    or contact at mail@mail.com
-                  </p>
-                </div>
-              </form>
-            </div>
+                  or contact at mail@mail.com
+                </p>
+              </div>
+            </form>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer
-      class="footer bg__orangeLight"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
-      <div class="container">
-        <a href="/contact-us" class="footer__top">
-          <h2 class="footer__title">Let’s Connect</h2>
+  <footer class="footer bg__orangeLight" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container">
+      <a href="/contact-us" class="footer__top">
+        <h2 class="footer__title">Let’s Connect</h2>
 
-          <svg
-            class="footer__titleIcon"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 60 60"
-          >
-            <rect width="60" height="60" fill="#E65435" rx="30" />
+        <svg class="footer__titleIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 60 60">
+          <rect width="60" height="60" fill="#E65435" rx="30" />
 
-            <path
-              stroke="#fff"
-              stroke-linecap="round"
-              stroke-width="2"
-              d="M15 30h28m-6.2998-7 7 7-7 7"
-            />
-          </svg>
-        </a>
+          <path stroke="#fff" stroke-linecap="round" stroke-width="2" d="M15 30h28m-6.2998-7 7 7-7 7" />
+        </svg>
+      </a>
 
-        <div class="footer__navWrapper">
-          <div class="row">
-            <div class="col-lg-2 col-md-3 col-6">
+      <div class="footer__navWrapper">
+        <div class="row">
+          <div class="col-lg-2 col-md-3 col-6">
+            <ul>
+              <li>
+                <a href="./" class="footer__navTitle footer__qucikLink">Home</a>
+              </li>
+
+              <li>
+                <a href="our-services" class="footer__navTitle footer__qucikLink">Services</a>
+              </li>
+
+              <li>
+                <a href="about-us" class="footer__navTitle footer__qucikLink">About Us</a>
+              </li>
+
+              <li>
+                <a href="process" class="footer__navTitle footer__qucikLink">Process</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-10 col-md-9 col-12 mt-md-0 mt-4 row">
+            <div class="col-lg-2 col-md-4 col-12 custom__desktop">
+              <h3 class="footer__navTitle">Social</h3>
+
               <ul>
                 <li>
-                  <a href="./" class="footer__navTitle footer__qucikLink"
-                    >Home</a
-                  >
+                  <a href="https://www.instagram.com/brandingbymoonrise/" class="footer__navLink">Instagram</a>
                 </li>
 
-                <li>
-                  <a
-                    href="our-services"
-                    class="footer__navTitle footer__qucikLink"
-                    >Services</a
-                  >
-                </li>
-
-                <li>
-                  <a href="about-us" class="footer__navTitle footer__qucikLink"
-                    >About Us</a
-                  >
-                </li>
-
-                <li>
-                  <a href="process" class="footer__navTitle footer__qucikLink"
-                    >Process</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-10 col-md-9 col-12 mt-md-0 mt-4 row">
-              <div class="col-lg-2 col-md-4 col-12 custom__desktop">
-                <h3 class="footer__navTitle">Social</h3>
-
-                <ul>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/brandingbymoonrise/"
-                      class="footer__navLink"
-                      >Instagram</a
-                    >
-                  </li>
-
-                  <!--<li>
+                <!--<li>
 
 										<a href="" class="footer__navLink"
 
@@ -997,71 +697,48 @@
 
 									</li>-->
 
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/company/moonrise-brand-consultants/?viewAsMember=true"
-                      class="footer__navLink"
-                      >Linkedin</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12">
-                <h3 class="footer__navTitle">Contact us</h3>
-
-                <ul>
-                  <li>
-                    <a
-                      href="mailto:anandita@brandingbymoonrise.com"
-                      class="footer__navLink"
-                      >anandita@branding<br />bymoonrise.com</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="tel:02222027370" class="footer__navLink"
-                      >022-22027370</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-12 mt-lg-0 mt-md-0 mt-4">
-                <h3 class="footer__navTitle">Address</h3>
-
-                <p class="footer__navPara">
-                  73, 7th Floor, Makers Chambers 6, Nariman Point, Mumbai -
-                  400021
-                </p>
-              </div>
+                <li>
+                  <a href="https://www.linkedin.com/company/moonrise-brand-consultants/?viewAsMember=true"
+                    class="footer__navLink">Linkedin</a>
+                </li>
+              </ul>
             </div>
 
-            <div class="col-12 custom__mobile">
-              <ul class="footer__social">
+            <div class="col-lg-3 col-md-6 col-12">
+              <h3 class="footer__navTitle">Contact us</h3>
+
+              <ul>
                 <li>
-                  <a
-                    href="https://www.instagram.com/brandingbymoonrise/"
-                    class="footer__socialLink"
-                    ><img
-                      src="assets/icons/instagram.png"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
+                  <a href="mailto:anandita@brandingbymoonrise.com"
+                    class="footer__navLink">anandita@branding<br />bymoonrise.com</a>
                 </li>
 
                 <li>
-                  <a
-                    href="https://www.linkedin.com/company/moonrise-brand-consultants/?viewAsMember=true"
-                    class="footer__socialLink"
-                    ><img
-                      src="assets/icons/linkedin.png"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
+                  <a href="tel:02222027370" class="footer__navLink">022-22027370</a>
                 </li>
+              </ul>
+            </div>
 
-                <!--<li>
+            <div class="col-lg-3 col-md-4 col-12 mt-lg-0 mt-md-0 mt-4">
+              <h3 class="footer__navTitle">Address</h3>
+
+              <p class="footer__navPara">73, 7th Floor, Makers Chambers 6, Nariman Point, Mumbai - 400021</p>
+            </div>
+          </div>
+
+          <div class="col-12 custom__mobile">
+            <ul class="footer__social">
+              <li>
+                <a href="https://www.instagram.com/brandingbymoonrise/" class="footer__socialLink"><img
+                    src="assets/icons/instagram.png" class="img-fluid" alt="" /></a>
+              </li>
+
+              <li>
+                <a href="https://www.linkedin.com/company/moonrise-brand-consultants/?viewAsMember=true"
+                  class="footer__socialLink"><img src="assets/icons/linkedin.png" class="img-fluid" alt="" /></a>
+              </li>
+
+              <!--<li>
 
 									<a href="#" class="footer__socialLink"
 
@@ -1108,391 +785,305 @@
 									/></a>
 
 								</li>-->
-              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">Moonrise Agency © 2023</p>
+
+        <p class="footer__copy">
+          Design & Developed by
+
+          <a href="https://uidirect.in/" target="_blank" rel="noopener noreferrer">UI Direct</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="popUp" id="letsTalk">
+    <div class="popUp__wrapper">
+      <div id="blueMoon" class="popUp__icon -Icon2 blue-moon"></div>
+
+      <form class="popUp__container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="popUp__closeBtn" fill="none" viewBox="0 0 41 40">
+          <path fill="#1B1C1E" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M20.4987 36.8965c9.1667 0 16.6667-7.5472 16.6667-16.7715s-7.5-16.77148-16.6667-16.77148c-9.1667 0-16.66667 7.54718-16.66667 16.77148S11.332 36.8965 20.4987 36.8965Z" />
+
+          <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m15.7812 24.8716 9.4334-9.4927m0 9.4927-9.4334-9.4927" />
+        </svg>
+
+        <h3 class="popUp__heading">
+          Hi, <br class="custom__mobile" />
+
+          Moonrise. team!
+        </h3>
+
+        <div class="popUp__form">
+          <div class="popUp__inputWrapper">
+            <p class="popUp__formText">My name is</p>
+
+            <input type="text" class="popUp__formInput -fullname" placeholder="Your Name" name="name" />
+          </div>
+
+          <div class="popUp__inputWrapper">
+            <p class="popUp__formText">from</p>
+
+            <input type="text" class="popUp__formInput -from" name="form" placeholder="WEBSITE OR COMPANY NAME" />
+          </div>
+
+          <div class="popUp__inputWrapper">
+            <p class="popUp__formText">I’d like to discuss</p>
+
+            <div class="popUp__formCheckBoxs -projectTags">
+              <input type="checkbox" name="project_idea" class="popUp__formCheckBox" checked value="DESIGN "
+                id="project_tag1" />
+
+              <label for="project_tag1" class="popUp__formCheckBoxLabel">DESIGN
+              </label>
+
+              <input type="checkbox" name="project_idea" class="popUp__formCheckBox" value="ACTIVATION "
+                id="project_tag2" />
+
+              <label for="project_tag2" class="popUp__formCheckBoxLabel">ACTIVATION
+              </label>
+
+              <input type="checkbox" name="project_idea" class="popUp__formCheckBox" value="STRATEGY"
+                id="project_tag3" />
+
+              <label for="project_tag3" class="popUp__formCheckBoxLabel">STRATEGY
+              </label>
             </div>
+
+            <p class="popUp__formText">project idea & design brief.</p>
+          </div>
+
+          <div class="popUp__inputWrapper w-100">
+            <input type="text" class="popUp__formInput w-100" placeholder="PITCH YOUR PROJECT IDEA (OPTIONAL)"
+              name="pitch_idea" />
+          </div>
+
+          <div class="popUp__inputWrapper">
+            <p class="popUp__formText">A budget for this project is</p>
+
+            <input type="text" class="popUp__formInput -email" placeholder="YOUR AMOUNT" name="amount" />
+          </div>
+
+          <div class="popUp__inputWrapper">
+            <p class="popUp__formText">Contact me back at</p>
+
+            <input type="text" class="popUp__formInput -email" placeholder="YOUR Email" name="email" />
           </div>
         </div>
 
-        <div class="footer__bottom">
-          <p class="footer__copy">Moonrise Agency © 2023</p>
+        <div class="form_submittedState -submitted">
+          <svg class="form_submittedStateIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 101 100">
+            <rect width="100" height="100" x=".200195" fill="#fff" rx="50" />
 
-          <p class="footer__copy">
-            Design & Developed by
-
-            <a
-              href="https://uidirect.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >UI Direct</a
-            >
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <div class="popUp" id="letsTalk">
-      <div class="popUp__wrapper">
-        <div id="blueMoon" class="popUp__icon -Icon2 blue-moon"></div>
-
-        <form class="popUp__container">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="popUp__closeBtn"
-            fill="none"
-            viewBox="0 0 41 40"
-          >
-            <path
-              fill="#1B1C1E"
-              stroke="#fff"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M20.4987 36.8965c9.1667 0 16.6667-7.5472 16.6667-16.7715s-7.5-16.77148-16.6667-16.77148c-9.1667 0-16.66667 7.54718-16.66667 16.77148S11.332 36.8965 20.4987 36.8965Z"
-            />
-
-            <path
-              stroke="#fff"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m15.7812 24.8716 9.4334-9.4927m0 9.4927-9.4334-9.4927"
-            />
+            <path stroke="#22AF6E" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              d="m28 58 12 12 32-40" />
           </svg>
 
-          <h3 class="popUp__heading">
-            Hi, <br class="custom__mobile" />
+          <p class="form_submittedStateText">
+            Thank you for completing the <br />
 
-            Moonrise. team!
-          </h3>
+            application form! We’ll get back <br />
 
-          <div class="popUp__form">
-            <div class="popUp__inputWrapper">
-              <p class="popUp__formText">My name is</p>
+            to you as soon as possible.
+          </p>
+        </div>
 
-              <input
-                type="text"
-                class="popUp__formInput -fullname"
-                placeholder="Your Name"
-                name="name"
-              />
-            </div>
+        <div class="form_submittedState -notsubmitted">
+          <svg xmlns="http://www.w3.org/2000/svg" class="form_submittedStateIcon" fill="none" viewBox="0 0 101 100">
+            <rect width="100" height="100" x=".201172" fill="#C71835" rx="50" />
 
-            <div class="popUp__inputWrapper">
-              <p class="popUp__formText">from</p>
+            <path fill="#FEFBED"
+              d="m53.2254 29.688-.7202 28.5318H48.35l-.7202-28.5318h5.5956Zm.3324 34.072v5.928h-6.1496V63.76h6.1496Z" />
+          </svg>
 
-              <input
-                type="text"
-                class="popUp__formInput -from"
-                name="form"
-                placeholder="WEBSITE OR COMPANY NAME"
-              />
-            </div>
+          <p class="form_submittedStateText">
+            Opps! We are facing some <br />
 
-            <div class="popUp__inputWrapper">
-              <p class="popUp__formText">I’d like to discuss</p>
+            technical issues. Please try again
 
-              <div class="popUp__formCheckBoxs -projectTags">
-                <input
-                  type="checkbox"
-                  name="project_idea"
-                  class="popUp__formCheckBox"
-                  checked
-                  value="DESIGN "
-                  id="project_tag1"
-                />
+            <br />
 
-                <label for="project_tag1" class="popUp__formCheckBoxLabel"
-                  >DESIGN
-                </label>
+            or contact at mail@mail.com
+          </p>
+        </div>
 
-                <input
-                  type="checkbox"
-                  name="project_idea"
-                  class="popUp__formCheckBox"
-                  value="ACTIVATION "
-                  id="project_tag2"
-                />
-
-                <label for="project_tag2" class="popUp__formCheckBoxLabel"
-                  >ACTIVATION
-                </label>
-
-                <input
-                  type="checkbox"
-                  name="project_idea"
-                  class="popUp__formCheckBox"
-                  value="STRATEGY"
-                  id="project_tag3"
-                />
-
-                <label for="project_tag3" class="popUp__formCheckBoxLabel"
-                  >STRATEGY
-                </label>
-              </div>
-
-              <p class="popUp__formText">project idea & design brief.</p>
-            </div>
-
-            <div class="popUp__inputWrapper w-100">
-              <input
-                type="text"
-                class="popUp__formInput w-100"
-                placeholder="PITCH YOUR PROJECT IDEA (OPTIONAL)"
-                name="pitch_idea"
-              />
-            </div>
-
-            <div class="popUp__inputWrapper">
-              <p class="popUp__formText">A budget for this project is</p>
-
-              <input
-                type="text"
-                class="popUp__formInput -email"
-                placeholder="YOUR AMOUNT"
-                name="amount"
-              />
-            </div>
-
-            <div class="popUp__inputWrapper">
-              <p class="popUp__formText">Contact me back at</p>
-
-              <input
-                type="text"
-                class="popUp__formInput -email"
-                placeholder="YOUR Email"
-                name="email"
-              />
-            </div>
-          </div>
-
-          <div class="form_submittedState -submitted">
-            <svg
-              class="form_submittedStateIcon"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 101 100"
-            >
-              <rect width="100" height="100" x=".200195" fill="#fff" rx="50" />
-
-              <path
-                stroke="#22AF6E"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="3"
-                d="m28 58 12 12 32-40"
-              />
-            </svg>
-
-            <p class="form_submittedStateText">
-              Thank you for completing the <br />
-
-              application form! We’ll get back <br />
-
-              to you as soon as possible.
-            </p>
-          </div>
-
-          <div class="form_submittedState -notsubmitted">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="form_submittedStateIcon"
-              fill="none"
-              viewBox="0 0 101 100"
-            >
-              <rect
-                width="100"
-                height="100"
-                x=".201172"
-                fill="#C71835"
-                rx="50"
-              />
-
-              <path
-                fill="#FEFBED"
-                d="m53.2254 29.688-.7202 28.5318H48.35l-.7202-28.5318h5.5956Zm.3324 34.072v5.928h-6.1496V63.76h6.1496Z"
-              />
-            </svg>
-
-            <p class="form_submittedStateText">
-              Opps! We are facing some <br />
-
-              technical issues. Please try again
-
-              <br />
-
-              or contact at mail@mail.com
-            </p>
-          </div>
-
-          <button type="submit" class="popUp__submit">Submit</button>
-        </form>
-      </div>
+        <button type="submit" class="popUp__submit">Submit</button>
+      </form>
     </div>
-    <div class="loader">
-      <span class="spinner"></span>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  </div>
+  <div class="loader">
+    <span class="spinner"></span>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Bootstrap Bundle js -->
+  <!-- Bootstrap Bundle js -->
 
-    <script src="./dist/js/libs/bootstrap.bundle.min.js"></script>
+  <script src="./dist/js/libs/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom main js -->
+  <!-- Custom main js -->
 
-    <script src="./dist/js/main.js"></script>
+  <script src="./dist/js/main.js"></script>
 
-    <script>
-      const swiper = new Swiper(".moonrise__slider", {
-        slidesPerView: 1,
+  <script>
+    const swiper = new Swiper(".moonrise__slider", {
+      slidesPerView: 1,
 
-        effect: "fade",
+      effect: "fade",
 
-        autoplay: {
-          delay: 2500,
-        },
+      autoplay: {
+        delay: 2500,
+      },
 
-        pagination: {
-          el: ".swiper-pagination",
+      pagination: {
+        el: ".swiper-pagination",
 
-          type: "bullets",
+        type: "bullets",
 
-          clickable: true,
-        },
+        clickable: true,
+      },
 
-        loop: true,
-      });
+      loop: true,
+    });
 
-      document
+    document
 
-        .getElementById("contact_form")
+      .getElementById("contact_form")
 
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          let loader = document.querySelector(".loader");
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+        let loader = document.querySelector(".loader");
 
-          let formValid = true;
+        let formValid = true;
 
-          // Clear previous error messages and remove error class
+        // Clear previous error messages and remove error class
 
-          var errorMessages = document.querySelectorAll(".form-error");
+        var errorMessages = document.querySelectorAll(".form-error");
 
-          var formFloatings = document.querySelectorAll(".form-floating");
+        var formFloatings = document.querySelectorAll(".form-floating");
 
-          errorMessages.forEach(function (formFloating) {
-            formFloating.classList.remove("-Invalid");
-          });
-
-          // Validate Name
-
-          var nameInput = document.getElementById("name");
-
-          var name = nameInput.value.trim();
-
-          if (name === "") {
-            showError(nameInput, "Name is required");
-
-            formValid = false;
-          }
-
-          // Validate Email
-
-          var emailInput = document.getElementById("email");
-
-          var email = emailInput.value.trim();
-
-          if (email === "") {
-            showError(emailInput, "Email is required");
-
-            formValid = false;
-          } else if (!isValidEmail(email)) {
-            showError(emailInput, "Invalid email format");
-
-            formValid = false;
-          }
-          var formData = new FormData(this);
-
-          // Validate Message
-
-          var msgInput = document.getElementById("msg");
-
-          var message = msgInput.value.trim();
-
-          if (message === "") {
-            showError(msgInput, "Message is required");
-
-            formValid = false;
-          }
-
-          // If there are no errors, submit the form
-
-          if (formValid) {
-            loader.classList.add("active");
-
-            formData.append("letsWorkTogether", true);
-
-            const xhr = new XMLHttpRequest();
-
-            xhr.open("POST", "form/mail.php", true);
-
-            xhr.setRequestHeader("Accept", "application/json");
-
-            xhr.onreadystatechange = function () {
-              if (xhr.readyState === 4) {
-                if (xhr.status === 200 && xhr.responseText === "mail sent") {
-                  loader.classList.remove("active");
-
-                  e.target.classList.add("-success");
-
-                  // Request successful, do something if needed
-
-                  console.log("Email sent successfully!");
-
-                  form.reset(); // Reset the form
-
-                  setTimeout(() => {
-                    e.target.classList.remove("-success");
-                  }, 5000);
-                } else {
-                  loader.classList.remove("active");
-
-                  e.target.classList.add("-failed");
-
-                  setTimeout(() => {
-                    e.target.classList.remove("-failed");
-                  }, 5000);
-                  console.log("Email not sent");
-                }
-              }
-            };
-
-            xhr.send(formData);
-
-            // Submit the form
-          }
+        errorMessages.forEach(function (formFloating) {
+          formFloating.classList.remove("-Invalid");
         });
 
-      function isValidEmail(email) {
-        var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        return emailRegex.test(email);
-      }
-      function showError(inputElement, errorMessage) {
-        var errorContainer =
-          inputElement.parentElement.querySelector(".form-error");
+        // Validate Name
 
-        errorContainer.querySelector("span").textContent = errorMessage;
+        var nameInput = document.getElementById("name");
 
-        errorContainer.classList.add("-Invalid");
-      }
+        var name = nameInput.value.trim();
 
-      function isValidNumber(number) {
-        var numberRegex = /^\d+$/;
+        if (name === "") {
+          showError(nameInput, "Name is required");
 
-        return numberRegex.test(number);
-      }
-    </script>
-  </body>
+          formValid = false;
+        }
+
+        // Validate Email
+
+        var emailInput = document.getElementById("email");
+
+        var email = emailInput.value.trim();
+
+        if (email === "") {
+          showError(emailInput, "Email is required");
+
+          formValid = false;
+        } else if (!isValidEmail(email)) {
+          showError(emailInput, "Invalid email format");
+
+          formValid = false;
+        }
+        var formData = new FormData(this);
+
+        // Validate Message
+
+        var msgInput = document.getElementById("msg");
+
+        var message = msgInput.value.trim();
+
+        if (message === "") {
+          showError(msgInput, "Message is required");
+
+          formValid = false;
+        }
+
+        // If there are no errors, submit the form
+
+        if (formValid) {
+          loader.classList.add("active");
+
+          formData.append("letsWorkTogether", true);
+
+          const xhr = new XMLHttpRequest();
+
+          xhr.open("POST", "form/mail.php", true);
+
+          xhr.setRequestHeader("Accept", "application/json");
+
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+            if (xhr.status == 200) console.log(xhr.responseText);
+              if (xhr.status === 200 && xhr.responseText == "Email sent successfully.") {
+                loader.classList.remove("active");
+
+                e.target.classList.add("-success");
+
+                // Request successful, do something if needed
+
+                console.log("Email sent successfully.");
+
+                form.reset(); // Reset the form
+
+                setTimeout(() => {
+                  e.target.classList.remove("-success");
+                }, 5000);
+              } else {
+                loader.classList.remove("active");
+
+                e.target.classList.add("-failed");
+
+                setTimeout(() => {
+                  e.target.classList.remove("-failed");
+                }, 5000);
+                console.log("Email not sent");
+              }
+            }
+          };
+
+          xhr.send(formData);
+
+          // Submit the form
+        }
+      });
+
+    function isValidEmail(email) {
+      var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      return emailRegex.test(email);
+    }
+    function showError(inputElement, errorMessage) {
+      var errorContainer = inputElement.parentElement.querySelector(".form-error");
+
+      errorContainer.querySelector("span").textContent = errorMessage;
+
+      errorContainer.classList.add("-Invalid");
+    }
+
+    function isValidNumber(number) {
+      var numberRegex = /^\d+$/;
+
+      return numberRegex.test(number);
+    }
+  </script>
+</body>
+
 </html>

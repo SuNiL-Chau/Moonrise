@@ -12,10 +12,10 @@ tabNavs.forEach(tabNav => {
     tabContents.forEach(content => {
       content.classList.remove("show");
     });
-    tabNavsBar.style.width = "".concat(tabNav.offsetWidth, "px");
-    tabNavsBar.style.transform = "translateX(".concat(tabNav.offsetLeft, "px)");
+    tabNavsBar.style.width = `${tabNav.offsetWidth}px`;
+    tabNavsBar.style.transform = `translateX(${tabNav.offsetLeft}px)`;
     tabNav.classList.add("active");
-    document.querySelector("[data-tab=\"".concat(activeTab, "\"]")).classList.add("show");
+    document.querySelector(`[data-tab="${activeTab}"]`).classList.add("show");
   });
 });
 

@@ -7,7 +7,7 @@
     "develop": "start npm run serve && start npm run watch-scss && start npm run watch-js",
     "serve": "http-server -g -b --cors",
     "build-css": "sass src/scss/:dist/css/ -s compressed && postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/",
-    "watch-scss": "sass src/scss/:dist/css/ -w -s compressed",
+    "watch-scss": "sass src/scss/:dist/css/ -w -s compressed && postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/",
     "build-js": "babel --config-file ./babel.config.json --out-dir ./dist/js/ ./src/js/ --copy-files",
     "watch-js": "babel --config-file ./babel.config.json --out-dir ./dist/js/ ./src/js/ --copy-files --watch",
     "prefix-css": "postcss ./dist/css/*.css --use autoprefixer -d ./dist/css/"
@@ -43,6 +43,5 @@
     "postcss": "^8.4.23",
     "postcss-cli": "^10.1.0",
     "sass": "^1.62.1"
-  },
-  "dependencies": {}
+  }
 }

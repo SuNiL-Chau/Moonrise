@@ -1,0 +1,76 @@
+[02-Jul-2023 15:33:11 UTC] PHP Notice:  Undefined variable: recipient in /home/agoclatfgfep/public_html/form/mail.php on line 122
+[02-Jul-2023 15:36:55 UTC] PHP Notice:  Undefined variable: recipient in /home/agoclatfgfep/public_html/form/mail.php on line 123
+[02-Jul-2023 15:44:36 UTC] PHP Notice:  Undefined index: message in /home/agoclatfgfep/public_html/form/mail.php on line 28
+[02-Jul-2023 15:44:36 UTC] PHP Notice:  Undefined index: phone in /home/agoclatfgfep/public_html/form/mail.php on line 30
+[02-Jul-2023 15:47:18 UTC] PHP Notice:  Undefined index: company in /home/agoclatfgfep/public_html/form/mail.php on line 141
+[02-Jul-2023 15:47:18 UTC] PHP Notice:  Undefined variable: recipient in /home/agoclatfgfep/public_html/form/mail.php on line 175
+[03-Jul-2023 07:35:06 UTC] PHP Notice:  Undefined index: company in /home/agoclatfgfep/public_html/form/mail.php on line 141
+[03-Jul-2023 07:35:06 UTC] PHP Notice:  Undefined variable: recipient in /home/agoclatfgfep/public_html/form/mail.php on line 175
+[28-Jul-2023 06:51:11 UTC] PHP Notice:  Undefined index: company in /home/agoclatfgfep/public_html/form/mail.php on line 141
+[28-Jul-2023 06:51:11 UTC] PHP Notice:  Undefined variable: recipient in /home/agoclatfgfep/public_html/form/mail.php on line 175
+[30-May-2024 06:58:51 UTC] PHP Notice:  Undefined index: company in /home/agoclatfgfep/public_html/form/mail.php on line 141
+[30-May-2024 06:58:51 UTC] PHP Notice:  Undefined variable: recipient in /home/agoclatfgfep/public_html/form/mail.php on line 175
+[02-Jun-2024 05:47:08 UTC] PHP Notice:  Array to string conversion in /home/agoclatfgfep/public_html/form/mail.php on line 26
+[02-Jun-2024 05:58:26 UTC] PHP Notice:  Undefined index: name in /home/agoclatfgfep/public_html/form/mail.php on line 28
+[02-Jun-2024 05:58:26 UTC] PHP Notice:  Undefined index: email in /home/agoclatfgfep/public_html/form/mail.php on line 29
+[02-Jun-2024 05:58:26 UTC] PHP Notice:  Undefined index: message in /home/agoclatfgfep/public_html/form/mail.php on line 30
+[02-Jun-2024 05:58:26 UTC] PHP Notice:  Undefined index: phone in /home/agoclatfgfep/public_html/form/mail.php on line 31
+[02-Jun-2024 16:00:31 UTC] PHP Notice:  Undefined variable: body in /home/agoclatfgfep/public_html/form/mail.php on line 73
+[02-Jun-2024 16:00:31 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Message body empty in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php:1613
+Stack trace:
+#0 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1517): PHPMailer\PHPMailer\PHPMailer->preSend()
+#1 /home/agoclatfgfep/public_html/form/mail.php(75): PHPMailer\PHPMailer\PHPMailer->send()
+#2 {main}
+  thrown in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php on line 1613
+[02-Jun-2024 16:27:31 UTC] PHP Notice:  Undefined variable: body in /home/agoclatfgfep/public_html/form/mail.php on line 73
+[02-Jun-2024 16:27:31 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Message body empty in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php:1613
+Stack trace:
+#0 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1517): PHPMailer\PHPMailer\PHPMailer->preSend()
+#1 /home/agoclatfgfep/public_html/form/mail.php(75): PHPMailer\PHPMailer\PHPMailer->send()
+#2 {main}
+  thrown in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php on line 1613
+[02-Jun-2024 16:30:48 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php:2282
+Stack trace:
+#0 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(2058): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1687): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Sun, 2 Ju...', 'Name: test\r\nEma...')
+#2 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1521): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/agoclatfgfep/public_html/form/mail.php(75): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php on line 2282
+[02-Jun-2024 18:49:11 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php:2282
+Stack trace:
+#0 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(2058): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1687): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Sun, 2 Ju...', 'Name: test\r\nEma...')
+#2 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1521): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/agoclatfgfep/public_html/form/mail.php(73): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php on line 2282
+[02-Jun-2024 18:53:29 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php:2282
+Stack trace:
+#0 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(2058): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1687): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Sun, 2 Ju...', 'Name: Subhransu...')
+#2 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1521): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/agoclatfgfep/public_html/form/mail.php(73): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php on line 2282
+[02-Jun-2024 18:54:54 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php:2282
+Stack trace:
+#0 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(2058): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1687): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Sun, 2 Ju...', 'Name: resr\r\nEma...')
+#2 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1521): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/agoclatfgfep/public_html/form/mail.php(72): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php on line 2282
+[02-Jun-2024 18:59:07 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php:2282
+Stack trace:
+#0 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(2058): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1687): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Sun, 2 Ju...', 'Name: test\r\nEma...')
+#2 /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php(1521): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/agoclatfgfep/public_html/form/mail.php(73): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/agoclatfgfep/public_html/form/phpmailer/PHPMailer.php on line 2282
+[02-Jun-2024 19:45:28 UTC] PHP Notice:  Undefined index: company in /home/agoclatfgfep/public_html/form/mail.php on line 247
+[02-Jun-2024 19:52:17 UTC] PHP Notice:  Undefined index: company in /home/agoclatfgfep/public_html/form/mail.php on line 247
+[02-Jun-2024 19:58:21 UTC] PHP Notice:  Undefined index: from in /home/agoclatfgfep/public_html/form/mail.php on line 247
+[02-Jun-2024 19:59:25 UTC] PHP Notice:  Undefined index: from in /home/agoclatfgfep/public_html/form/mail.php on line 247
+[02-Jun-2024 20:01:27 UTC] PHP Notice:  Undefined index: company in /home/agoclatfgfep/public_html/form/mail.php on line 267
