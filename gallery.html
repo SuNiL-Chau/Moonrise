@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gallery | Moon Rise</title>
+
+    <!-- favicon start  -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png" />
+
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png" />
+
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png" />
+
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png" />
+
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png" />
+
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png" />
+
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png" />
+
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+
+    <link rel="manifest" href="/assets/favicon/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- favicon end-->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./dist/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="./dist/css/fonts.css" />
+
+    <link rel="stylesheet" href="./dist/css/main.css" />
+
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <link rel="stylesheet" href="./dist/css/pages/gallery.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="custom__tablet">
+          <button class="navbar__hamburger">
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+          </button>
+        </div>
+
+        <a href="./" class="navbar-brand"><img src="./assets/images/moonrise.svg" class="img-fluid" alt="" /></a>
+
+        <div class="navbar__items">
+          <a href="our-services" class="navbar__link">Services</a>
+
+          <a href="about-us" class="navbar__link">About Us</a>
+
+          <a href="process" class="navbar__link">Process</a> <a href="gallery" class="navbar__link active">Gallery</a>
+
+          <a href="contact-us" class="navbar__link">Contact Us</a>
+
+          <button class="navbar__talkBtn">Let's Talk</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="">
+      <!-- <div id="cursor">
+				<div class="cursor__circle"></div>
+			</div> -->
+
+      <section class="section__wrapper gallery">
+        <svg width="91" height="238" class="gallery__icon -Icon3 serviceicon" viewBox="0 0 91 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M-114.609 40.5037C-103.739 26.1641 -92.4888 11.4288 -78.8488 4.30646C-67.6388 -1.56551 -54.2388 -1.2173 -43.9988 8.88058C-31.9588 20.7511 -28.2388 44.3656 -25.1688 64.8463C-21.6988 87.986 -19.6688 111.6 -15.9188 134.629C-12.5488 155.332 -7.68876 175.353 0.771238 192.257C8.20124 207.087 18.0512 219.86 29.7512 224.941C41.4512 230.021 53.8212 225.669 63.8012 214.589C68.8312 209.002 73.2212 201.975 77.0212 194.362C78.9912 190.405 80.7912 186.243 82.4612 181.953C83.9712 178.06 85.6512 173.976 86.6312 169.671C87.4112 166.284 87.9512 162.28 87.4112 158.703C86.8713 155.126 85.0912 153.511 82.9212 155.015C80.0212 157.009 77.8912 162.359 76.3512 166.506C74.6812 170.985 73.4513 175.796 72.4912 180.766C70.5812 190.611 69.5212 201.041 68.7812 211.266C68.2112 219.179 68.3612 231.715 75.0312 232.364C76.8412 232.538 78.8112 231.604 79.3712 228.597C79.9312 225.589 82.8112 226.919 82.2612 229.863C80.7412 237.998 74.0712 238.79 70.1312 234.659C64.3312 228.581 65.3512 215.555 66.2012 206.233C67.1812 195.407 68.2613 184.438 70.7412 174.166C71.9513 169.165 73.4712 164.322 75.4612 159.969C77.4513 155.616 79.8413 150.947 83.2112 149.919C85.7912 149.127 88.4212 150.916 89.6412 154.635C90.8612 158.355 90.7312 162.47 90.3012 166.316C89.8012 170.779 88.5212 174.72 87.1512 178.63C85.5512 183.204 83.8012 187.635 81.8912 191.893C74.4512 208.496 64.3912 223.2 51.8412 229.151C39.2912 235.102 26.5312 230.844 15.7712 220.224C5.01124 209.604 -3.92876 192.906 -9.86876 174.815C-16.8788 153.48 -20.0588 129.438 -22.9188 106.029C-24.4188 93.763 -25.8188 81.4493 -27.5788 69.2621C-29.3388 57.075 -31.1188 45.3944 -34.2888 34.3785C-37.1288 24.5181 -41.3588 16.2403 -47.4888 11.1756C-53.0288 6.60144 -59.3988 4.93956 -65.6088 5.30359C-80.1088 6.15827 -92.8188 18.9626 -103.889 32.78C-106.789 36.4045 -109.629 40.1397 -112.469 43.875C-113.939 45.8218 -116.079 42.4822 -114.589 40.5196L-114.609 40.5037Z"
+            fill="#0434AC"
+          />
+        </svg>
+
+        <div class="container">
+          <div class="gallery__content">
+            <div class="m__title mb-4">Gallery</div>
+          </div>
+		  <div class="row gallery-grid">
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/1.webp" loading="eager" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/2.webp" loading="eager" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/3.webp" loading="eager" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/4.webp" loading="eager" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/5.webp" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/6.webp" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/7.webp" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/8.webp" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/9.webp" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/10.webp" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/11.webp" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-4 col-sm-6 mb-4">
+				<img src="assets/images/gallery/12.webp" alt="" class="img-fluid">
+			</div>
+		  </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <a href="/contact-us" class="footer__top">
+          <h2 class="footer__title">Let’s Connect</h2>
+
+          <svg class="footer__titleIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 60 60">
+            <rect width="60" height="60" fill="#E65435" rx="30" />
+
+            <path stroke="#fff" stroke-linecap="round" stroke-width="2" d="M15 30h28m-6.2998-7 7 7-7 7" />
+          </svg>
+        </a>
+
+        <div class="footer__navWrapper">
+          <div class="row">
+            <div class="col-lg-2 col-md-3 col-6">
+              <ul>
+                <li>
+                  <a href="./" class="footer__navTitle footer__qucikLink">Home</a>
+                </li>
+
+                <li>
+                  <a href="our-services" class="footer__navTitle footer__qucikLink">Services</a>
+                </li>
+
+                <li>
+                  <a href="about-us" class="footer__navTitle footer__qucikLink">About Us</a>
+                </li>
+
+                <li>
+                  <a href="process" class="footer__navTitle footer__qucikLink">Process</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-10 col-md-9 col-12 mt-md-0 mt-4 row">
+              <div class="col-lg-2 col-md-4 col-12 custom__desktop">
+                <h3 class="footer__navTitle">Social</h3>
+
+                <ul>
+                  <li>
+                    <a href="https://www.instagram.com/brandingbymoonrise/" class="footer__navLink">Instagram</a>
+                  </li>
+
+                  <!--<li>
+
+										<a href="" class="footer__navLink"
+
+											>Behance</a
+
+										>
+
+									</li>
+
+									<li>
+
+										<a href="" class="footer__navLink"
+
+											>Dribble</a
+
+										>
+
+									</li>
+
+									<li>
+
+										<a href="" class="footer__navLink"
+
+											>Facebook</a
+
+										>
+
+									</li>-->
+
+                  <li>
+                    <a href="https://www.linkedin.com/company/moonrise-brand-consultants/?viewAsMember=true" class="footer__navLink">Linkedin</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-12">
+                <h3 class="footer__navTitle">Contact us</h3>
+
+                <ul>
+                  <li>
+                    <a href="mailto:anandita@brandingbymoonrise.com" class="footer__navLink">anandita@branding<br />bymoonrise.com</a>
+                  </li>
+
+                  <li>
+                    <a href="tel:02222027370" class="footer__navLink">022-22027370</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-12 mt-lg-0 mt-md-0 mt-4">
+                <h3 class="footer__navTitle">Address</h3>
+
+                <p class="footer__navPara">73, 7th Floor, Makers Chambers 6, Nariman Point, Mumbai - 400021</p>
+              </div>
+            </div>
+
+            <div class="col-12 custom__mobile">
+              <ul class="footer__social">
+                <li>
+                  <a href="https://www.instagram.com/brandingbymoonrise/" class="footer__socialLink"><img src="assets/icons/instagram.png" class="img-fluid" alt="" /></a>
+                </li>
+
+                <li>
+                  <a href="https://www.linkedin.com/company/moonrise-brand-consultants/?viewAsMember=true" class="footer__socialLink"><img src="assets/icons/linkedin.png" class="img-fluid" alt="" /></a>
+                </li>
+
+                <!--<li>
+
+									<a href="#" class="footer__socialLink"
+
+										><img
+
+											src="assets/icons/behance.png"
+
+											class="img-fluid"
+
+											alt=""
+
+									/></a>
+
+								</li>
+
+								<li>
+
+									<a href="#" class="footer__socialLink"
+
+										><img
+
+											src="assets/icons/dribble.png"
+
+											class="img-fluid"
+
+											alt=""
+
+									/></a>
+
+								</li>
+
+								<li>
+
+									<a href="#" class="footer__socialLink"
+
+										><img
+
+											src="assets/icons/fb.png"
+
+											class="img-fluid"
+
+											alt=""
+
+									/></a>
+
+								</li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copy">Moonrise Agency © 2023</p>
+
+          <p class="footer__copy">
+            Design & Developed by
+
+            <a href="https://uidirect.in/" target="_blank" rel="noopener noreferrer">UI Direct</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popUp" id="letsTalk">
+      <div class="popUp__wrapper">
+        <div class="popUp__containerWrapper">
+          <div id="blueMoon" class="popUp__icon -Icon2 blue-moon"></div>
+
+          <form class="popUp__container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="popUp__closeBtn" fill="none" viewBox="0 0 41 40">
+              <path fill="#1B1C1E" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.4987 36.8965c9.1667 0 16.6667-7.5472 16.6667-16.7715s-7.5-16.77148-16.6667-16.77148c-9.1667 0-16.66667 7.54718-16.66667 16.77148S11.332 36.8965 20.4987 36.8965Z" />
+
+              <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15.7812 24.8716 9.4334-9.4927m0 9.4927-9.4334-9.4927" />
+            </svg>
+
+            <h3 class="popUp__heading">
+              Hi, <br class="custom__mobile" />
+
+              Moonrise. team!
+            </h3>
+
+            <div class="popUp__form">
+              <div class="popUp__inputWrapper">
+                <p class="popUp__formText">My name is</p>
+
+                <input type="text" class="popUp__formInput -fullname" placeholder="Your Name" name="name" />
+              </div>
+
+              <div class="popUp__inputWrapper">
+                <p class="popUp__formText">from</p>
+
+                <input type="text" class="popUp__formInput -from" name="form" placeholder="WEBSITE OR COMPANY NAME" />
+              </div>
+
+              <div class="popUp__inputWrapper">
+                <p class="popUp__formText">I’d like to discuss</p>
+
+                <div class="popUp__formCheckBoxs -projectTags">
+                  <input type="checkbox" name="project_idea" class="popUp__formCheckBox" checked value="DESIGN " id="project_tag1" />
+
+                  <label for="project_tag1" class="popUp__formCheckBoxLabel">DESIGN </label>
+
+                  <input type="checkbox" name="project_idea" class="popUp__formCheckBox" value="ACTIVATION " id="project_tag2" />
+
+                  <label for="project_tag2" class="popUp__formCheckBoxLabel">ACTIVATION </label>
+
+                  <input type="checkbox" name="project_idea" class="popUp__formCheckBox" value="STRATEGY" id="project_tag3" />
+
+                  <label for="project_tag3" class="popUp__formCheckBoxLabel">STRATEGY </label>
+                </div>
+
+                <p class="popUp__formText">project idea & design brief.</p>
+              </div>
+
+              <div class="popUp__inputWrapper w-100">
+                <input type="text" class="popUp__formInput w-100" placeholder="PITCH YOUR PROJECT IDEA (OPTIONAL)" name="pitch_idea" />
+              </div>
+
+              <div class="popUp__inputWrapper">
+                <p class="popUp__formText">A budget for this project is</p>
+
+                <input type="text" class="popUp__formInput -email" placeholder="YOUR AMOUNT" name="amount" />
+              </div>
+
+              <div class="popUp__inputWrapper">
+                <p class="popUp__formText">Contact me back at</p>
+
+                <input type="text" class="popUp__formInput -email" placeholder="YOUR Email" name="email" />
+              </div>
+            </div>
+
+            <div class="form_submittedState -submitted">
+              <svg class="form_submittedStateIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 101 100">
+                <rect width="100" height="100" x=".200195" fill="#fff" rx="50" />
+
+                <path stroke="#22AF6E" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m28 58 12 12 32-40" />
+              </svg>
+
+              <p class="form_submittedStateText">
+                Thank you for completing the <br />
+
+                application form! We’ll get back <br />
+
+                to you as soon as possible.
+              </p>
+            </div>
+
+            <div class="form_submittedState -notsubmitted">
+              <svg xmlns="http://www.w3.org/2000/svg" class="form_submittedStateIcon" fill="none" viewBox="0 0 101 100">
+                <rect width="100" height="100" x=".201172" fill="#C71835" rx="50" />
+
+                <path fill="#FEFBED" d="m53.2254 29.688-.7202 28.5318H48.35l-.7202-28.5318h5.5956Zm.3324 34.072v5.928h-6.1496V63.76h6.1496Z" />
+              </svg>
+
+              <p class="form_submittedStateText">
+                Opps! We are facing some <br />
+
+                technical issues. Please try again
+
+                <br />
+
+                or contact at mail@mail.com
+              </p>
+            </div>
+
+            <button type="submit" class="popUp__submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+
+    <script src="./dist/js/libs/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom main js -->
+
+    <script src="./dist/js/main.js"></script>
+    <script>
+		window.addEventListener("load", ()=> {
+			var msnry = new Masonry('.gallery-grid', {
+				"percentPosition": true, 
+				"horizontalOrder": true
+			})
+		});
+	</script>
+  </body>
+</html>

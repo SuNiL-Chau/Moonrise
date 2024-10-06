@@ -1,0 +1,178 @@
+@import "../baseInfo";
+@import "../baseInfo";
+
+.gallery {
+//   padding-top: 80px;
+  overflow: hidden;
+  position: relative;
+  background: #fefbed;
+  &__icon {
+    width: 170px;
+    position: absolute;
+    @media only screen and (max-width: 1024px) {
+      width: 100px;
+    }
+    &.-Icon3 {
+      width: 91px;
+      top: 4px;
+      left: -40px;
+      height: auto;
+      @media only screen and (max-width: 1024px) {
+        top: -20px;
+        width: 46px;
+        left: -30px;
+      }
+      @include media-bp("mdl") {
+        top: 20px;
+        width: 46px;
+        left: -30px;
+      }
+    }
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__defaultLine {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    height: 100%;
+  }
+  &__drawLine {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    background: rgba(255, 255, 255, 1);
+    height: 30%;
+  }
+  &__content {
+    max-width: 820px;
+    .m__title {
+      color: #e65435;
+    }
+  }
+  &__banner {
+    position: relative;
+    min-height: 400px;
+    img {
+      width: 100%;
+      @media only screen and (min-width: 786px) {
+        height: 400px;
+      }
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &Form {
+    padding-top: 100px;
+    @include media-bp("mdl") {
+      padding-top: 200px;
+    }
+    &__input {
+      &Wrapper {
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        text-transform: uppercase;
+        &:not(:first-child) {
+          padding-top: 80px;
+          @include media-bp("mdl") {
+            padding-top: 60px;
+          }
+        }
+        @include media-bp("mdl") {
+          flex-direction: column;
+          align-items: start;
+        }
+
+        label {
+          min-width: 280px;
+          color: #0434ac;
+          font-size: 24px;
+          line-height: 31px;
+          // font-family: "Suisse Neue";
+
+          @include media-bp("mdl") {
+            font-size: 18px;
+            line-height: 24px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 30px;
+      justify-content: space-between;
+      font-size: 24px;
+      line-height: 30px;
+      input {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        box-shadow: 0;
+        @include media-bp("mdl") {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        &:focus-visible {
+          border: 0;
+          box-shadow: none;
+        }
+      }
+      span {
+        color: #c71835;
+        font-size: 14px;
+        line-height: 18px;
+        @include media-bp("mdl") {
+          font-size: 10px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    &__submitButton {
+      padding: 20px 40px;
+      height: 68px;
+      // max-width: 1000px;
+      background: transparent;
+      margin: 0 auto;
+      margin-top: 80px;
+      border: 1px solid #ffffff;
+      border-radius: 34px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      @media only screen and (max-width: 1024px) {
+        gap: 10px;
+        padding: 20px;
+        margin-top: 60px;
+      }
+      img {
+        width: 60px;
+        @media only screen and (max-width: 1024px) {
+          width: 40px;
+          // display: none;
+        }
+      }
+      &Text {
+        font-size: 48px;
+        line-height: 58px;
+        color: #c71835;
+        font-family: "PiepieW01-Regular";
+        @media only screen and (max-width: 1024px) {
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
