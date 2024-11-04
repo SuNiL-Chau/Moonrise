@@ -57,7 +57,6 @@ const moveCursor = e => {
   if (!isDragging) {
     customCursor.style.transition = "none"; // Disable transition
   }
-
   customCursor.style.transform = `translate3d(${mouseX - 50}px, ${mouseY - 50}px, 0)`;
 };
 const startDragging = () => {

@@ -181,7 +181,6 @@ if (LetsTalkForm) {
       // Submit the form
     }
   });
-
   function isValidEmail(email) {
     var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return emailRegex.test(email);
