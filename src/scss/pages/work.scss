@@ -24,9 +24,11 @@ html[data-page="work"] {
             height: 40px;
             border-radius: 20px;
             font-size: 14px;
+            line-height: 10px;
             @media only screen and (max-width: 1024px) {
                 padding: 8px 10px;
                 font-size: 12px;
+                line-height: 12px;
                 height: fit-content;
             }
         }

@@ -3,7 +3,7 @@
 .home {
     .moonrise {
         @media only screen and (min-width: 1024px) {
-            height: calc(100vh - 108px);
+            height: max(100%, calc(100vh - 108px));
         }
         .row {
             height: 100%;
