@@ -186,4 +186,39 @@ if (LetsTalkForm) {
     return emailRegex.test(email);
   }
 }
+
+// Select the .cursor image element
+const cursorImg = document.querySelector(".cursor");
+if (cursorImg) {
+  // Ensure the image is absolutely positioned
+  cursorImg.style.position = "fixed";
+  cursorImg.style.pointerEvents = "none"; // So it doesn't block clicks
+  cursorImg.style.zIndex = "9999"; // Ensure it's on top of other elements
+  cursorImg.style.transitionDuration = "0s"; // Optional: smooth transition
+
+  // Update the image position on mouse move
+  document.addEventListener("mousemove", e => {
+    // Offset to center the image on the cursor (optional)
+    const rect = cursorImg.getBoundingClientRect();
+    const offsetX = rect.width / 2;
+    const offsetY = rect.height / 2;
+    cursorImg.style.left = `${e.clientX - offsetX}px`;
+    cursorImg.style.top = `${e.clientY - offsetY}px`;
+    document.body.style.cursor = "none";
+
+    // Get the element under the cursor
+    const target = document.elementFromPoint(e.clientX, e.clientY);
+
+    // Check if it's an <a> or <button>
+    if (target && (target.tagName === "A" || target.tagName === "BUTTON" || target.parentNode.tagName === "A" || target.parentNode.tagName === "BUTTON")) {
+      // Hide custom cursor and show system cursor
+      cursorImg.style.display = "none";
+      document.body.style.cursor = "";
+    } else {
+      // Show custom cursor and hide system cursor
+      cursorImg.style.display = "block";
+      document.body.style.cursor = "none";
+    }
+  });
+}
 //# sourceMappingURL=main.js.map
