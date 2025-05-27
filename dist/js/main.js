@@ -210,14 +210,16 @@ if (cursorImg) {
     const target = document.elementFromPoint(e.clientX, e.clientY);
 
     // Check if it's an <a> or <button>
-    if (target && (target.tagName === "A" || target.tagName === "BUTTON" || target.parentNode.tagName === "A" || target.parentNode.tagName === "BUTTON")) {
+    if (target && (target.tagName === "A" || target.tagName === "BUTTON" || target.parentNode.tagName === "A" || target.parentNode.tagName === "BUTTON" || target.tagName === "INPUT" || target.tagName === "TEXTAREA")) {
       // Hide custom cursor and show system cursor
-      cursorImg.style.display = "none";
+      // cursorImg.style.display = "none";
+      cursorImg.style.scale = 0.25;
       document.body.style.cursor = "";
     } else {
       // Show custom cursor and hide system cursor
       cursorImg.style.display = "block";
-      document.body.style.cursor = "none";
+      cursorImg.style.scale = 1;
+      // document.body.style.cursor = "none";
     }
   });
 }
