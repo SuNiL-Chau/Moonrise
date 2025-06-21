@@ -37,6 +37,7 @@ html[data-page="work"] {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      max-width: 85%;
       @media only screen and (max-width: 1024px) {
         gap: 10px;
       }
