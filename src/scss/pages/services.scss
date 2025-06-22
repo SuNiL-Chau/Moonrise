@@ -345,12 +345,17 @@
         &::before {
             content: "";
             position: relative;
+            flex-shrink: 0;
             width: 9px;
             height: 16.36px;
             background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjE4IiBmaWxsPSJub25lIj48cGF0aCBmaWxsPSIjRkVENzAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0uMjk5MzI0IDE2Ljk0MjhjLjMzMTI5MS4zMTg4Ljg2NzYzNi4zMTg4IDEuMTk4MDc2IDBsNy4wMDYyNy02Ljc2MDhjLjY2MTc0LS42Mzg2LjY2MTc0LTEuNjc0NTYgMC0yLjMxMzE0bC03LjA1NzEtNi44MTExMUMxLjExODY3Ljc0MjE0MS41ODkxMDMuNzM3ODQyLjI1Njk2NCAxLjA0OTM2Yy0uMzM4OTE3My4zMTgwNi0uMzQzMTQ3My44NDIzOC0uMDA5MzE0IDEuMTY1MzVsNi40NTg5MSA2LjIzMjIzYy4zMzEyOS4zMTk3LjMzMTI5LjgzNzI2IDAgMS4xNTY5NkwuMjk5MzI0IDE1Ljc4NjZjLS4zMzEyOTIyLjMxODktLjMzMTI5MjIuODM3MyAwIDEuMTU2MloiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==");
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
+            top: 3px;
+            @media only screen and (max-width: 500px) {
+                top: 1.25px;
+            }
         }
     }
 }
